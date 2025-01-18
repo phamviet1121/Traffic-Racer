@@ -1,0 +1,4758 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1957445606574130
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4303266961254109}
+  - component: {fileID: 33301975399938169}
+  - component: {fileID: 23178924808146945}
+  - component: {fileID: 114312009765715205}
+  - component: {fileID: 114237287388078329}
+  - component: {fileID: 114442718933574924}
+  m_Layer: 12
+  m_Name: ambulans_yeni
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1359692633198853
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4545170507958567}
+  - component: {fileID: 65651489799847745}
+  - component: {fileID: 114868491151504182}
+  - component: {fileID: 54681075148895757}
+  m_Layer: 13
+  m_Name: back_trigger
+  m_TagString: back_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1088075754172367
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4206059185089603}
+  - component: {fileID: 65984086847525395}
+  - component: {fileID: 114773096458691503}
+  - component: {fileID: 54292306595378800}
+  m_Layer: 13
+  m_Name: front_trigger
+  m_TagString: front_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1946127118845739
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4681582088249049}
+  - component: {fileID: 65138387247447695}
+  - component: {fileID: 54456272921610375}
+  m_Layer: 13
+  m_Name: left_trigger
+  m_TagString: left_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1659636246142676
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4882045689015492}
+  - component: {fileID: 65286687825642043}
+  - component: {fileID: 54998084944375213}
+  m_Layer: 13
+  m_Name: right_trigger
+  m_TagString: right_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1609547760950716
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4886477029220959}
+  - component: {fileID: 33960062256082106}
+  - component: {fileID: 23461292137314864}
+  m_Layer: 0
+  m_Name: shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1551490818060592
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4364642377408458}
+  - component: {fileID: 33356635360178842}
+  - component: {fileID: 23833291213291858}
+  - component: {fileID: 114594685842359062}
+  m_Layer: 0
+  m_Name: signal_right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1366283973288537
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4456989912783194}
+  - component: {fileID: 114693585299201814}
+  m_Layer: 17
+  m_Name: signal_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1529204727917916
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4769538791143894}
+  - component: {fileID: 33776740979281946}
+  - component: {fileID: 23668755518662057}
+  - component: {fileID: 114053602513060035}
+  m_Layer: 0
+  m_Name: signal_left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1386396194981190
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4175205070683935}
+  - component: {fileID: 114000994932096028}
+  m_Layer: 17
+  m_Name: signal_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1036578343343360
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4487001341644355}
+  - component: {fileID: 33995821787225499}
+  - component: {fileID: 23465244002554805}
+  m_Layer: 0
+  m_Name: stop_right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1406972283971950
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4810235041546556}
+  - component: {fileID: 114743946239771627}
+  m_Layer: 17
+  m_Name: right_flare_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1685329046655399
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4825596273516722}
+  - component: {fileID: 33744806280421016}
+  - component: {fileID: 23578434965804032}
+  m_Layer: 0
+  m_Name: stop_left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1749797831434631
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4783831471661125}
+  - component: {fileID: 114091304005245449}
+  m_Layer: 17
+  m_Name: left_flare_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1683848366778061
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4148894319970531}
+  - component: {fileID: 33348827386382110}
+  - component: {fileID: 23282890510773227}
+  m_Layer: 0
+  m_Name: tr_light_ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1306738370022819
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4614547608794002}
+  - component: {fileID: 123494685907424956}
+  m_Layer: 0
+  m_Name: siren_left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1377058434639300
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4140674829751152}
+  - component: {fileID: 123128064079815090}
+  m_Layer: 0
+  m_Name: siren_right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1836847107185878
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4960289483056943}
+  - component: {fileID: 82136771675999317}
+  m_Layer: 0
+  m_Name: siren
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1435239249875681
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4812564256676302}
+  - component: {fileID: 114513265617579837}
+  m_Layer: 17
+  m_Name: right_flare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1508276434112711
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4865698896552820}
+  - component: {fileID: 114685491002103337}
+  m_Layer: 17
+  m_Name: left_flare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1472997692275643
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4742208927952006}
+  - component: {fileID: 114370208213328704}
+  m_Layer: 17
+  m_Name: right_flare_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1421662833042964
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4201994703650470}
+  - component: {fileID: 114951752114911685}
+  m_Layer: 17
+  m_Name: left_flare_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1208353752515322
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4018927209643423}
+  - component: {fileID: 65736763066539634}
+  m_Layer: 18
+  m_Name: lens_collider
+  m_TagString: left_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1543949523334751
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4038196192994174}
+  - component: {fileID: 114730566009765148}
+  m_Layer: 17
+  m_Name: front_left_flare_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1941484737801013
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4247434159494536}
+  - component: {fileID: 114121623830326883}
+  m_Layer: 17
+  m_Name: front_right_flare_mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1311075580730854
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4719509131736994}
+  - component: {fileID: 114622753640013963}
+  m_Layer: 17
+  m_Name: front_left_flare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1125604255119659
+GameObject:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Component:
+  - component: {fileID: 4976299380367479}
+  - component: {fileID: 114977326128282392}
+  m_Layer: 17
+  m_Name: front_right_flare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4303266961254109
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957445606574130}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 24.6, y: 10.97, z: 5.879}
+  m_LocalScale: {x: 0.7310292, y: 0.7310292, z: 0.7310292}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4545170507958567}
+  - {fileID: 4206059185089603}
+  - {fileID: 4681582088249049}
+  - {fileID: 4882045689015492}
+  - {fileID: 4886477029220959}
+  - {fileID: 4364642377408458}
+  - {fileID: 4769538791143894}
+  - {fileID: 4487001341644355}
+  - {fileID: 4825596273516722}
+  - {fileID: 4148894319970531}
+  - {fileID: 4614547608794002}
+  - {fileID: 4140674829751152}
+  - {fileID: 4960289483056943}
+  - {fileID: 4812564256676302}
+  - {fileID: 4865698896552820}
+  - {fileID: 4742208927952006}
+  - {fileID: 4201994703650470}
+  - {fileID: 4018927209643423}
+  - {fileID: 4038196192994174}
+  - {fileID: 4247434159494536}
+  - {fileID: 4719509131736994}
+  - {fileID: 4976299380367479}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -0, z: 0}
+--- !u!33 &33301975399938169
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957445606574130}
+  m_Mesh: {fileID: 4300000, guid: c5a891e293cd54c45b80b71ed0cbb0b7, type: 2}
+--- !u!23 &23178924808146945
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957445606574130}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a737ca832e207f2479c873069693c024, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &114312009765715205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957445606574130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6450dcd49e2a2e70e475702fc4a0f4e0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  finishPos: -355
+  probabilityScore: 1
+  halfWidth: 8.23
+  frontLength: 25.36
+  backLength: 25.4
+  hornType: 2
+  twoWayShadowPosX: -0.6
+  twoWayShadowPosZ: 0
+  twoWayShadowPosY: 0
+  isSpeedy: 1
+  isAmbulance: 1
+--- !u!114 &114237287388078329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957445606574130}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea178640e4459985f05381a74e089be8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &114442718933574924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957445606574130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc403b91afa38d53844717d315d9a3b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  leftSiren: {fileID: 1306738370022819}
+  rightSiren: {fileID: 1377058434639300}
+  leftSiren2: {fileID: 0}
+  rightSiren2: {fileID: 0}
+  isPolice: 0
+  left_siren_ground: {fileID: 0}
+  left_siren_ground_alt: {fileID: 0}
+  right_siren_ground: {fileID: 0}
+  left_siren_light: {fileID: 0}
+  left_siren_light_alt: {fileID: 0}
+  right_siren_light: {fileID: 0}
+  left_siren_obj: {fileID: 0}
+  left_siren_obj_alt: {fileID: 0}
+  right_siren_obj: {fileID: 0}
+--- !u!4 &4545170507958567
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359692633198853}
+  m_LocalRotation: {x: 0.49999997, y: -0.50000006, z: -0.49999997, w: 0.50000006}
+  m_LocalPosition: {x: 1.9484334, y: 30.233698, z: -9.600354}
+  m_LocalScale: {x: 1.2162393, y: 1.2162391, z: 1.6506654}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: 1.0245283E-05, z: 90}
+--- !u!65 &65651489799847745
+BoxCollider:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359692633198853}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  m_Size: {x: 2.17, y: 5.04, z: 11.04}
+  m_Center: {x: 0.63042104, y: 0, z: 1.058013}
+--- !u!114 &114868491151504182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359692633198853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e8b9bf8d1180d521f8edd19e423a9d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!54 &54681075148895757
+Rigidbody:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359692633198853}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &4206059185089603
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088075754172367}
+  m_LocalRotation: {x: 0.49999997, y: -0.50000006, z: -0.49999997, w: 0.50000006}
+  m_LocalPosition: {x: 1.7602277, y: -28.495342, z: -9.600362}
+  m_LocalScale: {x: 1.2162393, y: 1.2162391, z: 1.8617876}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: 1.0245283E-05, z: 90}
+--- !u!65 &65984086847525395
+BoxCollider:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088075754172367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  m_Size: {x: 2.5008426, y: 5.04, z: 9.3}
+  m_Center: {x: 0.63042104, y: 0, z: 1.058013}
+--- !u!114 &114773096458691503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088075754172367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32078efdddfb7e93bcfc76380e3aee6f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  isAI: 0
+--- !u!54 &54292306595378800
+Rigidbody:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088075754172367}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &4681582088249049
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946127118845739}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -9.076095, y: 3.4627109, z: -9.600365}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.947616}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!65 &65138387247447695
+BoxCollider:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946127118845739}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  m_Size: {x: 1.24, y: 5.04, z: 29.13}
+  m_Center: {x: 0, y: 0, z: 1.3873425}
+--- !u!54 &54456272921610375
+Rigidbody:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946127118845739}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &4882045689015492
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659636246142676}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 9.069598, y: 3.3507888, z: -9.600363}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.9476157}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!65 &65286687825642043
+BoxCollider:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659636246142676}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  m_Size: {x: 1.24, y: 5.04, z: 29.13}
+  m_Center: {x: 0, y: 0, z: 1.3873425}
+--- !u!54 &54998084944375213
+Rigidbody:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659636246142676}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &4886477029220959
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609547760950716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8527226, y: 3.649638, z: -14.7112255}
+  m_LocalScale: {x: 1.2061015, y: 1.6401097, z: 1.2162392}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!33 &33960062256082106
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609547760950716}
+  m_Mesh: {fileID: 4300000, guid: 9739de7fd72152e4dbcfe6b83f62dced, type: 2}
+--- !u!23 &23461292137314864
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609547760950716}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e0b1249e902546343a8ddca38b9fbd7b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &4364642377408458
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551490818060592}
+  m_LocalRotation: {x: 0.6786386, y: -0.0067521483, z: 0.02167753, w: -0.7341214}
+  m_LocalPosition: {x: 8.950555, y: 29.71283, z: -2.863371}
+  m_LocalScale: {x: 2.109352, y: 2.6512938, z: 4.864956}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4456989912783194}
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: -85.47907, y: 1.1178327, z: 2.349798}
+--- !u!33 &33356635360178842
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551490818060592}
+  m_Mesh: {fileID: 4300000, guid: 7caf2b79f5d655c44894e9584cf304ff, type: 2}
+--- !u!23 &23833291213291858
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551490818060592}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4ce6766e39b20d941ae85f8c12d4b617, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &114594685842359062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551490818060592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3034dd1f6acdc61903342a7b27b597, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  signalOn: 0
+--- !u!4 &4456989912783194
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366283973288537}
+  m_LocalRotation: {x: -0.9989722, y: -0.010553839, z: -0.02010282, w: -0.039232254}
+  m_LocalPosition: {x: 0.2730749, y: 7.964457, z: -0.31683153}
+  m_LocalScale: {x: 0.5760279, y: 0.45748255, z: 0.25181738}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4364642377408458}
+  m_LocalEulerAnglesHint: {x: 175.47643, y: 2.2543802, z: -1.2996309}
+--- !u!114 &114693585299201814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366283973288537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114693585299201814}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: 0.20843506, y: -0.72096115, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 1, g: 0.8896551, b: 0, a: 0.14294118}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4456989912783194}
+  LensPosition: {x: 0.5729395, y: 0.13951942, z: 102.21764}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.45
+  GlobalTintColor: {r: 1, g: 0.8896551, b: 0, a: 0.45}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4769538791143894
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529204727917916}
+  m_LocalRotation: {x: 0.67852265, y: 0.008841431, z: -0.02632805, w: -0.73405427}
+  m_LocalPosition: {x: -8.921742, y: 29.715492, z: -2.863371}
+  m_LocalScale: {x: 2.109353, y: 2.651294, z: 4.864957}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4175205070683935}
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: -85.46442, y: -1.303487, z: -2.9040632}
+--- !u!33 &33776740979281946
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529204727917916}
+  m_Mesh: {fileID: 4300000, guid: 7caf2b79f5d655c44894e9584cf304ff, type: 2}
+--- !u!23 &23668755518662057
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529204727917916}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4ce6766e39b20d941ae85f8c12d4b617, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &114053602513060035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529204727917916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3034dd1f6acdc61903342a7b27b597, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  signalOn: 0
+--- !u!4 &4175205070683935
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386396194981190}
+  m_LocalRotation: {x: -0.9988428, y: 0.012364907, z: 0.02486858, w: -0.039266765}
+  m_LocalPosition: {x: -0.2593123, y: 7.965573, z: -0.3161472}
+  m_LocalScale: {x: 0.57573485, y: 0.45749047, z: 0.25210217}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4769538791143894}
+  m_LocalEulerAnglesHint: {x: 175.4602, y: -2.7918983, z: 1.5291702}
+--- !u!114 &114000994932096028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386396194981190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114000994932096028}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: -0.20855713, y: -0.72096115, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 1, g: 0.8896551, b: 0, a: 0.14294118}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4175205070683935}
+  LensPosition: {x: 0.42697263, y: 0.13951942, z: 102.21764}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.45
+  GlobalTintColor: {r: 1, g: 0.8896551, b: 0, a: 0.45}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4487001341644355
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036578343343360}
+  m_LocalRotation: {x: 0.7134363, y: -0.013369132, z: 0.013126152, w: -0.70046955}
+  m_LocalPosition: {x: 8.941299, y: 29.746977, z: -4.072417}
+  m_LocalScale: {x: 2.2149277, y: 2.6079514, z: 3.0056002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4810235041546556}
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: -91.05087, y: 3.8084767E-07, z: 2.147088}
+--- !u!33 &33995821787225499
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036578343343360}
+  m_Mesh: {fileID: 4300000, guid: 7caf2b79f5d655c44894e9584cf304ff, type: 2}
+--- !u!23 &23465244002554805
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036578343343360}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b4789a1819e2547479e4db7bdf467c5e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &4810235041546556
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406972283971950}
+  m_LocalRotation: {x: -0.9997825, y: 0.00017181318, z: -0.018734995, w: 0.009168923}
+  m_LocalPosition: {x: 0.09777282, y: 7.6470428, z: 0.14208542}
+  m_LocalScale: {x: 0.54890746, y: 0.4663371, z: 0.40488097}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4487001341644355}
+  m_LocalEulerAnglesHint: {x: -178.94838, y: 2.1467268, z: 0.03939621}
+--- !u!114 &114743946239771627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406972283971950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114743946239771627}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: 0.1920166, y: -0.7209611, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.14294118}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4810235041546556}
+  LensPosition: {x: 0.5671896, y: 0.13951945, z: 102.217636}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.45
+  GlobalTintColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.45}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4825596273516722
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685329046655399}
+  m_LocalRotation: {x: 0.7135363, y: 0.020320192, z: -0.0054900693, w: -0.700302}
+  m_LocalPosition: {x: -8.936195, y: 29.747345, z: -4.072463}
+  m_LocalScale: {x: 2.2149272, y: 2.6079524, z: 3.0056021}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4783831471661125}
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: -91.09431, y: 1.1818559, z: -2.1029756}
+--- !u!33 &33744806280421016
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685329046655399}
+  m_Mesh: {fileID: 4300000, guid: 7caf2b79f5d655c44894e9584cf304ff, type: 2}
+--- !u!23 &23578434965804032
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685329046655399}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b4789a1819e2547479e4db7bdf467c5e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &4783831471661125
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749797831434631}
+  m_LocalRotation: {x: -0.9997347, y: -0.01048648, z: 0.01825061, w: 0.009358078}
+  m_LocalPosition: {x: -0.23621735, y: 7.644417, z: 0.14561357}
+  m_LocalScale: {x: 0.5488823, y: 0.46637055, z: 0.40487257}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4825596273516722}
+  m_LocalEulerAnglesHint: {x: -178.90521, y: -2.0800223, z: -1.2218119}
+--- !u!114 &114091304005245449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749797831434631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114091304005245449}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: -0.1895752, y: -0.72096115, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.14294118}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4783831471661125}
+  LensPosition: {x: 0.43361732, y: 0.13951942, z: 102.21764}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.45
+  GlobalTintColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.45}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4148894319970531
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683848366778061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: -1}
+  m_LocalPosition: {x: 0, y: -73.44009, z: -14.717245}
+  m_LocalScale: {x: 109.46153, y: 261.4914, z: 1.2162392}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33348827386382110
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683848366778061}
+  m_Mesh: {fileID: 4300000, guid: 7caf2b79f5d655c44894e9584cf304ff, type: 2}
+--- !u!23 &23282890510773227
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683848366778061}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 32aa1e6affb64d54fa768e335fe444f4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &4614547608794002
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306738370022819}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.824709, y: -4.9767175, z: 13.294162}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.2162389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!123 &123494685907424956
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306738370022819}
+  m_Enabled: 1
+  m_Flare: {fileID: 12100000, guid: 8e679131003e60e41b35beca84ba9598, type: 2}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Brightness: 0.3
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
+--- !u!4 &4140674829751152
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377058434639300}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 3.304003, y: -4.9767194, z: 13.294167}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.2162389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!123 &123128064079815090
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377058434639300}
+  m_Enabled: 1
+  m_Flare: {fileID: 12100000, guid: 8e679131003e60e41b35beca84ba9598, type: 2}
+  m_Color: {r: 0, g: 0.6275859, b: 1, a: 0}
+  m_Brightness: 0.3
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
+--- !u!4 &4960289483056943
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836847107185878}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.0017352046, y: 88.886505, z: 4.179226}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.2162389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!82 &82136771675999317
+AudioSource:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836847107185878}
+  m_Enabled: 0
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: df58867e2a819574daa0a9c34d7c2242, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 13
+  MaxDistance: 350
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0325
+      value: 1
+      inSlope: -4.2825155
+      outSlope: -4.2825155
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.34116703
+      value: 0.3252016
+      inSlope: -1.0335445
+      outSlope: -1.0335445
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.12561244
+      outSlope: -0.12561244
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &4812564256676302
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435239249875681}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 9.16, y: 29.8, z: -4.1}
+  m_LocalScale: {x: 1.2162395, y: 1.2162389, z: 1.2162391}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114513265617579837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435239249875681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114513265617579837}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: 0.20843506, y: -0.38843966, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 0
+    FinalAngle: 0
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.27}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 0.4, y: 1}
+    type: 0
+  thisTransform: {fileID: 4812564256676302}
+  LensPosition: {x: 0.5729505, y: 0.30578017, z: 94.14546}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.85
+  GlobalTintColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.85}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4865698896552820
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508276434112711}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -9.05, y: 29.8, z: -4.1}
+  m_LocalScale: {x: 1.2162395, y: 1.2162389, z: 1.2162391}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114685491002103337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508276434112711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114685491002103337}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: -0.20581055, y: -0.38843966, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 0
+    FinalAngle: 0
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.27}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 0.4, y: 1}
+    type: 0
+  thisTransform: {fileID: 4865698896552820}
+  LensPosition: {x: 0.4279256, y: 0.30578017, z: 94.14546}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.85
+  GlobalTintColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.85}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4742208927952006
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472997692275643}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 9.160001, y: 29.80002, z: -24.02}
+  m_LocalScale: {x: 1.2162395, y: 1.2162389, z: 1.2162391}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114370208213328704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472997692275643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114370208213328704}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: 0.1920166, y: -0.7209606, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.1747059}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4742208927952006}
+  LensPosition: {x: 0.5671895, y: 0.13951969, z: 102.21765}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.55
+  GlobalTintColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.55}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4201994703650470
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421662833042964}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -9.05, y: 29.80002, z: -24.02}
+  m_LocalScale: {x: 1.2162395, y: 1.2162389, z: 1.2162391}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114951752114911685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421662833042964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114951752114911685}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: -0.1895752, y: -0.7209606, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.1747059}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4201994703650470}
+  LensPosition: {x: 0.43361732, y: 0.13951969, z: 102.21765}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.55
+  GlobalTintColor: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.55}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4018927209643423
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208353752515322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!65 &65736763066539634
+BoxCollider:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208353752515322}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  m_Size: {x: 19.42, y: 61.5, z: 20.87}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &4038196192994174
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543949523334751}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -8.314308, y: -28.769493, z: -22.916613}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.2162389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114730566009765148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543949523334751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114730566009765148}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: -0.12390137, y: -0.06827259, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 1, g: 1, b: 0.9254902, a: 0.15446368}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4038196192994174}
+  LensPosition: {x: 0.4566103, y: 0.4658637, z: 143.67175}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.4862745
+  GlobalTintColor: {r: 1, g: 1, b: 0.9254902, a: 0.4862745}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4247434159494536
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941484737801013}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 7.8357587, y: -28.769493, z: -22.916607}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.2162389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114121623830326883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941484737801013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114121623830326883}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: 0.116882324, y: -0.06827259, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 90
+    FinalAngle: 90
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 1, g: 1, b: 0.9254902, a: 0.15446368}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 1, y: 0.8}
+    type: 0
+  thisTransform: {fileID: 4247434159494536}
+  LensPosition: {x: 0.5408923, y: 0.4658637, z: 143.67175}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 0.4862745
+  GlobalTintColor: {r: 1, g: 1, b: 0.9254902, a: 0.4862745}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4719509131736994
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311075580730854}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -8.314308, y: -28.769512, z: -5.277011}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.2162389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114622753640013963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311075580730854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114622753640013963}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: -0.1303711, y: 0.16895401, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 0
+    FinalAngle: 0
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 1, g: 1, b: 0.9254902, a: 0.31764707}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 0.4, y: 1}
+    type: 0
+  thisTransform: {fileID: 4719509131736994}
+  LensPosition: {x: 0.4543385, y: 0.584477, z: 136.52365}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 1
+  GlobalTintColor: {r: 1, g: 1, b: 0.9254902, a: 1}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0
+--- !u!4 &4976299380367479
+Transform:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125604255119659}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 7.8357587, y: -28.769512, z: -5.2770133}
+  m_LocalScale: {x: 1.2162392, y: 1.2162389, z: 1.2162389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4303266961254109}
+  m_LocalEulerAnglesHint: {x: 90, y: -0, z: -0}
+--- !u!114 &114977326128282392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125604255119659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4846259f0690b97a47e0feeeb73f8b39, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Atlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+  FlareBatches: []
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 1
+    Visible: 1
+    elementTextureID: 9
+    SpriteName: Steak_SoftEnds
+    flare: {fileID: 114977326128282392}
+    flareAtlas: {fileID: 114313542652739906, guid: 4aed6ffebcf6d1e4e843e2a58cf8a89a, type: 2}
+    Brightness: 1
+    Scale: 0.17
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 1
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: 0.12298584, y: 0.16895401, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 0
+    FinalAngle: 0
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 1, g: 1, b: 0.9254902, a: 0.31764707}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.31764707}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements:
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5777831
+      offset: {x: 0, y: 0.30196127, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.78889155
+      random2: 0.06178665
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.5576205
+      RandomColorSeedG: 0.3452451
+      RandomColorSeedB: 0.30273554
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.1065563
+      offset: {x: 0, y: 0.055688497, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.55327815
+      random2: 0.45249695
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.20971358
+      RandomColorSeedG: 0.5951216
+      RandomColorSeedB: 0.30506417
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: -0.34707296
+      offset: {x: 0, y: -0.18138742, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.32646352
+      random2: 0.7986486
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.21480763
+      RandomColorSeedG: -0.99056554
+      RandomColorSeedB: -0.9954674
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.77629375
+      offset: {x: 0, y: 0.40570697, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.8881469
+      random2: 0.27343434
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: 0.33187672
+      RandomColorSeedG: 0.11310089
+      RandomColorSeedB: 0.13014448
+      RandomColorSeedA: 0.5
+    - color: {r: 1, g: 1, b: 1, a: 0.33}
+      colorFinal: {r: 0.97794116, g: 0.035953693, b: 0.035953693, a: 0.10749977}
+      position: 0.5365615
+      offset: {x: 0, y: 0.280418, z: 0}
+      angle: 0
+      scale: 1
+      random: 0.76828074
+      random2: 0.42515522
+      RandomScaleSeed: 0.5
+      RandomColorSeedR: -0.45045388
+      RandomColorSeedG: -0.995116
+      RandomColorSeedB: -0.17371547
+      RandomColorSeedA: 0.5
+    size: {x: 0.4, y: 1}
+    type: 0
+  thisTransform: {fileID: 4976299380367479}
+  LensPosition: {x: 0.54303336, y: 0.584477, z: 136.52365}
+  EditGlobals: 1
+  GlobalScale: 115
+  GlobalBrightness: 1
+  GlobalTintColor: {r: 1, g: 1, b: 0.9254902, a: 1}
+  useMaxDistance: 0
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 262144
+  RaycastPhysics: 1
+  Occluded: 0
+  OccludeScale: 1
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  DisabledPlayMode: 0

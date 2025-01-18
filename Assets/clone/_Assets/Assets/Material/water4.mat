@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: water4
+  m_Shader: {fileID: 10701, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties:
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _MainTex:
+        m_Texture: {fileID: 2800000, guid: 13e0d315c49c1d647960a4467a424012, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _EdgeFoamStrength: 1
+      _Fresnel0: 0.1
+      _Gloss: 10.8
+      _Reflectivity: 0.39999998
+      _Refractivity: 3.48
+      _Shininess: 0.6964603
+      _SpecAmount: 1
+      _WaterAttenuation: 1.0400001
+      _normalStrength: 1.4072
+      _refractionsWetness: 0.66
+    m_Colors:
+      _Color: {r: 0.682914, g: 0.63432837, b: 1, a: 1}
+      _DeepWaterTint: {r: 0.16072622, g: 0.6058144, b: 0.8283582, a: 1}
+      _MainColor: {r: 0.85820895, g: 0.89291304, b: 1, a: 1}
+      _ShallowWaterTint: {r: 0.08426154, g: 0.47087342, b: 0.6641791, a: 1}
+      _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_BuildTextureStacks: []
