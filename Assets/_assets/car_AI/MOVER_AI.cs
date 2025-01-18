@@ -10,7 +10,7 @@ public class MOVER_AI : MonoBehaviour
     public float maxX;
     float speed;
     int turnint;
-
+    private float targetSpeed=0f;
     void Start()
     {
          speed = Random.Range(speedrandommin, speedrandommax);
@@ -32,6 +32,13 @@ public class MOVER_AI : MonoBehaviour
             Debug.Log("rẽ phải");
             turnint = 0;
         }
-
+       
     }
+
+    public void OncolliderCars()
+    {
+        speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 2f);
+        Debug.Log($"{speed}");
+    }
+
 }

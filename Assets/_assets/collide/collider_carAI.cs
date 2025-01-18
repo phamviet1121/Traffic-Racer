@@ -1,37 +1,39 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class collider_carAI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
+    public string taggameObject;
+    public UnityEvent collider_cars;
+   
 
 
-        if (other.gameObject.CompareTag("back_trigger")|| other.gameObject.CompareTag("front_trigger") || other.gameObject.CompareTag("left_trigger") || other.gameObject.CompareTag("right_trigger"))
-        {
-
-            Destroy(other.gameObject);
-        }
-    }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("back_trigger") || collision.gameObject.CompareTag("front_trigger") || collision.gameObject.CompareTag("left_trigger") || collision.gameObject.CompareTag("right_trigger"))
-        {
 
-            Destroy(collision.gameObject);
+        if (collision.gameObject.CompareTag(taggameObject))
+        {
+           collider_cars.Invoke();
+           
+           
+
         }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("event");
+            collider_cars.Invoke();
+
+
+
+        }
+    }
+   
+   
+    public void destroyCar()
+    {
+     
+
     }
 }

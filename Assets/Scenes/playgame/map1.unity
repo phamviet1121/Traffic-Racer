@@ -5580,6 +5580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hummer
       objectReference: {fileID: 0}
+    - target: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4539505518515273, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37
@@ -5627,6 +5631,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 359368810}
+    - targetCorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359368815}
+    - targetCorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359368817}
+    - targetCorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359368816}
   m_SourcePrefab: {fileID: 100100000, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
 --- !u!1 &117944538
 GameObject:
@@ -8106,6 +8119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: jeep_commander
       objectReference: {fileID: 0}
+    - target: {fileID: 1102035464378643, guid: 2695a931e0b7b3e448139eb3208cc030, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4097305515718671, guid: 2695a931e0b7b3e448139eb3208cc030, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.5
@@ -8153,6 +8170,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1102035464378643, guid: 2695a931e0b7b3e448139eb3208cc030, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067118999}
+    - targetCorrespondingSourceObject: {fileID: 1102035464378643, guid: 2695a931e0b7b3e448139eb3208cc030, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067119004}
+    - targetCorrespondingSourceObject: {fileID: 1102035464378643, guid: 2695a931e0b7b3e448139eb3208cc030, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067119006}
+    - targetCorrespondingSourceObject: {fileID: 1102035464378643, guid: 2695a931e0b7b3e448139eb3208cc030, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067119005}
   m_SourcePrefab: {fileID: 100100000, guid: 2695a931e0b7b3e448139eb3208cc030, type: 3}
 --- !u!1 &190281226
 GameObject:
@@ -10469,6 +10495,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &231301014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231301007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.760427, y: 37.59562, z: 15.96652}
+  m_Center: {x: 0.0000011920929, y: 3.0762863, z: 7.947589}
+--- !u!114 &231301015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231301007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &231301016
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231301007}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &231800005
 GameObject:
   m_ObjectHideFlags: 0
@@ -11849,11 +11951,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1363082881}
+    m_TransformParent: {fileID: 1344493356}
     m_Modifications:
     - target: {fileID: 1132728257475566, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_Name
       value: lada_kalina
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132728257475566, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.86417025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0537635
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0537635
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11861,27 +11979,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.505377
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4415873760444753, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11902,6 +12020,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1132728257475566, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1066838315}
+    - targetCorrespondingSourceObject: {fileID: 1132728257475566, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1066838320}
   m_SourcePrefab: {fileID: 100100000, guid: a7bee8ccf50dd2e4abcdd257f140d8f0, type: 3}
 --- !u!1 &270895362 stripped
 GameObject:
@@ -14734,6 +14855,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &359368815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359368808}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.16595, y: 41.45417, z: 16.578026}
+  m_Center: {x: -0.0000872612, y: 0.10207843, z: 8.236048}
+--- !u!114 &359368816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359368808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &359368817
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359368808}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &360018794
 GameObject:
   m_ObjectHideFlags: 0
@@ -15758,6 +15955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ambulans_yeni
       objectReference: {fileID: 0}
+    - target: {fileID: 1957445606574130, guid: d1594d091689f1043ac5025e2e92d2a0, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4303266961254109, guid: d1594d091689f1043ac5025e2e92d2a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.6
@@ -15805,6 +16006,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1957445606574130, guid: d1594d091689f1043ac5025e2e92d2a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1534502066}
+    - targetCorrespondingSourceObject: {fileID: 1957445606574130, guid: d1594d091689f1043ac5025e2e92d2a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1534502072}
+    - targetCorrespondingSourceObject: {fileID: 1957445606574130, guid: d1594d091689f1043ac5025e2e92d2a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1534502074}
+    - targetCorrespondingSourceObject: {fileID: 1957445606574130, guid: d1594d091689f1043ac5025e2e92d2a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1534502073}
   m_SourcePrefab: {fileID: 100100000, guid: d1594d091689f1043ac5025e2e92d2a0, type: 3}
 --- !u!1 &400075364
 GameObject:
@@ -25744,6 +25954,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &614275492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614275481}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.315277, y: 33.2134, z: 11.795434}
+  m_Center: {x: 0.0000016689303, y: 1.7439916, z: 5.865091}
+--- !u!114 &614275493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614275481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &614275494
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614275481}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &616724738
 GameObject:
   m_ObjectHideFlags: 0
@@ -26111,6 +26397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lada_coupe
       objectReference: {fileID: 0}
+    - target: {fileID: 1835695455414966, guid: 5c812c30b547f964e95918a98c216835, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4605812133638226, guid: 5c812c30b547f964e95918a98c216835, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -26153,11 +26443,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4605812133638226, guid: 5c812c30b547f964e95918a98c216835, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1066838314}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1835695455414966, guid: 5c812c30b547f964e95918a98c216835, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1344493357}
+    - targetCorrespondingSourceObject: {fileID: 1835695455414966, guid: 5c812c30b547f964e95918a98c216835, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1344493362}
+    - targetCorrespondingSourceObject: {fileID: 1835695455414966, guid: 5c812c30b547f964e95918a98c216835, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1344493364}
+    - targetCorrespondingSourceObject: {fileID: 1835695455414966, guid: 5c812c30b547f964e95918a98c216835, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1344493363}
   m_SourcePrefab: {fileID: 100100000, guid: 5c812c30b547f964e95918a98c216835, type: 3}
 --- !u!1 &620366985 stripped
 GameObject:
@@ -33940,6 +34242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lada_combi
       objectReference: {fileID: 0}
+    - target: {fileID: 1104015886860031, guid: 2d969ab4d00ea174b9e3c9a6babfd35f, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4862652715658423, guid: 2d969ab4d00ea174b9e3c9a6babfd35f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.4
@@ -33987,6 +34293,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1104015886860031, guid: 2d969ab4d00ea174b9e3c9a6babfd35f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 614275487}
+    - targetCorrespondingSourceObject: {fileID: 1104015886860031, guid: 2d969ab4d00ea174b9e3c9a6babfd35f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 614275492}
+    - targetCorrespondingSourceObject: {fileID: 1104015886860031, guid: 2d969ab4d00ea174b9e3c9a6babfd35f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 614275494}
+    - targetCorrespondingSourceObject: {fileID: 1104015886860031, guid: 2d969ab4d00ea174b9e3c9a6babfd35f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 614275493}
   m_SourcePrefab: {fileID: 100100000, guid: 2d969ab4d00ea174b9e3c9a6babfd35f, type: 3}
 --- !u!1 &832713020
 GameObject:
@@ -39462,6 +39777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: isuzu
       objectReference: {fileID: 0}
+    - target: {fileID: 1827766791396026, guid: 7d59229272cc7ff45a504e72b0d50452, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4657410484332867, guid: 7d59229272cc7ff45a504e72b0d50452, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -39509,6 +39828,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1827766791396026, guid: 7d59229272cc7ff45a504e72b0d50452, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1568932545}
+    - targetCorrespondingSourceObject: {fileID: 1827766791396026, guid: 7d59229272cc7ff45a504e72b0d50452, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568932550}
+    - targetCorrespondingSourceObject: {fileID: 1827766791396026, guid: 7d59229272cc7ff45a504e72b0d50452, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568932552}
+    - targetCorrespondingSourceObject: {fileID: 1827766791396026, guid: 7d59229272cc7ff45a504e72b0d50452, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568932551}
   m_SourcePrefab: {fileID: 100100000, guid: 7d59229272cc7ff45a504e72b0d50452, type: 3}
 --- !u!1 &980958575
 GameObject:
@@ -41230,6 +41558,87 @@ Transform:
   - {fileID: 607942390}
   m_Father: {fileID: 1395388473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1021256352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+  m_PrefabInstance: {fileID: 1433243999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1021256357
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021256352}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1021256358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021256352}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.16595, y: 41.45417, z: 19.8}
+  m_Center: {x: -0.00008535385, y: 0.10207843, z: 8.236048}
+--- !u!114 &1021256359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021256352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1639318923}
+        m_TargetAssemblyTypeName: mover, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1024918851
 GameObject:
   m_ObjectHideFlags: 0
@@ -43600,6 +44009,27 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &1066838320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270895362}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.295452, y: 30.819048, z: 11.894439}
+  m_Center: {x: 0.0000030994415, y: 0.20131585, z: 5.9519334}
 --- !u!1 &1067528492
 GameObject:
   m_ObjectHideFlags: 0
@@ -53734,6 +54164,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &1344493362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620366985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.06785, y: 33.90996, z: 11.3346615}
+  m_Center: {x: -0.00000047683716, y: 0.74817175, z: 5.6365185}
+--- !u!114 &1344493363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620366985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &1344493364
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620366985}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1346161148
 GameObject:
   m_ObjectHideFlags: 0
@@ -54367,7 +54873,6 @@ Transform:
   - {fileID: 2067118998}
   - {fileID: 614275486}
   - {fileID: 1344493356}
-  - {fileID: 1066838314}
   m_Father: {fileID: 1165665105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1364350740
@@ -54966,23 +55471,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382418063}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1386072000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1578174378303630, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
-  m_PrefabInstance: {fileID: 1433243999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1386072005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386072000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1386658738
 GameObject:
   m_ObjectHideFlags: 0
@@ -55579,6 +56067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lancer_evo
       objectReference: {fileID: 0}
+    - target: {fileID: 1163967473318729, guid: eb2fbdc1c968b9f4abbd14cb2dbb931a, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4390999800811778, guid: eb2fbdc1c968b9f4abbd14cb2dbb931a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -273
@@ -55626,6 +56118,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1163967473318729, guid: eb2fbdc1c968b9f4abbd14cb2dbb931a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1410114684}
+    - targetCorrespondingSourceObject: {fileID: 1163967473318729, guid: eb2fbdc1c968b9f4abbd14cb2dbb931a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1410114689}
+    - targetCorrespondingSourceObject: {fileID: 1163967473318729, guid: eb2fbdc1c968b9f4abbd14cb2dbb931a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1410114691}
+    - targetCorrespondingSourceObject: {fileID: 1163967473318729, guid: eb2fbdc1c968b9f4abbd14cb2dbb931a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1410114690}
   m_SourcePrefab: {fileID: 100100000, guid: eb2fbdc1c968b9f4abbd14cb2dbb931a, type: 3}
 --- !u!1 &1410114683 stripped
 GameObject:
@@ -55648,6 +56149,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &1410114689
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410114683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1218.0836, y: 398.3642, z: 484.63483}
+  m_Center: {x: 70.24336, y: 197.93925, z: 0}
+--- !u!114 &1410114690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410114683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &1410114691
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410114683}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1412048256
 GameObject:
   m_ObjectHideFlags: 0
@@ -56567,11 +57144,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1809396865234464, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: front_trigger
       objectReference: {fileID: 0}
     - target: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       propertyPath: m_Name
       value: hummer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4539505518515273, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56617,18 +57202,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1578174378303630, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1386072005}
-    - targetCorrespondingSourceObject: {fileID: 1809396865234464, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      addedObject: {fileID: 1021256358}
+    - targetCorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1988811002}
-    - targetCorrespondingSourceObject: {fileID: 1385573039953852, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
+      addedObject: {fileID: 1021256357}
+    - targetCorrespondingSourceObject: {fileID: 1950744439386311, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1859956120}
-    - targetCorrespondingSourceObject: {fileID: 1646131277351501, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2108542704}
+      addedObject: {fileID: 1021256359}
   m_SourcePrefab: {fileID: 100100000, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
 --- !u!1 &1434441657
 GameObject:
@@ -60640,6 +61222,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &1534502072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534502064}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 24.706076, y: 61.720005, z: 28.1638}
+  m_Center: {x: 0.0000038146973, y: 0, z: -0.93711066}
+--- !u!114 &1534502073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534502064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &1534502074
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534502064}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1535979667
 GameObject:
   m_ObjectHideFlags: 0
@@ -62244,6 +62902,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &1568932550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568932543}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 683.8468, y: 372.2233, z: 273.67218}
+  m_Center: {x: 115.64908, y: 185.40906, z: -0.000015258787}
+--- !u!114 &1568932551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568932543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &1568932552
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568932543}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1571564322
 GameObject:
   m_ObjectHideFlags: 0
@@ -65699,9 +66433,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  speedTurm: 50
   navigation_car: {fileID: 29170733}
   minX: -35
   maxX: 60
+  maxSpeed: 200
+  minSpeed: 50
 --- !u!4 &1639318924
 Transform:
   m_ObjectHideFlags: 0
@@ -75533,23 +76270,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856689244}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1859956116 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1385573039953852, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
-  m_PrefabInstance: {fileID: 1433243999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1859956120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859956116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1863702768
 GameObject:
   m_ObjectHideFlags: 0
@@ -77956,6 +78676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gazel_bus
       objectReference: {fileID: 0}
+    - target: {fileID: 1852348572669880, guid: 1058152d4b0666f49aac8842255733ea, type: 3}
+      propertyPath: m_TagString
+      value: carAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4689741541513722, guid: 1058152d4b0666f49aac8842255733ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.2
@@ -78003,6 +78727,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1852348572669880, guid: 1058152d4b0666f49aac8842255733ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 231301009}
+    - targetCorrespondingSourceObject: {fileID: 1852348572669880, guid: 1058152d4b0666f49aac8842255733ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 231301014}
+    - targetCorrespondingSourceObject: {fileID: 1852348572669880, guid: 1058152d4b0666f49aac8842255733ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 231301016}
+    - targetCorrespondingSourceObject: {fileID: 1852348572669880, guid: 1058152d4b0666f49aac8842255733ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 231301015}
   m_SourcePrefab: {fileID: 100100000, guid: 1058152d4b0666f49aac8842255733ea, type: 3}
 --- !u!1 &1914855576
 GameObject:
@@ -80760,23 +81493,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986638341}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1988810997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1809396865234464, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
-  m_PrefabInstance: {fileID: 1433243999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1988811002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988810997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1991976113
 GameObject:
   m_ObjectHideFlags: 0
@@ -83590,6 +84306,82 @@ MonoBehaviour:
   speedrandommin: 120
   minX: -30
   maxX: 60
+--- !u!65 &2067119004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067118997}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.262535, y: 38.394714, z: 15.438082}
+  m_Center: {x: 0.00222826, y: -3.3523238, z: 7.631346}
+--- !u!114 &2067119005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067118997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taggameObject: carAI
+  collider_cars:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410114684}
+        m_TargetAssemblyTypeName: MOVER_AI, Assembly-CSharp
+        m_MethodName: OncolliderCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &2067119006
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067118997}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2069250991
 GameObject:
   m_ObjectHideFlags: 0
@@ -84909,23 +85701,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2055983248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2108542700 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1646131277351501, guid: 79c2b0450777b9145ae80e1e16e766f2, type: 3}
-  m_PrefabInstance: {fileID: 1433243999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2108542704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108542700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2df43721c6b4f4292cbe5d90abf473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2108830967
 GameObject:
   m_ObjectHideFlags: 0
