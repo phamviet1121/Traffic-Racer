@@ -16,24 +16,21 @@ public class collider_carAI : MonoBehaviour
         if (collision.gameObject.CompareTag(taggameObject))
         {
            collider_cars.Invoke();
-           
-           
 
+            StartCoroutine(DestroyCarAfterDelay(collision.gameObject, 1f));
         }
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("event");
             collider_cars.Invoke();
 
-
-
+          
         }
     }
-   
-   
-    public void destroyCar()
-    {
-     
 
+    private IEnumerator DestroyCarAfterDelay(GameObject car, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(car);
     }
+    
 }

@@ -6,39 +6,61 @@ public class MOVER_AI : MonoBehaviour
 {
     public float speedrandommax;
     public float speedrandommin;
-    public float minX; 
+    public float minX;
     public float maxX;
     float speed;
     int turnint;
-    private float targetSpeed=0f;
+    public bool isCollided = false;
     void Start()
     {
-         speed = Random.Range(speedrandommin, speedrandommax);
-       int turnint= Random.Range(0, 3);
-            
+        speed = Random.Range(speedrandommin, speedrandommax);
+        turnint = Random.Range(0, 3);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 0, 1f * speed * Time.deltaTime);
-        if (turnint==1 && transform.position.x >= minX )
+        if (!isCollided)
         {
-            Debug.Log("rẽ trái");
-            turnint = 0;
+
+            transform.position += new Vector3(0, 0, speed * Time.deltaTime);
+            if (turnint == 1 && transform.position.x >= minX)
+            {
+                //Debug.Log("rẽ trái");
+                turnint = 0;
+            }
+            else if (turnint == 2 && transform.position.x <= maxX)
+            {
+                //Debug.Log("rẽ phải");
+                turnint = 0;
+            }
         }
-        else if (turnint == 2 && transform.position.x <= maxX)
+        else
         {
-            Debug.Log("rẽ phải");
-            turnint = 0;
+
+            speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 2f); // Tăng tốc độ giảm dần
+            transform.position += new Vector3(0, 0, speed * Time.deltaTime);
+
+            // Kiểm tra nếu tốc độ gần bằng 0 thì dừng di chuyển
+            if (speed <= 0.01f)
+            {
+                speed = 0f;
+                enabled = false; // Vô hiệu hóa Update để dừng đối tượng
+                //Debug.Log("Đối tượng đã dừng.");
+            }
+
+
         }
-       
+
+
     }
 
     public void OncolliderCars()
     {
-        speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 2f);
-        Debug.Log($"{speed}");
+        isCollided = true;
+
+      //  Debug.Log("co chay ko.");
     }
 
 }
