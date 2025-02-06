@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: leon_body
-  m_Shader: {fileID: 4800000, guid: febce019c2dd27b4a83c01d03a5cfabc, type: 3}
-  m_Parent: {fileID: 0}
+  m_Shader: {fileID: 4800000, guid: f79bb71e2aee11d46855a5990050e6aa, type: 3}
+  m_Parent: {fileID: 2100000, guid: c2134b5d2b718724b84386325ce07340, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -19,28 +19,17 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties:
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-      _CubeTex:
-        m_Texture: {fileID: 8900000, guid: 145bfeab611c57d45a6aa2ea1fc1d651, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-      _MainTex:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 813a7d66311418a46904922d899a3443, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: {}
+    m_Ints: []
     m_Floats:
-      _BlendFactor: 0.38
-      _Cutoff: 0.5
-      _EmissionFactor: 0.25
-      _FresnelPower: 3
-      _Parallax: 0.02
-      _Shininess: 0.7
+    - _Cutoff: 0.5
     m_Colors:
-      _Color: {r: 0.9098039, g: 0.53333336, b: 0.039215688, a: 0}
-      _Emission: {r: 0, g: 0, b: 0, a: 0}
-      _SpecColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0.9098039, g: 0.53333336, b: 0.039215688, a: 0}
   m_BuildTextureStacks: []
