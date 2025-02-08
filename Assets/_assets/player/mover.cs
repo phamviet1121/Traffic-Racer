@@ -6,6 +6,11 @@ public class mover : MonoBehaviour
 {
     public float speed;
     public float speedTurm;
+
+    public float accelerate;
+    public float deceleration;
+    public float speedRunTime;
+
     public GameObject navigation_car;
     public float minX; // Giới hạn biên trái
     public float maxX;  // Giới hạn biên phải
@@ -18,11 +23,37 @@ public class mover : MonoBehaviour
     private float targetSpeed;
 
     private bool canIncreaseSpeed = true;
+
+    public Rigidbody player_rb;
+    private Rigidbody rb;
+
+
+    public Transform vitri;
     void Start()
     {
-        targetSpeed = minSpeed;
-    }
+        player_rb=GetComponent<Rigidbody>();
+        GameObject B = GameObject.Find("oto");
 
+        targetSpeed = minSpeed;
+        if (B != null)
+        {
+            
+            Transform A = B.transform.GetChild(0); // Giả sử A là child đầu tiên của B (cần kiểm tra lại logic nếu có nhiều child)
+            navigation_car = B.transform.GetChild(0).gameObject;
+            if (A != null)
+            {
+                rb = A.GetComponent<Rigidbody>(); // Chỉ lấy Rigidbody của A, bỏ qua các child của A
+                if (rb != null)
+                {
+                    Debug.Log("Tìm thấy Rigidbody của A: " + A.gameObject.name);
+                }
+                else
+                {
+                    Debug.Log("A không có Rigidbody.");
+                }
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -31,34 +62,80 @@ public class mover : MonoBehaviour
         {
             // Nếu người chơi nhấn K, tăng dần tốc độ đến maxSpeed
             targetSpeed = maxSpeed;
+            speedRunTime = accelerate;
         }
         else
         {
             if (!canIncreaseSpeed)
             {
-                targetSpeed = minSpeed-30;
+                targetSpeed = minSpeed - 30;
+
+                speedRunTime = 10f;
             }
             else
             {
                 // Nếu không nhấn K, giảm tốc độ về minSpeed
                 targetSpeed = minSpeed;
+                speedRunTime = deceleration;
             }
 
         }
-
-        // Lấy tốc độ thực tế với sự chuyển tiếp mượt mà
-        speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 5f);
-
-
-        if (Input.GetKey(KeyCode.A) && turnleft)
+        if (Input.GetKey(KeyCode.J))
         {
-            navigation_car.transform.position += new Vector3(-1f * speedTurm * Time.deltaTime, 0, 0);
+            targetSpeed = minSpeed;
+            speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 5f);
         }
-        if (Input.GetKey(KeyCode.D) && turnright)
+        else
         {
-            navigation_car.transform.position += new Vector3(1f * speedTurm * Time.deltaTime, 0, 0);
+            speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * speedRunTime);
         }
-        transform.position += new Vector3(0, 0, 1f * speed * Time.deltaTime);
+
+        player_rb.velocity=new Vector3(0, 0, speed);
+
+
+
+
+        //if (Input.GetKey(KeyCode.A) && turnleft&& canIncreaseSpeed)
+        //{
+        //    // navigation_car.transform.position += new Vector3(-1f * speedTurm * Time.deltaTime, 0, 0);
+        //    rb.velocity = new Vector3(-speedTurm, 0f, 0f);
+        //}
+        //if (Input.GetKey(KeyCode.D) && turnright&& canIncreaseSpeed)
+        //{
+        //    // navigation_car.transform.position += new Vector3(1f * speedTurm * Time.deltaTime, 0, 0);
+        //    rb.velocity = new Vector3(speedTurm, 0f, 0f);
+        //}
+        ////transform.position += new Vector3(0, 0, 1f * speed * Time.deltaTime);
+        //rb.velocity = new Vector3(0, 0, speed);
+        Vector3 moveDirection = new Vector3(0, 0, speed);
+
+        if (Input.GetKey(KeyCode.A) && turnleft )
+        {
+             moveDirection.x = -speedTurm;
+            if(!canIncreaseSpeed)
+            {
+                moveDirection.x = -5;
+
+            } 
+          
+        }
+        else if (Input.GetKey(KeyCode.D) && turnright )
+        {
+            moveDirection.x = speedTurm;
+            if (!canIncreaseSpeed)
+            {
+                moveDirection.x = 5;
+
+            } 
+            
+        }
+        else
+        {
+            moveDirection.x = 0f;
+        }
+        rb.velocity = moveDirection; // Gán giá trị cuối cùng
+
+
 
 
         Vector3 position = navigation_car.transform.position;
@@ -82,6 +159,15 @@ public class mover : MonoBehaviour
             turnleft = true;
             turnright = true;
         }
+
+        if(position.z!=vitri.position.z&& canIncreaseSpeed)
+        {
+          
+            position.z = Mathf.Lerp(position.z, vitri.position.z, Time.deltaTime * 5f);
+            navigation_car.transform.position = position;
+        }
+
+
     }
     public void OncolliderCars()
     {
