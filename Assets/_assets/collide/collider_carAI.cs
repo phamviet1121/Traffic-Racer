@@ -15,7 +15,7 @@ public class collider_carAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(taggameObject))
         {
-            Debug.Log("có chạm ko ");
+         
            collider_cars.Invoke();
 
             StartCoroutine(DestroyCarAfterDelay(collision.gameObject, 2f));

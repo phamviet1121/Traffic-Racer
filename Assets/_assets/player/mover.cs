@@ -29,28 +29,30 @@ public class mover : MonoBehaviour
 
 
     public Transform vitri;
+
+    private bool gameover = false;
     void Start()
     {
-        player_rb=GetComponent<Rigidbody>();
+        player_rb = GetComponent<Rigidbody>();
         GameObject B = GameObject.Find("oto");
 
         targetSpeed = minSpeed;
         if (B != null)
         {
-            
+
             Transform A = B.transform.GetChild(0); // Giả sử A là child đầu tiên của B (cần kiểm tra lại logic nếu có nhiều child)
             navigation_car = B.transform.GetChild(0).gameObject;
             if (A != null)
             {
                 rb = A.GetComponent<Rigidbody>(); // Chỉ lấy Rigidbody của A, bỏ qua các child của A
-                if (rb != null)
-                {
-                    Debug.Log("Tìm thấy Rigidbody của A: " + A.gameObject.name);
-                }
-                else
-                {
-                    Debug.Log("A không có Rigidbody.");
-                }
+                //if (rb != null)
+                //{
+                //    Debug.Log("Tìm thấy Rigidbody của A: " + A.gameObject.name);
+                //}
+                //else
+                //{
+                //    Debug.Log("A không có Rigidbody.");
+                //}
             }
         }
     }
@@ -87,10 +89,18 @@ public class mover : MonoBehaviour
         }
         else
         {
-            speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * speedRunTime);
+            if (gameover)
+            {
+                speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.5f);
+            }
+            else
+            {
+                speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * speedRunTime);
+            }
+
         }
 
-        player_rb.velocity=new Vector3(0, 0, speed);
+
 
 
 
@@ -109,25 +119,25 @@ public class mover : MonoBehaviour
         //rb.velocity = new Vector3(0, 0, speed);
         Vector3 moveDirection = new Vector3(0, 0, speed);
 
-        if (Input.GetKey(KeyCode.A) && turnleft )
+        if (Input.GetKey(KeyCode.A) && turnleft)
         {
-             moveDirection.x = -speedTurm;
-            if(!canIncreaseSpeed)
+            moveDirection.x = -speedTurm;
+            if (!canIncreaseSpeed)
             {
                 moveDirection.x = -5;
 
-            } 
-          
+            }
+
         }
-        else if (Input.GetKey(KeyCode.D) && turnright )
+        else if (Input.GetKey(KeyCode.D) && turnright)
         {
             moveDirection.x = speedTurm;
             if (!canIncreaseSpeed)
             {
                 moveDirection.x = 5;
 
-            } 
-            
+            }
+
         }
         else
         {
@@ -147,11 +157,19 @@ public class mover : MonoBehaviour
         navigation_car.transform.position = position;
         if (position.x <= minX)
         {
+            if (turnleft)
+            {
+                StartCoroutine(DisableSpeedIncreaseFence(0.1f));
+            }
             turnleft = false;
 
         }
         else if (position.x >= maxX)
         {
+            if (turnright)
+            {
+                StartCoroutine(DisableSpeedIncreaseFence(0.1f));
+            }
             turnright = false;
         }
         else
@@ -160,12 +178,21 @@ public class mover : MonoBehaviour
             turnright = true;
         }
 
-        if(position.z!=vitri.position.z&& canIncreaseSpeed)
+        if (position.z != vitri.position.z && canIncreaseSpeed)
         {
-          
-            position.z = Mathf.Lerp(position.z, vitri.position.z, Time.deltaTime * 5f);
-            navigation_car.transform.position = position;
+            if (!gameover)
+            {
+
+                position.z = Mathf.Lerp(position.z, vitri.position.z, Time.deltaTime * 5f);
+                navigation_car.transform.position = position;
+            }
+
         }
+
+        player_rb.velocity = new Vector3(0, 0, speed);
+
+
+
 
 
     }
@@ -180,12 +207,35 @@ public class mover : MonoBehaviour
         {
             speed -= 30;
         }
-        StartCoroutine(DisableSpeedIncrease(2f));
+        StartCoroutine(DisableSpeedIncrease(1.5f));
     }
     private IEnumerator DisableSpeedIncrease(float duration)
     {
-        canIncreaseSpeed = false; // Tắt khả năng tăng tốc
-        yield return new WaitForSeconds(duration); // Chờ trong 1 giây
-        canIncreaseSpeed = true; // Bật lại khả năng tăng tốc
+        if (speed <= 300)
+        {
+            canIncreaseSpeed = false;
+            yield return new WaitForSeconds(duration);
+            canIncreaseSpeed = true;
+        }
+        else
+        {
+
+            gameover = true;
+
+
+            //navigation_car.transform.position = navigation_car.transform.position;
+            yield return new WaitForSeconds(duration);
+            Time.timeScale = 0;
+        }
+
+    }
+    private IEnumerator DisableSpeedIncreaseFence(float duration)
+    {
+
+        canIncreaseSpeed = false; 
+        yield return new WaitForSeconds(duration); 
+        canIncreaseSpeed = true; 
+
+
     }
 }
