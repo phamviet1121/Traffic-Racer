@@ -15,8 +15,8 @@ public class collider_carAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(taggameObject))
         {
-         
-           collider_cars.Invoke();
+           
+            collider_cars.Invoke();
 
             StartCoroutine(DestroyCarAfterDelay(collision.gameObject, 2f));
         }
@@ -30,9 +30,10 @@ public class collider_carAI : MonoBehaviour
 
     private IEnumerator DestroyCarAfterDelay(GameObject car, float delay)
     {
-        Debug.Log("có xóa ko ");
+       
         yield return new WaitForSeconds(delay);
         Destroy(car);
     }
     
+   
 }

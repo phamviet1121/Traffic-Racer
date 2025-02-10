@@ -12,6 +12,7 @@ TagManager:
   - front_trigger
   - right_trigger
   - carAI
+  - plus_point
   layers:
   - Default
   - TransparentFX
