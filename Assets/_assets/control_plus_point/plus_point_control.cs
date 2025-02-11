@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class plus_point_control : MonoBehaviour
 {
+    public mover mover;
     public TextMeshProUGUI point;
     public TextMeshProUGUI obstaclePassCount_txt;
     public int obstaclesCleared = 0;
@@ -14,6 +15,9 @@ public class plus_point_control : MonoBehaviour
 
     public GameObject point_txt;
     public int plus_point;
+   // private float speed_player;
+   // private bool canIncreaseSpeed_player;
+
     void Start()
     {
         obstaclePassCount_txt.enabled = false;
@@ -24,22 +28,28 @@ public class plus_point_control : MonoBehaviour
     {
         point.text = score.ToString();
         obstaclePassCount_txt.text = obstaclesCleared.ToString();
+       // canIncreaseSpeed_player = mover.canIncreaseSpeed;
+        //speed_player = mover.speed;
     }
 
 
 
     public void obstaclePassCount(Vector3 hitPosition, GameObject player)
     {
-        point.enabled = true;
-        obstaclePassCount_txt.enabled = true;
-        if (obstaclesCleared <= 3)
+        if (mover.canIncreaseSpeed == true && mover.speed >= 300)
         {
-            AddScore(100, hitPosition, player);
+            point.enabled = true;
+            obstaclePassCount_txt.enabled = true;
+            if (obstaclesCleared <= 3)
+            {
+                AddScore(100, hitPosition, player);
+            }
+            else
+            {
+                AddScore(120, hitPosition, player);
+            }
         }
-        else
-        {
-            AddScore(120, hitPosition, player);
-        }
+
     }
 
 
@@ -82,7 +92,7 @@ public class plus_point_control : MonoBehaviour
         TextMeshPro tmp = point_txt.GetComponent<TextMeshPro>();
 
 
-      
+
         tmp.text = "+ " + plus_point.ToString();
         Vector3 position_point_txt = new Vector3(player.transform.position.x, 30f, player.transform.position.z);
         if (hitPosition.x <= player.transform.position.x)

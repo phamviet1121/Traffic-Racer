@@ -23,13 +23,15 @@ public class mover : MonoBehaviour
     public float minSpeed;
     private float targetSpeed;
 
-    private bool canIncreaseSpeed = true;
+    public bool canIncreaseSpeed = true;
 
     public Rigidbody player_rb;
     private Rigidbody rb;
 
 
     public Transform vitri;
+
+    public GameObject explosion;
 
     public bool gameover = false;
     void Start()
@@ -94,7 +96,7 @@ public class mover : MonoBehaviour
 
 
     }
-    public void OncolliderCars()
+    public void OncolliderCars(Vector3 contactPoint)
     {
 
         if (speed - 30 <= 0)
@@ -105,9 +107,9 @@ public class mover : MonoBehaviour
         {
             speed -= 30;
         }
-        StartCoroutine(DisableSpeedIncrease(1.5f));
+        StartCoroutine(DisableSpeedIncrease(1.5f, contactPoint));
     }
-    private IEnumerator DisableSpeedIncrease(float duration)
+    private IEnumerator DisableSpeedIncrease(float duration,Vector3 contactPoint)
     {
         if (speed <= 300)
         {
@@ -123,7 +125,7 @@ public class mover : MonoBehaviour
 
             //// Giữ nguyên vị trí hiện tại của A
             //navigation_car.transform.position = navigation_car.transform.position;
-
+            Instantiate(explosion, new Vector3 (contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
 
             //navigation_car.transform.position = navigation_car.transform.position;
             yield return new WaitForSeconds(duration);

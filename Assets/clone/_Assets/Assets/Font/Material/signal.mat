@@ -19,15 +19,15 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties:
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: {}
-    m_Ints: {}
+    m_TexEnvs: []
+    m_Ints: []
     m_Floats:
-      _Shininess: 0.7
+    - _Shininess: 0.7
     m_Colors:
-      _Color: {r: 1, g: 0.9020979, b: 0, a: 1}
-      _Emission: {r: 0.37313432, g: 0.35225967, b: 0, a: 0}
-      _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.9020979, b: 0, a: 1}
+    - _Emission: {r: 0.37313432, g: 0.35225967, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

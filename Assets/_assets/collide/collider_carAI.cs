@@ -7,7 +7,9 @@ public class collider_carAI : MonoBehaviour
 {
     public string taggameObject;
     public UnityEvent collider_cars;
-   
+    public UnityEvent<Vector3> Player_collider_cars;
+
+
 
 
     public void OnCollisionEnter(Collision collision)
@@ -15,7 +17,8 @@ public class collider_carAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(taggameObject))
         {
-           
+            Vector3 contactPoint = collision.contacts[0].point;
+            Player_collider_cars.Invoke(contactPoint);
             collider_cars.Invoke();
 
             StartCoroutine(DestroyCarAfterDelay(collision.gameObject, 2f));
