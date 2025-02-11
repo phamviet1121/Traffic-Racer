@@ -34,6 +34,11 @@ public class mover : MonoBehaviour
     public GameObject explosion;
 
     public bool gameover = false;
+    TurnSignal turnSignalScript;
+
+    bool accelerate_Inactive;
+    bool deceleration_Inactive;
+
     void Start()
     {
         control_Rb();
@@ -46,31 +51,34 @@ public class mover : MonoBehaviour
 
         Vector3 moveDirection = new Vector3(0, 0, speed);
 
-     
+
 
         if (Input.GetKey(KeyCode.A) && turnleft)
         {
+          
             moveDirection.x = -speedTurm;
             if (!canIncreaseSpeed)
             {
                 moveDirection.x = -5;
 
             }
-
+            turnSignalScript.turnLeft();
         }
         else if (Input.GetKey(KeyCode.D) && turnright)
         {
+          
             moveDirection.x = speedTurm;
             if (!canIncreaseSpeed)
             {
                 moveDirection.x = 5;
 
             }
-
+            turnSignalScript.turnRight();
         }
         else
         {
             moveDirection.x = 0f;
+            turnSignalScript.Inactive_Turn();
         }
 
         if (!gameover)
@@ -109,7 +117,7 @@ public class mover : MonoBehaviour
         }
         StartCoroutine(DisableSpeedIncrease(1.5f, contactPoint));
     }
-    private IEnumerator DisableSpeedIncrease(float duration,Vector3 contactPoint)
+    private IEnumerator DisableSpeedIncrease(float duration, Vector3 contactPoint)
     {
         if (speed <= 300)
         {
@@ -125,7 +133,7 @@ public class mover : MonoBehaviour
 
             //// Giữ nguyên vị trí hiện tại của A
             //navigation_car.transform.position = navigation_car.transform.position;
-            Instantiate(explosion, new Vector3 (contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
+            Instantiate(explosion, new Vector3(contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
 
             //navigation_car.transform.position = navigation_car.transform.position;
             yield return new WaitForSeconds(duration);
@@ -185,7 +193,7 @@ public class mover : MonoBehaviour
             }
 
         }
-    }    
+    }
     public void turn(Vector3 moveDirection)
     {
         if (Input.GetKey(KeyCode.A) && turnleft)
@@ -212,18 +220,23 @@ public class mover : MonoBehaviour
         {
             moveDirection.x = 0f;
         }
-    }    
+    }
     public void accelerate_deceleration_cars()
     {
 
         if (Input.GetKey(KeyCode.K) && canIncreaseSpeed)
         {
+
+            accelerate_Inactive = false;
+            turnSignalScript.Acceleration_car();
             // Nếu người chơi nhấn K, tăng dần tốc độ đến maxSpeed
             targetSpeed = maxSpeed;
             speedRunTime = accelerate;
+           
         }
         else
         {
+            accelerate_Inactive = true;
             if (!canIncreaseSpeed)
             {
                 targetSpeed = minSpeed - 30;
@@ -236,15 +249,23 @@ public class mover : MonoBehaviour
                 targetSpeed = minSpeed;
                 speedRunTime = deceleration;
             }
-
+            if (deceleration_Inactive)
+            {
+                turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
+            }
         }
         if (Input.GetKey(KeyCode.J))
         {
+          deceleration_Inactive = false;
+            turnSignalScript.Deceleration_car();
             targetSpeed = minSpeed;
             speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 5f);
+          
+           
         }
         else
         {
+            deceleration_Inactive = true;
             if (gameover)
             {
                 speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.5f);
@@ -253,7 +274,10 @@ public class mover : MonoBehaviour
             {
                 speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * speedRunTime);
             }
-
+            if (accelerate_Inactive)
+            {
+                turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
+            }
         }
     }
 
@@ -270,18 +294,21 @@ public class mover : MonoBehaviour
             navigation_car = B.transform.GetChild(0).gameObject;
             if (A != null)
             {
-                rb = A.GetComponent<Rigidbody>(); // Chỉ lấy Rigidbody của A, bỏ qua các child của A
-                                                  //if (rb != null)
-                                                  //{
-                                                  //    Debug.Log("Tìm thấy Rigidbody của A: " + A.gameObject.name);
-                                                  //}
-                                                  //else
-                                                  //{
-                                                  //    Debug.Log("A không có Rigidbody.");
-                                                  //}
+                rb = A.GetComponent<Rigidbody>();
+                // Chỉ lấy Rigidbody của A, bỏ qua các child của A
+                //if (rb != null)
+                //{
+                //    Debug.Log("Tìm thấy Rigidbody của A: " + A.gameObject.name);
+                //}
+                //else
+                //{
+                //    Debug.Log("A không có Rigidbody.");
+                //}
+
+                turnSignalScript = navigation_car.GetComponent<TurnSignal>();
             }
         }
-    }    
+    }
 
 
 }
