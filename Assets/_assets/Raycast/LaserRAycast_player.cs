@@ -12,6 +12,7 @@ public class LaserRAycast_player : MonoBehaviour
         //{
 
 
+     //   Vector3 poss=new Vector3(transform.position.x,1000f,transform.position.z);
             // Tạo một ray từ vị trí của camera (hoặc từ vị trí nào khác)
             Ray ray = new Ray(transform.position, transform.forward);
             
