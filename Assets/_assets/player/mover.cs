@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class mover : MonoBehaviour
@@ -43,6 +44,7 @@ public class mover : MonoBehaviour
     bool hasCheckedBrake_right;
     bool hasCheckedBrake;
 
+    public UnityEvent Spamplayer;
     void Start()
     {
         control_Rb();
@@ -140,17 +142,28 @@ public class mover : MonoBehaviour
     {
         hasWrongWayCrash = true;
     }
+
+
+    //map_1_1
     public void l_v_2_OncolliderCars(Vector3 contactPoint)
     {
-        if (speed - 30 <= 0)
-        {
-            speed = 0;
-        }
-        else
-        {
-            speed -= 30;
-        }
-        StartCoroutine(DisableSpeedIncrease_LV2(1.5f, contactPoint));
+       
+        StartCoroutine(DisableSpeedIncrease_1_1(1.5f, contactPoint));
+    }
+     private IEnumerator DisableSpeedIncrease_1_1(float duration, Vector3 contactPoint)
+    {
+
+            gameover = true;
+            navigation_car.transform.SetParent(null);
+
+           
+            Instantiate(explosion, new Vector3(contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
+
+           
+            yield return new WaitForSeconds(duration);
+            Time.timeScale = 0;
+        
+
     }
     private IEnumerator DisableSpeedIncrease_LV2(float duration, Vector3 contactPoint)
     {

@@ -8,6 +8,7 @@ public class collider_carAI : MonoBehaviour
     public string taggameObject;
     public UnityEvent collider_cars;
     public UnityEvent<Vector3> Player_collider_cars;
+    public UnityEvent<Vector3> collider_cars_1_1;
 
 
 
@@ -29,8 +30,19 @@ public class collider_carAI : MonoBehaviour
 
           
         }
-    }
 
+
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("front_trigger"))
+        {
+            Vector3 contactPoint = other.ClosestPointOnBounds(transform.position);
+            collider_cars_1_1.Invoke(contactPoint);
+
+
+        }
+    }
     private IEnumerator DestroyCarAfterDelay(GameObject car, float delay)
     {
        

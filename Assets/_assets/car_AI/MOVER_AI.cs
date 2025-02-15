@@ -25,6 +25,8 @@ public class MOVER_AI : MonoBehaviour
 
     public UnityEvent event_turrn_left;
     public UnityEvent event_turrn_right;
+
+    public UnityEvent event_mover;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,20 +38,40 @@ public class MOVER_AI : MonoBehaviour
 
     void Update()
     {
+        //    if (!isCollided)
+        //    {
+
+        //        rb.velocity = new Vector3(0, 0, speed);
+
+        //    }
+        //    else
+        //    {
+
+        //        speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.75f);
+        //        rb.velocity = new Vector3(0, 0, speed);
+
+
+        //        if (speed <= 0.01f)
+        //        {
+        //            speed = 0f;
+        //            enabled = false;
+
+        //        }
+
+
+        //    }
+        event_mover.Invoke();
+
+    }
+
+    public void Mover_carAI()
+    {
+
         if (!isCollided)
         {
 
             rb.velocity = new Vector3(0, 0, speed);
-            //if (turnint == 1 && transform.position.x >= minX)
-            //{
-            //    //Debug.Log("rẽ trái");
-            //    turnint = 0;
-            //}
-            //else if (turnint == 2 && transform.position.x <= maxX)
-            //{
-            //    //Debug.Log("rẽ phải");
-            //    turnint = 0;
-            //}
+
         }
         else
         {
@@ -67,147 +89,32 @@ public class MOVER_AI : MonoBehaviour
 
 
         }
+    }
+    public void Mover_carAI_1_1()
+    {
+
+        if (!isCollided)
+        {
+
+            rb.velocity = new Vector3(0, 0, -speed);
+
+        }
+        else
+        {
+
+            speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.75f);
+            rb.velocity = new Vector3(0, 0, -speed);
 
 
-        //if (turn_left_right = true)
-        //{
+            if (speed <= 0.01f)
+            {
+                speed = 0f;
+                enabled = false;
+
+            }
 
 
-        //    if (!Blockage_left() && !Blockage_right())
-        //    {
-        //        if (transform.position.x >= minX + 30f || transform.position.x <= maxX - 30f)
-        //        {
-        //            // Sử dụng Lerp để di chuyển mượt mà trái hoặc phải
-        //            transform.position = new Vector3(
-        //                Mathf.Lerp(transform.position.x, transform.position.x + 30f /*hoặc*/ /*transform.position.x - 30f*/,
-        //                Time.deltaTime * 0.75f),
-        //                transform.position.y,  // Giữ nguyên giá trị Y
-        //                transform.position.z   // Giữ nguyên giá trị Z
-        //            );
-
-        //        }
-        //        else if (transform.position.x <= minX)
-        //        {
-        //            // Di chuyển phải khi ở gần minX
-        //            transform.position = new Vector3(
-        //                Mathf.Lerp(transform.position.x, transform.position.x + 30f, Time.deltaTime * 0.75f),
-        //                transform.position.y,
-        //                transform.position.z
-        //            );
-        //        }
-        //        else if (transform.position.x >= maxX)
-        //        {
-        //            // Di chuyển trái khi ở gần maxX
-        //            transform.position = new Vector3(
-        //                Mathf.Lerp(transform.position.x, transform.position.x - 30f, Time.deltaTime * 0.75f),
-        //                transform.position.y,
-        //                transform.position.z
-        //            );
-        //        }
-        //        else
-        //        {
-        //            // Không làm gì nếu không vào điều kiện nào
-        //            transform.position = transform.position;
-        //        }
-        //    }
-        //    else if (Blockage_left() && !Blockage_right())
-        //    {
-        //        if (transform.position.x < maxX)
-        //        {
-        //            // Rẽ sang phải nếu có vật cản bên trái
-        //            transform.position = new Vector3(
-        //                Mathf.Lerp(transform.position.x, transform.position.x + 30f, Time.deltaTime * 0.75f),
-        //                transform.position.y,
-        //                transform.position.z
-        //            );
-        //        }
-        //        else
-        //        {
-        //            transform.position = transform.position;
-        //        }
-        //    }
-        //    else if (!Blockage_left() && Blockage_right())
-        //    {
-        //        if (transform.position.x > minX)
-        //        {
-        //            // Rẽ sang trái nếu có vật cản bên phải
-        //            transform.position = new Vector3(
-        //                Mathf.Lerp(transform.position.x, transform.position.x - 30f, Time.deltaTime * 0.75f),
-        //                transform.position.y,
-        //                transform.position.z
-        //            );
-        //        }
-        //        else
-        //        {
-        //            transform.position = transform.position;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        // Không làm gì nếu có vật cản cả hai bên
-        //        transform.position = transform.position;
-        //    }
-        //    turn_left_right = false;
-        //}
-        //if (turn_left_right && !isMoving) // Check if the object is ready to move
-        //{
-        //    isMoving = true; // Set moving flag to true
-
-        //    if (!on_left_turn && !on_right_turn)
-        //    {
-
-        //        if (transform.position.x >= minX + 30f || transform.position.x <= maxX - 30f)
-        //        {
-        //            float targetX = Random.Range(0f, 1f) > 0.5f ? transform.position.x + 30f : transform.position.x - 30f; // Randomly choose +30f or -30f
-        //            // Move smoothly left or right using Lerp
-        //            StartCoroutine(MoveToTarget(targetX)); // Move right by 30f or left by 30f
-        //        }
-        //        else if (transform.position.x <= minX)
-        //        {
-        //            // Move right when near minX
-        //            StartCoroutine(MoveToTarget(transform.position.x + 30f));
-        //        }
-        //        else if (transform.position.x >= maxX)
-        //        {
-        //            // Move left when near maxX
-        //            StartCoroutine(MoveToTarget(transform.position.x - 30f));
-        //        }
-        //        else
-        //        {
-        //            isMoving = false; // No action, reset moving flag
-        //        }
-        //    }
-        //    else if (on_left_turn && !on_right_turn)
-        //    {
-        //        if (transform.position.x < maxX)
-        //        {
-        //            // Move right if there's a blockage on the left
-        //            StartCoroutine(MoveToTarget(transform.position.x + 30f));
-        //        }
-        //        else
-        //        {
-        //            isMoving = false; // No action, reset moving flag
-        //        }
-        //    }
-        //    else if (!on_left_turn && on_right_turn)
-        //    {
-        //        if (transform.position.x > minX)
-        //        {
-        //            // Move left if there's a blockage on the right
-        //            StartCoroutine(MoveToTarget(transform.position.x - 30f));
-        //        }
-        //        else
-        //        {
-        //            isMoving = false; // No action, reset moving flag
-        //        }
-        //    }
-        //    else
-        //    {
-        //        isMoving = false; // No action, reset moving flag
-        //    }
-
-        //    turn_left_right = false; // Reset the turn flag after the action
-        //}
+        }
     }
 
     private IEnumerator MoveToTarget(float targetX)
