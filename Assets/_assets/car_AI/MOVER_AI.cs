@@ -21,6 +21,8 @@ public class MOVER_AI : MonoBehaviour
     public bool on_left_turn;
     public bool on_right_turn;
 
+    private Coroutine resetSpeedCoroutine;
+
     public UnityEvent event_turrn_left;
     public UnityEvent event_turrn_right;
     void Start()
@@ -216,7 +218,7 @@ public class MOVER_AI : MonoBehaviour
         while (timeElapsed < 1f) // Move smoothly over time
         {
             transform.position = new Vector3(Mathf.Lerp(startX, targetX, timeElapsed), transform.position.y, transform.position.z);
-            timeElapsed += Time.deltaTime * 0.75f; // Adjust the speed factor here if needed
+            timeElapsed += Time.deltaTime * 0.38f; // Adjust the speed factor here if needed
             yield return null; // Wait until the next frame
         }
 
@@ -235,7 +237,22 @@ public class MOVER_AI : MonoBehaviour
     }
     public void Blockage_Ahead()
     {
+        if (resetSpeedCoroutine != null)
+        {
+            StopCoroutine(resetSpeedCoroutine); // Dừng Coroutine đang chạy (nếu có)
+            resetSpeedCoroutine = null;
+        }
+
+
         speed = Mathf.Lerp(speed, speedrandommin - 5f, Time.deltaTime * 0.75f);
+        resetSpeedCoroutine = StartCoroutine(ResetSpeedAfterDelay(5f));
+    }
+    private IEnumerator ResetSpeedAfterDelay(float delay)
+    {
+
+        yield return new WaitForSeconds(delay);
+        float targetSpeed = Random.Range(80f, 120f);
+        speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 0.75f);
     }
     public void Blockage_left(bool turn)
     {

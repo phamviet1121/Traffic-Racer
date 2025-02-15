@@ -36,8 +36,12 @@ public class mover : MonoBehaviour
     public bool gameover = false;
     TurnSignal turnSignalScript;
 
+    brake_suddenly brake_suddenlyScript;
     bool accelerate_Inactive;
     bool deceleration_Inactive;
+    bool hasCheckedBrake_left;
+    bool hasCheckedBrake_right;
+    bool hasCheckedBrake;
 
     void Start()
     {
@@ -55,7 +59,7 @@ public class mover : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A) && turnleft)
         {
-          
+
             moveDirection.x = -speedTurm;
             if (!canIncreaseSpeed)
             {
@@ -63,10 +67,20 @@ public class mover : MonoBehaviour
 
             }
             turnSignalScript.turnLeft();
+
+            if (!hasCheckedBrake_left)
+            {
+                hasCheckedBrake_left = true; // Đánh dấu đã kiểm tra
+                if (speed >= 250)
+                {
+                    brake_suddenlyScript.turn_suddenly_left();
+                }
+            }
+
         }
         else if (Input.GetKey(KeyCode.D) && turnright)
         {
-          
+
             moveDirection.x = speedTurm;
             if (!canIncreaseSpeed)
             {
@@ -74,6 +88,15 @@ public class mover : MonoBehaviour
 
             }
             turnSignalScript.turnRight();
+
+            if (!hasCheckedBrake_right)
+            {
+                hasCheckedBrake_right = true; // Đánh dấu đã kiểm tra
+                if (speed >= 250)
+                {
+                    brake_suddenlyScript.turnle_suddenly_right();
+                }
+            }
         }
         else
         {
@@ -93,6 +116,14 @@ public class mover : MonoBehaviour
         }
         // Gán giá trị cuối cùng
 
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            hasCheckedBrake_left = false;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            hasCheckedBrake_right = false;
+        }
 
 
         correct_location();
@@ -102,6 +133,65 @@ public class mover : MonoBehaviour
 
 
 
+
+    }
+    bool hasWrongWayCrash = false;
+    public void OnWrongWayCollision()
+    {
+        hasWrongWayCrash = true;
+    }
+    public void l_v_2_OncolliderCars(Vector3 contactPoint)
+    {
+        if (speed - 30 <= 0)
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed -= 30;
+        }
+        StartCoroutine(DisableSpeedIncrease_LV2(1.5f, contactPoint));
+    }
+    private IEnumerator DisableSpeedIncrease_LV2(float duration, Vector3 contactPoint)
+    {
+        if (speed <= 300)
+        {
+            if (hasWrongWayCrash)
+            {
+                gameover = true;
+                navigation_car.transform.SetParent(null);
+
+                //// Giữ nguyên vị trí hiện tại của A
+                //navigation_car.transform.position = navigation_car.transform.position;
+                Instantiate(explosion, new Vector3(contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
+
+                //navigation_car.transform.position = navigation_car.transform.position;
+                yield return new WaitForSeconds(duration);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                canIncreaseSpeed = false;
+                yield return new WaitForSeconds(duration);
+                canIncreaseSpeed = true;
+            }
+
+
+        }
+        else
+        {
+
+            gameover = true;
+            navigation_car.transform.SetParent(null);
+
+            //// Giữ nguyên vị trí hiện tại của A
+            //navigation_car.transform.position = navigation_car.transform.position;
+            Instantiate(explosion, new Vector3(contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
+
+            //navigation_car.transform.position = navigation_car.transform.position;
+            yield return new WaitForSeconds(duration);
+            Time.timeScale = 0;
+        }
 
     }
     public void OncolliderCars(Vector3 contactPoint)
@@ -121,6 +211,7 @@ public class mover : MonoBehaviour
     {
         if (speed <= 300)
         {
+
             canIncreaseSpeed = false;
             yield return new WaitForSeconds(duration);
             canIncreaseSpeed = true;
@@ -232,7 +323,7 @@ public class mover : MonoBehaviour
             // Nếu người chơi nhấn K, tăng dần tốc độ đến maxSpeed
             targetSpeed = maxSpeed;
             speedRunTime = accelerate;
-           
+
         }
         else
         {
@@ -256,12 +347,20 @@ public class mover : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.J))
         {
-          deceleration_Inactive = false;
+            deceleration_Inactive = false;
             turnSignalScript.Deceleration_car();
             targetSpeed = minSpeed;
             speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 5f);
-          
-           
+            if (!hasCheckedBrake)
+            {
+                hasCheckedBrake = true; // Đánh dấu đã kiểm tra
+                if (speed >= 250)
+                {
+                    brake_suddenlyScript.brake();
+                }
+            }
+
+
         }
         else
         {
@@ -278,6 +377,10 @@ public class mover : MonoBehaviour
             {
                 turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
             }
+        }
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            hasCheckedBrake = false;
         }
     }
 
@@ -306,6 +409,7 @@ public class mover : MonoBehaviour
                 //}
 
                 turnSignalScript = navigation_car.GetComponent<TurnSignal>();
+                brake_suddenlyScript = navigation_car.GetComponent<brake_suddenly>();
             }
         }
     }

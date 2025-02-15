@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class LaserRaycast : MonoBehaviour
 {
    // public Transform startPoint; // Điểm xuất phát của tia laser (ví dụ: vật A)
-    public LayerMask hitLayers; // Lớp của vật thể có thể bị ảnh hưởng
+   // public LayerMask hitLayers; // Lớp của vật thể có thể bị ảnh hưởng
     public float rayDistance_infront = 10f;
     //public float rayDistance_left_right = 10f;
 
