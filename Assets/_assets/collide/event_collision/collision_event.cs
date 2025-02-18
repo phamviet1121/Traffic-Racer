@@ -93,4 +93,6 @@ public class collision_event : MonoBehaviour
         TurnSignal.SetActive(false);
    
     }
+
+
 }

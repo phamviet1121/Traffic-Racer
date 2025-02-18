@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class plus_point_control : MonoBehaviour
 {
@@ -15,8 +16,10 @@ public class plus_point_control : MonoBehaviour
 
     public GameObject point_txt;
     public int plus_point;
-   // private float speed_player;
-   // private bool canIncreaseSpeed_player;
+    // private float speed_player;
+    // private bool canIncreaseSpeed_player;
+
+    public UnityEvent/*<float>*/ event_award;
 
     void Start()
     {
@@ -58,7 +61,7 @@ public class plus_point_control : MonoBehaviour
         plus_point = Mathf.Min(plus_point + points, 540);
         obstaclesCleared++;
         score += plus_point;
-
+        event_award.Invoke();
         // Nếu đã có một coroutine đang chạy, hủy nó để reset lại thời gian
         if (resetCoroutine != null)
         {

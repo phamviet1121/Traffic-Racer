@@ -19,6 +19,7 @@ public class collider_carAI : MonoBehaviour
         if (collision.gameObject.CompareTag(taggameObject))
         {
             Vector3 contactPoint = collision.contacts[0].point;
+
             Player_collider_cars.Invoke(contactPoint);
             collider_cars.Invoke();
 

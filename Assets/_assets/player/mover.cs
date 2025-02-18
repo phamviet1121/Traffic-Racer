@@ -45,8 +45,13 @@ public class mover : MonoBehaviour
     bool hasCheckedBrake;
 
     public UnityEvent Spamplayer;
+    public bool spam_car_player;
+
+
     void Start()
     {
+        spam_car_player = true;
+        Spamplayer.Invoke();
         control_Rb();
     }
     // Update is called once per frame
@@ -112,7 +117,7 @@ public class mover : MonoBehaviour
         }
         else
         {
-            Debug.Log("mayf cos chay ko may dung lai chua ha");
+            //Debug.Log("mayf cos chay ko may dung lai chua ha");
             rb.velocity = new Vector3(0, 0, 0);
             navigation_car.transform.position = navigation_car.transform.position;
         }
@@ -147,47 +152,42 @@ public class mover : MonoBehaviour
     //map_1_1
     public void l_v_2_OncolliderCars(Vector3 contactPoint)
     {
-       
+
         StartCoroutine(DisableSpeedIncrease_1_1(1.5f, contactPoint));
     }
-     private IEnumerator DisableSpeedIncrease_1_1(float duration, Vector3 contactPoint)
+    private IEnumerator DisableSpeedIncrease_1_1(float duration, Vector3 contactPoint)
     {
 
-            gameover = true;
-            navigation_car.transform.SetParent(null);
+        gameover = true;
+        navigation_car.transform.SetParent(null);
 
-           
-            Instantiate(explosion, new Vector3(contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
 
-           
-            yield return new WaitForSeconds(duration);
-            Time.timeScale = 0;
-        
+        Instantiate(explosion, new Vector3(contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
+
+
+        yield return new WaitForSeconds(duration);
+        Time.timeScale = 0;
+
 
     }
-    private IEnumerator DisableSpeedIncrease_LV2(float duration, Vector3 contactPoint)
+
+    int a;
+    public void l_v_3_OncolliderCars(Vector3 contactPoint)
+    {
+
+        
+        StartCoroutine(DisableSpeedIncrease_1_2(1.5f, contactPoint));
+    }
+    private IEnumerator DisableSpeedIncrease_1_2(float duration, Vector3 contactPoint)
     {
         if (speed <= 300)
         {
-            if (hasWrongWayCrash)
-            {
-                gameover = true;
-                navigation_car.transform.SetParent(null);
 
-                //// Giữ nguyên vị trí hiện tại của A
-                //navigation_car.transform.position = navigation_car.transform.position;
-                Instantiate(explosion, new Vector3(contactPoint.x, 10f, contactPoint.z), Quaternion.identity);
 
-                //navigation_car.transform.position = navigation_car.transform.position;
-                yield return new WaitForSeconds(duration);
-                Time.timeScale = 0;
-            }
-            else
-            {
-                canIncreaseSpeed = false;
-                yield return new WaitForSeconds(duration);
-                canIncreaseSpeed = true;
-            }
+            canIncreaseSpeed = false;
+            yield return new WaitForSeconds(duration);
+            canIncreaseSpeed = true;
+
 
 
         }
@@ -203,8 +203,36 @@ public class mover : MonoBehaviour
 
             //navigation_car.transform.position = navigation_car.transform.position;
             yield return new WaitForSeconds(duration);
-            Time.timeScale = 0;
+            a++;
+            Debug.Log($"goij may lan {a}");
+            if (spam_car_player)
+            {
+
+
+                StartCoroutine(delay_spamcar(0.1f));
+            }
+            //Spamplayer.Invoke();
+            // control_Rb();
+            //gameover = false;
+
         }
+
+    }
+
+    private IEnumerator delay_spamcar(float a)
+    {
+
+
+      
+        canIncreaseSpeed = false;
+        Spamplayer.Invoke();
+        control_Rb();
+        gameover = false; 
+        spam_car_player = false;
+        yield return new WaitForSeconds(a);
+
+        canIncreaseSpeed = true;
+        spam_car_player = true;
 
     }
     public void OncolliderCars(Vector3 contactPoint)
@@ -345,7 +373,7 @@ public class mover : MonoBehaviour
             {
                 targetSpeed = minSpeed - 30;
 
-                speedRunTime = 10f;
+                speedRunTime = 2f;
             }
             else
             {
@@ -380,7 +408,7 @@ public class mover : MonoBehaviour
             deceleration_Inactive = true;
             if (gameover)
             {
-                speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.5f);
+                speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.15f);
             }
             else
             {
