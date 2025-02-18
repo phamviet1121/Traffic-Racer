@@ -13,18 +13,18 @@ public class TurnSignal : MonoBehaviour
     public void turnLeft()
     {
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, 0f, 5f);
+        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, 0f, 3f);
     }
 
     public void turnRight()
     {
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, 0f, -5f);
+        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, 0f, -3f);
     }
     public void Acceleration_car()
     {
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(-5f, 0f, currentRotation.z);
+        body_car.transform.rotation = Quaternion.Euler(-3f, 0f, currentRotation.z);
       
      
     }
@@ -33,7 +33,7 @@ public class TurnSignal : MonoBehaviour
 
 
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(5f, 0f, currentRotation.z);
+        body_car.transform.rotation = Quaternion.Euler(3f, 0f, currentRotation.z);
     }
     public void Inactive()
     {

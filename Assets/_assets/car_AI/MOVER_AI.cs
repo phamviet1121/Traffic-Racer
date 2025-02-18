@@ -152,7 +152,7 @@ public class MOVER_AI : MonoBehaviour
 
 
         speed = Mathf.Lerp(speed, speedrandommin - 5f, Time.deltaTime * 0.75f);
-        resetSpeedCoroutine = StartCoroutine(ResetSpeedAfterDelay(5f));
+       // resetSpeedCoroutine = StartCoroutine(ResetSpeedAfterDelay(5f));
     }
     private IEnumerator ResetSpeedAfterDelay(float delay)
     {
@@ -196,7 +196,7 @@ public class MOVER_AI : MonoBehaviour
                         event_turrn_left.Invoke();
                         targetX = transform.position.x - 27f;
                     }
-                     Debug.Log("may co chay ko chuyen lan di chu 1_1" );
+                  //   Debug.Log("may co chay ko chuyen lan di chu 1_1" );
                     //float targetX = Random.Range(0f, 1f) > 0.5f ? transform.position.x + 27f : transform.position.x - 27f; 
                     // Move smoothly left or right using Lerp
                     StartCoroutine(MoveToTarget(targetX)); // Move right by 30f or left by 30f
@@ -206,19 +206,19 @@ public class MOVER_AI : MonoBehaviour
                     event_turrn_right.Invoke();
                     // Move right when near minX
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                    Debug.Log("may co chay ko chuyen lan di chu 1_2");
+                  //  Debug.Log("may co chay ko chuyen lan di chu 1_2");
                 }
                 else if (transform.position.x > minX && !on_left_turn)
                 {
                     event_turrn_left.Invoke();
                     // Move left when near maxX
                     StartCoroutine(MoveToTarget(transform.position.x - 27f));
-                     Debug.Log("may co chay ko chuyen lan di chu 1_3");
+                  //   Debug.Log("may co chay ko chuyen lan di chu 1_3");
                 }
                 else
                 {
                     isMoving = false; // No action, reset moving flag
-                                        Debug.Log("may co chay ko chuyen lan di chu 1_4");
+                                        //Debug.Log("may co chay ko chuyen lan di chu 1_4");
                 }
             }
             else if (on_left_turn && !on_right_turn)
@@ -228,12 +228,12 @@ public class MOVER_AI : MonoBehaviour
                     event_turrn_right.Invoke();
                     // Move right if there's a blockage on the left
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                      Debug.Log("may co chay ko chuyen lan di chu 2_1");
+                     // Debug.Log("may co chay ko chuyen lan di chu 2_1");
                 }
                 else
                 {
                     isMoving = false; // No action, reset moving flag
-                                       Debug.Log("may co chay ko chuyen lan di chu 2_2");
+                                     //  Debug.Log("may co chay ko chuyen lan di chu 2_2");
                 }
             }
             else if (!on_left_turn && on_right_turn)
@@ -243,12 +243,12 @@ public class MOVER_AI : MonoBehaviour
                     event_turrn_left.Invoke();
                     // Move left if there's a blockage on the right
                     StartCoroutine(MoveToTarget(transform.position.x - 27f));
-                     Debug.Log("may co chay ko chuyen lan di chu 3_1");
+                    // Debug.Log("may co chay ko chuyen lan di chu 3_1");
                 }
                 else
                 {
                     isMoving = false; // No action, reset moving flag
-                                       Debug.Log("may co chay ko chuyen lan di chu 3_2");
+                                      // Debug.Log("may co chay ko chuyen lan di chu 3_2");
                 }
             }
             else

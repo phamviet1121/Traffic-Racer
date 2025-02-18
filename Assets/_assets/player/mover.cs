@@ -171,7 +171,7 @@ public class mover : MonoBehaviour
 
     }
 
-    int a;
+   // int a;
     public void l_v_3_OncolliderCars(Vector3 contactPoint)
     {
 
@@ -185,7 +185,7 @@ public class mover : MonoBehaviour
 
 
             canIncreaseSpeed = false;
-            yield return new WaitForSeconds(duration);
+            yield return new WaitForSeconds(duration-1f);
             canIncreaseSpeed = true;
 
 
@@ -203,13 +203,13 @@ public class mover : MonoBehaviour
 
             //navigation_car.transform.position = navigation_car.transform.position;
             yield return new WaitForSeconds(duration);
-            a++;
-            Debug.Log($"goij may lan {a}");
+          //  a++;
+           // Debug.Log($"goij may lan {a}");
             if (spam_car_player)
             {
 
 
-                StartCoroutine(delay_spamcar(0.1f));
+                StartCoroutine(delay_spamcar(0.2f));
             }
             //Spamplayer.Invoke();
             // control_Rb();
@@ -373,7 +373,7 @@ public class mover : MonoBehaviour
             {
                 targetSpeed = minSpeed - 30;
 
-                speedRunTime = 2f;
+                speedRunTime = 10f;
             }
             else
             {
