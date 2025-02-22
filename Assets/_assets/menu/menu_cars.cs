@@ -32,6 +32,7 @@ public class menu_cars : MonoBehaviour
             {
 
                 RotationCarMenu.car = cars[i];
+                RotationCarMenu.start_carrotation();
             }
         }
     }

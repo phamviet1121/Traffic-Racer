@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: leon_body
-  m_Shader: {fileID: 4800000, guid: f79bb71e2aee11d46855a5990050e6aa, type: 3}
-  m_Parent: {fileID: 2100000, guid: c2134b5d2b718724b84386325ce07340, type: 2}
+  m_Shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 2100000, guid: 550afa28b6a5515499ee75c31767a239, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []

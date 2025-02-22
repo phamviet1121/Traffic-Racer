@@ -6,10 +6,10 @@ public class spam_player_car : MonoBehaviour
 {
     public GameObject player_car;  // Đối tượng bạn muốn tạo
     public Transform folder_car;  // Thư mục (hoặc đối tượng cha) mà bạn muốn tạo GameObject B bên trong
-
+    public list_cars list_cars;
     void Start()
     {
-       
+        loadplayer();
     }
 
 
@@ -25,4 +25,9 @@ public class spam_player_car : MonoBehaviour
         newB.transform.localPosition = Vector3.zero;
         newB.transform.SetSiblingIndex(0);
     }
+
+    public void loadplayer()
+    {
+        player_car = list_cars.player;
+    }    
 }

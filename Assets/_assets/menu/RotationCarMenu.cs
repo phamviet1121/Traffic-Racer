@@ -53,9 +53,9 @@ public class RotationCarMenu : MonoBehaviour
 {
     public GameObject car;
     private Vector2 startTouchPosition, endTouchPosition;
-    private float rotationSpeed = 0.2f;
-    private float minXRotation = 75f;
-    private float maxXRotation = 100f;
+    public float rotationSpeed = 0.2f;
+    public float minXRotation = 75f;
+    public float maxXRotation = 100f;
     private float idleTime = 0f;
     private float autoRotateDelay = 2f;
     private float autoRotateSpeed = 10f;
@@ -64,8 +64,9 @@ public class RotationCarMenu : MonoBehaviour
 
     void Start()
     {
-        currentRotation = car.transform.eulerAngles;
-        currentRotation.y = 0f; // Đảm bảo trục Y luôn cố định
+        //currentRotation = car.transform.eulerAngles;
+        //currentRotation.y = 0f; // Đảm bảo trục Y luôn cố định
+        start_carrotation();
     }
 
     void Update()
@@ -104,5 +105,16 @@ public class RotationCarMenu : MonoBehaviour
             }
         }
     }
+
+
+    public void start_carrotation()
+    {
+        currentRotation = car.transform.eulerAngles;
+        currentRotation.y = 0f; // Đảm bảo trục Y luôn cố định
+        Debug.Log("Initial Rotation: " + currentRotation);
+    }
+        
+
+
 }
 
