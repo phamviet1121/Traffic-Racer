@@ -7,7 +7,7 @@ public class load_playerData : MonoBehaviour
 
     public int indexcar;
 
-    void Start()
+    void Awake()
     {
         Debug.Log("player_car:"+PlayerData.Instance.playerLevel+" name"+ PlayerData.Instance.playerName);
 

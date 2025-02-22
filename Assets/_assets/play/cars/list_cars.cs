@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +8,11 @@ public class list_cars : MonoBehaviour
     public GameObject[] List_player_cars;
     public load_playerData load_playerData;
     public GameObject player;
-    void Start()
+    public int a;
+    void Awake()
     {
+        Debug.Log("list chạy");
+        a = load_playerData.indexcar;
         start_loadscene();
     }
 

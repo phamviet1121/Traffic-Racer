@@ -7,8 +7,9 @@ public class spam_player_car : MonoBehaviour
     public GameObject player_car;  // Đối tượng bạn muốn tạo
     public Transform folder_car;  // Thư mục (hoặc đối tượng cha) mà bạn muốn tạo GameObject B bên trong
     public list_cars list_cars;
-    void Start()
+    void Awake()
     {
+        Debug.Log("spam chay");
         loadplayer();
     }
 
@@ -29,5 +30,5 @@ public class spam_player_car : MonoBehaviour
     public void loadplayer()
     {
         player_car = list_cars.player;
-    }    
+    }
 }
