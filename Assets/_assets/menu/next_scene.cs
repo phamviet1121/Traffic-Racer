@@ -9,7 +9,6 @@ public class next_scene : MonoBehaviour
 
     public int number;
 
-    public string map;
     void Start()
     {
 
@@ -21,7 +20,7 @@ public class next_scene : MonoBehaviour
 
     }
 
-    public void nextScene()
+    public void nextScene(string map)
     {
 
         number= menu_cars.index;

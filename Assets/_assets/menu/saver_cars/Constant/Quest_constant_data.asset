@@ -1,0 +1,543 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9ed50c97b9ee142a89faf68425edf7, type: 3}
+  m_Name: Quest_constant_data
+  m_EditorClassIdentifier: 
+  QuestInfo_Constants:
+  - car_index: 0
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 25
+    index_handling: 15
+    index_barking: 15
+    status_car: 1
+  - car_index: 1
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 27
+    index_handling: 14
+    index_barking: 15
+    status_car: 0
+  - car_index: 2
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 3
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 4
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 5
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 6
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 7
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 8
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 9
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 10
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 11
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 12
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 13
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 14
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 15
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 16
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 17
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 18
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 19
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 20
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 21
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 22
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 23
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 24
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 25
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 26
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 27
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 28
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 29
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 30
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 31
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 32
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 33
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 34
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 35
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 36
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 37
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 38
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 39
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 40
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 41
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 42
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0
+  - car_index: 43
+    index_color:
+    - 0.9
+    - 0.58
+    - 0.03
+    - 1
+    index_wheel: 0
+    index_Sticker: -1
+    index_speed: 0
+    index_handling: 0
+    index_barking: 0
+    status_car: 0

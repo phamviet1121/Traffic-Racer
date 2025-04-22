@@ -19,28 +19,28 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties:
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-      _CubeTex:
+    - _CubeTex:
         m_Texture: {fileID: 8900000, guid: 145bfeab611c57d45a6aa2ea1fc1d651, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-      _MainTex:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: d7233a18c4df4ba4997c9f1b84a8d8eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: {}
+    m_Ints: []
     m_Floats:
-      _BlendFactor: 0.38
-      _Cutoff: 0.5
-      _EmissionFactor: 0.25
-      _FresnelPower: 3
-      _Parallax: 0.02
-      _Shininess: 0.7
+    - _BlendFactor: 0.38
+    - _Cutoff: 0.5
+    - _EmissionFactor: 0.25
+    - _FresnelPower: 3
+    - _Parallax: 0.02
+    - _Shininess: 0.7
     m_Colors:
-      _Color: {r: 0.9098039, g: 0.53333336, b: 0.039215688, a: 0}
-      _Emission: {r: 0, g: 0, b: 0, a: 0}
-      _SpecColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0.9, g: 0.58, b: 0.03, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

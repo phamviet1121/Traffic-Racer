@@ -11,6 +11,7 @@ public class Collision_plus_point : MonoBehaviour
     // public int plus_point;
     //int point = 0;
     public UnityEvent<Vector3,GameObject> Event_plus_point;
+   // public UnityEvent vuotqua_carAI_event;
     //public void Collision_player_plus_point(Vector3 hitPosition, GameObject player)
     //{
     //    TextMeshPro tmp = point_txt.GetComponent<TextMeshPro>();
@@ -41,10 +42,11 @@ public class Collision_plus_point : MonoBehaviour
             GameObject player = other.gameObject;
 
 
-           // Debug.Log($"player {player}");
+           Debug.Log($"player {player}");
             Vector3 car = transform.position;
             //Debug.Log($"car {car}");
             Event_plus_point.Invoke(hitPosition, player);
+         //   vuotqua_carAI_event.Invoke();
             //  Collision_player_plus_point(hitPosition, player);
 
         }

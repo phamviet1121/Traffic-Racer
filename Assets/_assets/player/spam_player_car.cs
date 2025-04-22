@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class spam_player_car : MonoBehaviour
 {
     public GameObject player_car;  // Đối tượng bạn muốn tạo
     public Transform folder_car;  // Thư mục (hoặc đối tượng cha) mà bạn muốn tạo GameObject B bên trong
     public list_cars list_cars;
+    public UnityEvent UnityEvent_loadCar;
     void Awake()
     {
         Debug.Log("spam chay");
-        loadplayer();
+        UnityEvent_loadCar.Invoke();
     }
 
 

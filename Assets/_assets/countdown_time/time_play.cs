@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TimePlay : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class TimePlay : MonoBehaviour
 
     private bool isGameOver = false;
     private Color defaultColor;
+    public UnityEvent event_over;
     void Start()
     {
         countdownTime = startTime;
@@ -49,6 +51,7 @@ public class TimePlay : MonoBehaviour
         isGameOver = true;
         yield return new WaitForSeconds(delay);
         Time.timeScale = 0;
+        event_over.Invoke();
        // gameOverPanel.SetActive(true); // Hiển thị giao diện Game Over
     }
 

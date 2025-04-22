@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class mover : MonoBehaviour
 {
@@ -48,11 +49,26 @@ public class mover : MonoBehaviour
     public bool spam_car_player;
 
 
+
+
+    private bool isAccelerating;
+    private bool isDecelerating;
+    public Vector3 moveDirection;
+
+    public bool input_left;
+    public bool input_right;
+
+
+    public UnityEvent event_gameOver;
     void Start()
     {
         spam_car_player = true;
         Spamplayer.Invoke();
         control_Rb();
+        input_left = false;
+        input_right = false;
+
+
     }
     // Update is called once per frame
     void Update()
@@ -60,11 +76,125 @@ public class mover : MonoBehaviour
         accelerate_deceleration_cars();
 
 
+        //  moveDirection = new Vector3(0, 0, speed);
+
+        //A2();
+        //A1();
+
+        //if (!gameover)
+        //{
+        //    rb.velocity = moveDirection;
+        //}
+        //else
+        //{
+        //    rb.velocity = Vector3.zero;
+        //}
+
+        //if (input_left == false && input_right == false)
+        //{
+        //    Debug.Log("may chyaj nhieeuf thees");
+        //    moveDirection.x = 0f;
+        //    turnSignalScript.Inactive_Turn();
+        //}
+
+        a();
+
+        correct_location();
+
+        player_rb.velocity = new Vector3(0, 0, speed);
+
+
+
+
+
+    }
+
+
+    public void input_getkey_left()
+    {
+
+        input_left = true;
+
+
+    }
+    public void getkeyup_left()
+    {
+        hasCheckedBrake_left = false;
+        input_left = false;
+    }
+
+    public void input_getkey_right()
+    {
+
+        input_right = true;
+
+
+    }
+    public void getkeyup_right()
+    {
+        hasCheckedBrake_right = false;
+        input_right = false;
+    }
+
+    public void A1()
+    {
+
+        // moveDirection = new Vector3(0, 0, speed);
+        // Vector3 moveDirection = new Vector3(0, 0, speed);
+        if (input_left && turnleft)
+        {
+            //input_left = true;
+            moveDirection.x = -speedTurm;
+            if (!canIncreaseSpeed)
+            {
+                moveDirection.x = -5;
+
+            }
+            turnSignalScript.turnLeft();
+
+            if (!hasCheckedBrake_left)
+            {
+                hasCheckedBrake_left = true; // Đánh dấu đã kiểm tra
+                if (speed >= 250)
+                {
+                    brake_suddenlyScript.turn_suddenly_left();
+                }
+            }
+            Debug.Log("may chyaj nhieeuf thees HAM AN DAY NE");
+        }
+
+    }
+    public void A2()
+    {
+        //moveDirection = new Vector3(0, 0, speed);
+        // Vector3 moveDirection = new Vector3(0, 0, speed);
+        if (input_right && turnright)
+        {
+            // input_right = true;
+            moveDirection.x = speedTurm;
+            if (!canIncreaseSpeed)
+            {
+                moveDirection.x = 5;
+
+            }
+            turnSignalScript.turnRight();
+
+            if (!hasCheckedBrake_right)
+            {
+                hasCheckedBrake_right = true; // Đánh dấu đã kiểm tra
+                if (speed >= 250)
+                {
+                    brake_suddenlyScript.turnle_suddenly_right();
+                }
+            }
+        }
+
+    }
+    public void a()
+    {
         Vector3 moveDirection = new Vector3(0, 0, speed);
-
-
-
-        if (Input.GetKey(KeyCode.A) && turnleft)
+        // Vector3 moveDirection = new Vector3(0, 0, speed);
+        if (input_left && turnleft)
         {
 
             moveDirection.x = -speedTurm;
@@ -85,7 +215,7 @@ public class mover : MonoBehaviour
             }
 
         }
-        else if (Input.GetKey(KeyCode.D) && turnright)
+        else if (input_right && turnright)
         {
 
             moveDirection.x = speedTurm;
@@ -110,7 +240,6 @@ public class mover : MonoBehaviour
             moveDirection.x = 0f;
             turnSignalScript.Inactive_Turn();
         }
-
         if (!gameover)
         {
             rb.velocity = moveDirection;
@@ -121,27 +250,38 @@ public class mover : MonoBehaviour
             rb.velocity = new Vector3(0, 0, 0);
             navigation_car.transform.position = navigation_car.transform.position;
         }
-        // Gán giá trị cuối cùng
 
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            hasCheckedBrake_left = false;
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            hasCheckedBrake_right = false;
-        }
-
-
-        correct_location();
-
-        player_rb.velocity = new Vector3(0, 0, speed);
-
-
-
-
+        //if (Input.GetKeyUp(KeyCode.A))
+        //{
+        //    hasCheckedBrake_left = false;
+        //}
+        //if (Input.GetKeyUp(KeyCode.D))
+        //{
+        //    hasCheckedBrake_right = false;
+        //}
 
     }
+
+    public void input_getkey_Accelerating()
+    {
+        isAccelerating = true;
+    }
+    public void getup_Accelerating()
+    {
+        isAccelerating = false;
+    }
+    public void input_getkey_isDecelerating()
+    {
+        isDecelerating = true;
+    }
+    public void getup_isDecelerating()
+    {
+        isDecelerating = false;
+        hasCheckedBrake = false;
+    }
+
+
+
     bool hasWrongWayCrash = false;
     public void OnWrongWayCollision()
     {
@@ -166,16 +306,17 @@ public class mover : MonoBehaviour
 
 
         yield return new WaitForSeconds(duration);
+        event_gameOver.Invoke();
         Time.timeScale = 0;
 
 
     }
 
-   // int a;
+    // int a;
     public void l_v_3_OncolliderCars(Vector3 contactPoint)
     {
 
-        
+
         StartCoroutine(DisableSpeedIncrease_1_2(1.5f, contactPoint));
     }
     private IEnumerator DisableSpeedIncrease_1_2(float duration, Vector3 contactPoint)
@@ -185,7 +326,7 @@ public class mover : MonoBehaviour
 
 
             canIncreaseSpeed = false;
-            yield return new WaitForSeconds(duration-1f);
+            yield return new WaitForSeconds(duration - 1f);
             canIncreaseSpeed = true;
 
 
@@ -203,8 +344,8 @@ public class mover : MonoBehaviour
 
             //navigation_car.transform.position = navigation_car.transform.position;
             yield return new WaitForSeconds(duration);
-          //  a++;
-           // Debug.Log($"goij may lan {a}");
+            //  a++;
+            // Debug.Log($"goij may lan {a}");
             if (spam_car_player)
             {
 
@@ -223,11 +364,11 @@ public class mover : MonoBehaviour
     {
 
 
-      
+
         canIncreaseSpeed = false;
         Spamplayer.Invoke();
         control_Rb();
-        gameover = false; 
+        gameover = false;
         spam_car_player = false;
         yield return new WaitForSeconds(a);
 
@@ -269,7 +410,9 @@ public class mover : MonoBehaviour
 
             //navigation_car.transform.position = navigation_car.transform.position;
             yield return new WaitForSeconds(duration);
+            event_gameOver.Invoke();
             Time.timeScale = 0;
+
         }
 
     }
@@ -356,7 +499,7 @@ public class mover : MonoBehaviour
     public void accelerate_deceleration_cars()
     {
 
-        if (Input.GetKey(KeyCode.K) && canIncreaseSpeed)
+        if (/*Input.GetKey(KeyCode.K)*/isAccelerating && canIncreaseSpeed)
         {
 
             accelerate_Inactive = false;
@@ -386,7 +529,7 @@ public class mover : MonoBehaviour
                 turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
             }
         }
-        if (Input.GetKey(KeyCode.J))
+        if (/*Input.GetKey(KeyCode.J)*/isDecelerating)
         {
             deceleration_Inactive = false;
             turnSignalScript.Deceleration_car();
@@ -419,10 +562,7 @@ public class mover : MonoBehaviour
                 turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
             }
         }
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            hasCheckedBrake = false;
-        }
+
     }
 
     public void control_Rb()

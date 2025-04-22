@@ -111,7 +111,7 @@ public class RotationCarMenu : MonoBehaviour
     {
         currentRotation = car.transform.eulerAngles;
         currentRotation.y = 0f; // Đảm bảo trục Y luôn cố định
-        Debug.Log("Initial Rotation: " + currentRotation);
+      //  Debug.Log("Initial Rotation: " + currentRotation);
     }
         
 
