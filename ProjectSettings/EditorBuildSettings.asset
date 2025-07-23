@@ -27,6 +27,18 @@ EditorBuildSettings:
     path: Assets/Scenes/playgame/map2/map2_0.unity
     guid: 38d6c4ea95695f94e93ee1eb9688b0e9
   - enabled: 1
+    path: Assets/Scenes/playgame/map2/map2_1.unity
+    guid: 527a4a962a63f1048a804d88cb1ad4fe
+  - enabled: 1
+    path: Assets/Scenes/playgame/map2/map2_2.unity
+    guid: 6320dc1852dc833448de65f5a0cbc143
+  - enabled: 1
+    path: Assets/Scenes/playgame/map2/map2_3.unity
+    guid: 69a85ea0297fbb743bf4fadf45ec241e
+  - enabled: 1
+    path: Assets/Scenes/playgame/map2/map2_5.unity
+    guid: 5b3f58ae38f6c764eb886d102f816023
+  - enabled: 1
     path: Assets/Scenes/playgame/map3/map3_0.unity
     guid: 6f4005a1e005ab8439984203538ec89d
   - enabled: 1

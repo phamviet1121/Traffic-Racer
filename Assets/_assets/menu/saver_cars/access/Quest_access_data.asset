@@ -33,9 +33,9 @@ MonoBehaviour:
     - 1
     index_wheel: 0
     index_Sticker: -1
-    index_speed: 0
-    index_handling: 0
-    index_barking: 0
+    index_speed: 111
+    index_handling: 7
+    index_barking: 8
     status_car: 0
   - car_index: 2
     index_color:
