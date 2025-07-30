@@ -9,9 +9,10 @@ public class MOVER_AI : MonoBehaviour
     public float speedrandommin;
     public float minX;
     public float maxX;
-    float speed;
+    public float speed;
+    float speed_;
     //int turnint;
-    public bool isCollided = false;
+
 
     private Rigidbody rb;
     private bool turn_left_right = false;
@@ -20,6 +21,12 @@ public class MOVER_AI : MonoBehaviour
                                    //  private bool blockageStatus = false;
     public bool on_left_turn;
     public bool on_right_turn;
+
+    public bool isCollided = false;
+    public bool isDeceleration=false;
+    public bool isResuming=false;
+
+
 
     private Coroutine resetSpeedCoroutine;
 
@@ -38,58 +45,76 @@ public class MOVER_AI : MonoBehaviour
 
     void Update()
     {
-        //    if (!isCollided)
-        //    {
 
-        //        rb.velocity = new Vector3(0, 0, speed);
-
-        //    }
-        //    else
-        //    {
-
-        //        speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.75f);
-        //        rb.velocity = new Vector3(0, 0, speed);
-
-
-        //        if (speed <= 0.01f)
-        //        {
-        //            speed = 0f;
-        //            enabled = false;
-
-        //        }
-
-
-        //    }
         event_mover.Invoke();
 
     }
 
     public void Mover_carAI()
     {
-
-        if (!isCollided)
+        // giảm tốc về 0 
+        if (isCollided)
         {
 
-            rb.velocity = new Vector3(0, 0, speed);
-
-        }
-        else
-        {
-
+            // Giảm tốc về 0
             speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.75f);
             rb.velocity = new Vector3(0, 0, speed);
-
 
             if (speed <= 0.01f)
             {
                 speed = 0f;
-                enabled = false;
-
+                rb.velocity = Vector3.zero;
+                enabled = false; // Dừng cập nhật nếu muốn
             }
-
-
         }
+        else
+        {
+
+            //giảm tốc
+            if (isDeceleration)
+            {
+                speed = Mathf.Lerp(speed, speedrandommin - 10f, Time.deltaTime * 5f);
+                rb.velocity = new Vector3(0, 0, speed);
+                if (speed <= speedrandommin - 10f)
+                {
+                    speed = speedrandommin - 10f;
+                   // isDeceleration = false;
+
+                }
+            }  //tăng tốc  
+            else if (isResuming)
+            {
+                speed_ = Random.Range(speedrandommin, speedrandommax);
+                // Tăng tốc lại
+                speed = Mathf.Lerp(speed, speed_, Time.deltaTime * 0.75f);
+                rb.velocity = new Vector3(0, 0, speed);
+
+                if (speed >= speed_ - 0.01f)
+                {
+                    speed = speed_;
+                    isResuming = false;
+                }
+            }
+            //tóc độ nình thường
+            else
+            {
+                // Di chuyển bình thường
+                rb.velocity = new Vector3(0, 0, speed);
+            }
+        }
+
     }
+    public void Blockage_Ahead()
+    {
+        Debug.Log("có chạy ko ");
+        isDeceleration = true;
+
+    }
+    public void ResumeSpeed()
+    {
+        isResuming = true;
+        isDeceleration = false;
+    } 
     public void Mover_carAI_1_1()
     {
 
@@ -115,7 +140,9 @@ public class MOVER_AI : MonoBehaviour
 
 
         }
+
     }
+       
 
     private IEnumerator MoveToTarget(float targetX)
     {
@@ -142,33 +169,17 @@ public class MOVER_AI : MonoBehaviour
 
 
     }
-    public void Blockage_Ahead()
-    {
-        if (resetSpeedCoroutine != null)
-        {
-            StopCoroutine(resetSpeedCoroutine); // Dừng Coroutine đang chạy (nếu có)
-            resetSpeedCoroutine = null;
-        }
-
-
-        speed = Mathf.Lerp(speed, speedrandommin - 5f, Time.deltaTime * 0.75f);
-       // resetSpeedCoroutine = StartCoroutine(ResetSpeedAfterDelay(5f));
-    }
-    private IEnumerator ResetSpeedAfterDelay(float delay)
-    {
-
-        yield return new WaitForSeconds(delay);
-        float targetSpeed = Random.Range(80f, 120f);
-        speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 0.75f);
-    }
+   
+   
+    
     public void Blockage_left(bool turn)
     {
         on_left_turn = turn;
-      //  Debug.Log($"rex trai {on_left_turn}");
+        //  Debug.Log($"rex trai {on_left_turn}");
     }
     public void Blockage_right(bool turn)
     {
-       // Debug.Log($"rex phai {on_right_turn}");
+        // Debug.Log($"rex phai {on_right_turn}");
         on_right_turn = turn;
     }
 
@@ -196,7 +207,7 @@ public class MOVER_AI : MonoBehaviour
                         event_turrn_left.Invoke();
                         targetX = transform.position.x - 27f;
                     }
-                  //   Debug.Log("may co chay ko chuyen lan di chu 1_1" );
+                    //   Debug.Log("may co chay ko chuyen lan di chu 1_1" );
                     //float targetX = Random.Range(0f, 1f) > 0.5f ? transform.position.x + 27f : transform.position.x - 27f; 
                     // Move smoothly left or right using Lerp
                     StartCoroutine(MoveToTarget(targetX)); // Move right by 30f or left by 30f
@@ -206,19 +217,19 @@ public class MOVER_AI : MonoBehaviour
                     event_turrn_right.Invoke();
                     // Move right when near minX
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                  //  Debug.Log("may co chay ko chuyen lan di chu 1_2");
+                    //  Debug.Log("may co chay ko chuyen lan di chu 1_2");
                 }
                 else if (transform.position.x > minX && !on_left_turn)
                 {
                     event_turrn_left.Invoke();
                     // Move left when near maxX
                     StartCoroutine(MoveToTarget(transform.position.x - 27f));
-                  //   Debug.Log("may co chay ko chuyen lan di chu 1_3");
+                    //   Debug.Log("may co chay ko chuyen lan di chu 1_3");
                 }
                 else
                 {
                     isMoving = false; // No action, reset moving flag
-                                        //Debug.Log("may co chay ko chuyen lan di chu 1_4");
+                                      //Debug.Log("may co chay ko chuyen lan di chu 1_4");
                 }
             }
             else if (on_left_turn && !on_right_turn)
@@ -228,12 +239,12 @@ public class MOVER_AI : MonoBehaviour
                     event_turrn_right.Invoke();
                     // Move right if there's a blockage on the left
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                     // Debug.Log("may co chay ko chuyen lan di chu 2_1");
+                    // Debug.Log("may co chay ko chuyen lan di chu 2_1");
                 }
                 else
                 {
                     isMoving = false; // No action, reset moving flag
-                                     //  Debug.Log("may co chay ko chuyen lan di chu 2_2");
+                                      //  Debug.Log("may co chay ko chuyen lan di chu 2_2");
                 }
             }
             else if (!on_left_turn && on_right_turn)
