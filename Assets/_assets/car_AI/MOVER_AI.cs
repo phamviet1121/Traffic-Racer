@@ -249,7 +249,7 @@ public class MOVER_AI : MonoBehaviour
             }
             else if (!on_left_turn && on_right_turn)
             {
-                if (transform.position.x > 0)
+                if (transform.position.x > minX)
                 {
                     event_turrn_left.Invoke();
                     // Move left if there's a blockage on the right
