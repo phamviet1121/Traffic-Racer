@@ -48,6 +48,8 @@ public class MOVER_AI : MonoBehaviour
 
         event_mover.Invoke();
 
+     
+
     }
 
     public void Mover_carAI()
@@ -189,7 +191,7 @@ public class MOVER_AI : MonoBehaviour
         if (/*turn_left_right &&*/ !isMoving) // Check if the object is ready to move
         {
             isMoving = true; // Set moving flag to true
-                             // Debug.Log("may co chay ko chuyen lan di chu");
+            Debug.Log($"{transform.position.x}");
             if (!on_left_turn && !on_right_turn)
             {
 
@@ -207,190 +209,62 @@ public class MOVER_AI : MonoBehaviour
                         event_turrn_left.Invoke();
                         targetX = transform.position.x - 27f;
                     }
-                    //   Debug.Log("may co chay ko chuyen lan di chu 1_1" );
-                    //float targetX = Random.Range(0f, 1f) > 0.5f ? transform.position.x + 27f : transform.position.x - 27f; 
-                    // Move smoothly left or right using Lerp
-                    StartCoroutine(MoveToTarget(targetX)); // Move right by 30f or left by 30f
+                    
+                    StartCoroutine(MoveToTarget(targetX)); 
                 }
-                else if (transform.position.x < maxX && !on_right_turn)
+                else if (transform.position.x < maxX-1f && !on_right_turn)
                 {
                     event_turrn_right.Invoke();
-                    // Move right when near minX
+                   
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                    //  Debug.Log("may co chay ko chuyen lan di chu 1_2");
+                  
                 }
-                else if (transform.position.x > minX && !on_left_turn)
+                else if (transform.position.x > minX+1f && !on_left_turn)
                 {
                     event_turrn_left.Invoke();
-                    // Move left when near maxX
+                   
                     StartCoroutine(MoveToTarget(transform.position.x - 27f));
-                    //   Debug.Log("may co chay ko chuyen lan di chu 1_3");
+                    
                 }
                 else
                 {
-                    isMoving = false; // No action, reset moving flag
-                                      //Debug.Log("may co chay ko chuyen lan di chu 1_4");
+                    isMoving = false; 
                 }
             }
             else if (on_left_turn && !on_right_turn)
             {
-                if (transform.position.x < maxX)
+                if (transform.position.x < maxX-1f)
                 {
                     event_turrn_right.Invoke();
-                    // Move right if there's a blockage on the left
+                   
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                    // Debug.Log("may co chay ko chuyen lan di chu 2_1");
+                   
                 }
                 else
                 {
-                    isMoving = false; // No action, reset moving flag
-                                      //  Debug.Log("may co chay ko chuyen lan di chu 2_2");
+                    isMoving = false; 
                 }
             }
             else if (!on_left_turn && on_right_turn)
             {
-                if (transform.position.x > minX)
+                if (transform.position.x > minX+1f)
                 {
                     event_turrn_left.Invoke();
-                    // Move left if there's a blockage on the right
+                 
                     StartCoroutine(MoveToTarget(transform.position.x - 27f));
-                    // Debug.Log("may co chay ko chuyen lan di chu 3_1");
+                  
                 }
                 else
                 {
-                    isMoving = false; // No action, reset moving flag
-                                      // Debug.Log("may co chay ko chuyen lan di chu 3_2");
+                    isMoving = false; 
                 }
             }
             else
             {
-                isMoving = false; // No action, reset moving flag
+                isMoving = false; 
             }
 
-            //turn_left_right = false; // Reset the turn flag after the action
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ////turn_left_right = true;
-        //if (/*turn_left_right &&*/ !isMoving) // Check if the object is ready to move
-        //{
-        //    isMoving = true; // Set moving flag to true
-        //                     // Debug.Log("may co chay ko chuyen lan di chu");
-
-        //    if (transform.position.x >= minX + 27f && transform.position.x <= maxX - 27f)
-        //    {
-
-        //        if (!on_left_turn && !on_right_turn)
-        //        {
-
-        //            float targetX;
-        //            float x = Random.Range(0f, 1f);
-        //            if (x > 0.5f)
-        //            {
-        //                event_turrn_right.Invoke();
-        //                targetX = transform.position.x + 27f;
-        //            }
-        //            else
-        //            {
-        //                event_turrn_left.Invoke();
-        //                targetX = transform.position.x - 27f;
-        //            }
-        //            // Debug.Log("may co chay ko chuyen lan di chu 1_1" );
-        //            //float targetX = Random.Range(0f, 1f) > 0.5f ? transform.position.x + 27f : transform.position.x - 27f; 
-        //            // Move smoothly left or right using Lerp
-        //            StartCoroutine(MoveToTarget(targetX)); // Move right by 30f or left by 30f
-        //        }
-        //        else if (on_left_turn && !on_right_turn)
-        //        {
-        //            event_turrn_right.Invoke();
-        //            // Move right when near minX
-        //            StartCoroutine(MoveToTarget(transform.position.x + 27f));
-        //            //Debug.Log("may co chay ko chuyen lan di chu 1_2");
-        //        }
-        //        else if (on_right_turn && !on_left_turn)
-        //        {
-        //            event_turrn_left.Invoke();
-        //            // Move left when near maxX
-        //            StartCoroutine(MoveToTarget(transform.position.x - 27f));
-        //            // Debug.Log("may co chay ko chuyen lan di chu 1_3");
-        //        }
-        //        else
-        //        {
-        //            isMoving = false; // No action, reset moving flag
-        //                              //  Debug.Log("may co chay ko chuyen lan di chu 1_4");
-        //        }
-        //    }
-        //    else if (transform.position.x >= maxX)
-        //    {
-        //        if (on_left_turn && !on_right_turn)
-        //        {
-
-        //            event_turrn_right.Invoke();
-        //            // Move right if there's a blockage on the left
-        //            StartCoroutine(MoveToTarget(transform.position.x + 27f));
-        //            //  Debug.Log("may co chay ko chuyen lan di chu 2_1");
-        //        }
-        //        else
-        //        {
-        //            isMoving = false; // No action, reset moving flag
-        //                              // Debug.Log("may co chay ko chuyen lan di chu 2_2");
-        //        }
-        //    }
-        //    else if (transform.position.x <= minX)
-        //    {
-
-        //        if (!on_left_turn && on_right_turn)
-        //        {
-
-        //            event_turrn_left.Invoke();
-        //            // Move left if there's a blockage on the right
-        //            StartCoroutine(MoveToTarget(transform.position.x - 27f));
-        //            // Debug.Log("may co chay ko chuyen lan di chu 3_1");
-        //        }
-        //        else
-        //        {
-        //            isMoving = false; // No action, reset moving flag
-        //                              // Debug.Log("may co chay ko chuyen lan di chu 3_2");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        isMoving = false; // No action, reset moving flag
-        //    }
-
-        //    //turn_left_right = false; // Reset the turn flag after the action
-        //}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

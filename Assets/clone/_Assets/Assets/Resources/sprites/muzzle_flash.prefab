@@ -2,16 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &1148873284486774
 GameObject:
-  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4376625092590120}
   - component: {fileID: 33353740410033641}
   - component: {fileID: 23953870813983023}
-  - component: {fileID: 114060750868847593}
   m_Layer: 0
   m_Name: muzzle_flash
   m_TagString: Untagged
@@ -21,12 +20,12 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &4376625092590120
 Transform:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148873284486774}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.99826837, z: 0, w: 0.058824133}
   m_LocalPosition: {x: 0.35369492, y: 0.15164404, z: -1.5786622}
   m_LocalScale: {x: 4, y: 4, z: 4}
@@ -84,19 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &114060750868847593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148873284486774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c434e591a7f9b3391d0e7df259ce246f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  row: 4
-  column: 1
-  fps: 30
-  destroyable: 0
