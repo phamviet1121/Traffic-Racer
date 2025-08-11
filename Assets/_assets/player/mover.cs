@@ -565,6 +565,26 @@ public class mover : MonoBehaviour
 
     }
 
+
+    public void on_flash()
+    {
+        turnSignalScript.on_light();
+    }
+    public void off_flash()
+    {
+        turnSignalScript.off_light();
+    }
+    public void on_whistle()
+    {
+
+    }    
+    public void off_whistle()
+    {
+
+    }    
+
+
+
     public void control_Rb()
     {
         player_rb = GetComponent<Rigidbody>();
@@ -579,16 +599,6 @@ public class mover : MonoBehaviour
             if (A != null)
             {
                 rb = A.GetComponent<Rigidbody>();
-                // Chỉ lấy Rigidbody của A, bỏ qua các child của A
-                //if (rb != null)
-                //{
-                //    Debug.Log("Tìm thấy Rigidbody của A: " + A.gameObject.name);
-                //}
-                //else
-                //{
-                //    Debug.Log("A không có Rigidbody.");
-                //}
-
                 turnSignalScript = navigation_car.GetComponent<TurnSignal>();
                 brake_suddenlyScript = navigation_car.GetComponent<brake_suddenly>();
             }

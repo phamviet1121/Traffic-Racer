@@ -6,8 +6,10 @@ using UnityEngine;
 public class TurnSignal : MonoBehaviour
 {
     public GameObject body_car;
+    public LaserRAycast_player laserRAycast_player;
     //public float turnspeed;
     //public float turntime;
+
 
 
     public void turnLeft()
@@ -52,5 +54,14 @@ public class TurnSignal : MonoBehaviour
        
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
         body_car.transform.rotation = Quaternion.Euler(0f, 0f, currentRotation.z);
+    }
+
+    public  void on_light()
+    {
+        laserRAycast_player.onlight = true;
+    }
+    public void off_light()
+    {
+        laserRAycast_player.onlight = false;
     }
 }
