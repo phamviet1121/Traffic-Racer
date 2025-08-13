@@ -601,6 +601,7 @@ public class mover : MonoBehaviour
                 rb = A.GetComponent<Rigidbody>();
                 turnSignalScript = navigation_car.GetComponent<TurnSignal>();
                 brake_suddenlyScript = navigation_car.GetComponent<brake_suddenly>();
+                on_flash();
             }
         }
     }
