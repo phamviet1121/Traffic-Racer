@@ -39,6 +39,7 @@ public class mover : MonoBehaviour
     TurnSignal turnSignalScript;
 
     brake_suddenly brake_suddenlyScript;
+    control_rollingwheel control_rollingwheelScript;
     bool accelerate_Inactive;
     bool deceleration_Inactive;
     bool hasCheckedBrake_left;
@@ -60,6 +61,7 @@ public class mover : MonoBehaviour
 
 
     public UnityEvent event_gameOver;
+    public UnityEvent event_startgame;
     void Start()
     {
         spam_car_player = true;
@@ -102,6 +104,7 @@ public class mover : MonoBehaviour
         correct_location();
 
         player_rb.velocity = new Vector3(0, 0, speed);
+        control_rollingwheelScript.rotationSpeed = speed;
 
 
 
@@ -601,7 +604,8 @@ public class mover : MonoBehaviour
                 rb = A.GetComponent<Rigidbody>();
                 turnSignalScript = navigation_car.GetComponent<TurnSignal>();
                 brake_suddenlyScript = navigation_car.GetComponent<brake_suddenly>();
-                on_flash();
+                control_rollingwheelScript = navigation_car.GetComponent<control_rollingwheel>();
+                event_startgame.Invoke();
             }
         }
     }

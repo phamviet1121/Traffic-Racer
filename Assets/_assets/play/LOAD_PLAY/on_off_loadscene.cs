@@ -6,16 +6,6 @@ using UnityEngine.SceneManagement;
 public class on_off_loadscene : MonoBehaviour
 {
    public string sceneName;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void on_loadScene()
     {
         SceneManager.LoadScene(sceneName);

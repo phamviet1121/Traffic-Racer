@@ -23,12 +23,13 @@ public class MOVER_AI : MonoBehaviour
     public bool on_right_turn;
 
     public bool isCollided = false;
-    public bool isDeceleration=false;
-    public bool isResuming=false;
+    public bool isDeceleration = false;
+    public bool isResuming = false;
 
 
 
     private Coroutine resetSpeedCoroutine;
+    //public control_rollingwheel control_rollingwheel;
 
     public UnityEvent event_turrn_left;
     public UnityEvent event_turrn_right;
@@ -47,8 +48,10 @@ public class MOVER_AI : MonoBehaviour
     {
 
         event_mover.Invoke();
-
-     
+        //if (control_rollingwheel != null)
+        //{
+        //    control_rollingwheel.rotationSpeed = speed;
+        //}
 
     }
 
@@ -80,7 +83,7 @@ public class MOVER_AI : MonoBehaviour
                 if (speed <= speedrandommin - 10f)
                 {
                     speed = speedrandommin - 10f;
-                   // isDeceleration = false;
+                    // isDeceleration = false;
 
                 }
             }  //tăng tốc  
@@ -116,7 +119,7 @@ public class MOVER_AI : MonoBehaviour
     {
         isResuming = true;
         isDeceleration = false;
-    } 
+    }
     public void Mover_carAI_1_1()
     {
 
@@ -144,7 +147,7 @@ public class MOVER_AI : MonoBehaviour
         }
 
     }
-       
+
 
     private IEnumerator MoveToTarget(float targetX)
     {
@@ -171,9 +174,9 @@ public class MOVER_AI : MonoBehaviour
 
 
     }
-   
-   
-    
+
+
+
     public void Blockage_left(bool turn)
     {
         on_left_turn = turn;
@@ -209,59 +212,59 @@ public class MOVER_AI : MonoBehaviour
                         event_turrn_left.Invoke();
                         targetX = transform.position.x - 27f;
                     }
-                    
-                    StartCoroutine(MoveToTarget(targetX)); 
+
+                    StartCoroutine(MoveToTarget(targetX));
                 }
-                else if (transform.position.x < maxX-1f && !on_right_turn)
+                else if (transform.position.x < maxX - 1f && !on_right_turn)
                 {
                     event_turrn_right.Invoke();
-                   
+
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                  
+
                 }
-                else if (transform.position.x > minX+1f && !on_left_turn)
+                else if (transform.position.x > minX + 1f && !on_left_turn)
                 {
                     event_turrn_left.Invoke();
-                   
+
                     StartCoroutine(MoveToTarget(transform.position.x - 27f));
-                    
+
                 }
                 else
                 {
-                    isMoving = false; 
+                    isMoving = false;
                 }
             }
             else if (on_left_turn && !on_right_turn)
             {
-                if (transform.position.x < maxX-1f)
+                if (transform.position.x < maxX - 1f)
                 {
                     event_turrn_right.Invoke();
-                   
+
                     StartCoroutine(MoveToTarget(transform.position.x + 27f));
-                   
+
                 }
                 else
                 {
-                    isMoving = false; 
+                    isMoving = false;
                 }
             }
             else if (!on_left_turn && on_right_turn)
             {
-                if (transform.position.x > minX+1f)
+                if (transform.position.x > minX + 1f)
                 {
                     event_turrn_left.Invoke();
-                 
+
                     StartCoroutine(MoveToTarget(transform.position.x - 27f));
-                  
+
                 }
                 else
                 {
-                    isMoving = false; 
+                    isMoving = false;
                 }
             }
             else
             {
-                isMoving = false; 
+                isMoving = false;
             }
 
         }
