@@ -40,6 +40,9 @@ public class mover : MonoBehaviour
 
     brake_suddenly brake_suddenlyScript;
     control_rollingwheel control_rollingwheelScript;
+    public BlinkController BlinkController;
+
+
     bool accelerate_Inactive;
     bool deceleration_Inactive;
     bool hasCheckedBrake_left;
@@ -106,8 +109,7 @@ public class mover : MonoBehaviour
         player_rb.velocity = new Vector3(0, 0, speed);
         control_rollingwheelScript.rotationSpeed = speed;
 
-
-
+    
 
 
     }
@@ -381,6 +383,8 @@ public class mover : MonoBehaviour
     }
     public void OncolliderCars(Vector3 contactPoint)
     {
+       
+
 
         if (speed - 30 <= 0)
         {
@@ -390,6 +394,10 @@ public class mover : MonoBehaviour
         {
             speed -= 30;
         }
+      
+            BlinkController.runblink_gameobj(navigation_car);
+        
+
         StartCoroutine(DisableSpeedIncrease(1.5f, contactPoint));
     }
     private IEnumerator DisableSpeedIncrease(float duration, Vector3 contactPoint)
@@ -580,11 +588,11 @@ public class mover : MonoBehaviour
     public void on_whistle()
     {
 
-    }    
+    }
     public void off_whistle()
     {
 
-    }    
+    }
 
 
 

@@ -36,7 +36,7 @@ Material:
     - _BlendFactor: 0.38461542
     - _Cutoff: 0.5
     - _EmissionFactor: 0.48461536
-    - _FresnelPower: 5
+    - _FresnelPower: 0.05
     - _Parallax: 0.02
     - _Shininess: 0.7
     m_Colors:

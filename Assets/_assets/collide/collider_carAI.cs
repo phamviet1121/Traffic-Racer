@@ -29,7 +29,7 @@ public class collider_carAI : MonoBehaviour
         {
             collider_cars.Invoke();
 
-          
+
         }
 
 
@@ -43,13 +43,17 @@ public class collider_carAI : MonoBehaviour
 
 
         }
-    }
-    private IEnumerator DestroyCarAfterDelay(GameObject car, float delay)
+    } private IEnumerator DestroyCarAfterDelay(GameObject car, float delay)
     {
-       
+        BlinkController linkController = car.GetComponent<BlinkController>();
+        if (linkController != null)
+        {
+            linkController.runblink_gameobj_carAI(car);
+        }
         yield return new WaitForSeconds(delay);
         Destroy(car);
     }
-    
    
+
+
 }
