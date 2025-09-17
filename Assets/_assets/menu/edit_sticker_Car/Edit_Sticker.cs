@@ -24,7 +24,6 @@ public class Edit_Sticker : MonoBehaviour
     {
         for (int i = 0; i < Sticker.Length; i++)
         {
-            Debug.Log(" có chạy ko tắt đi chứ ");
             Sticker[i].SetActive(false);
             
         }

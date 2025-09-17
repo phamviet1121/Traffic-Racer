@@ -20,8 +20,24 @@ public class TiltControl : MonoBehaviour
         if(on_input_acceleration)
         {
             input_acceleration();
-            mover.input_right = right;
-            mover.input_left = left;
+            //mover.input_right = right;
+            //mover.input_left = left;
+            if (left)
+            {
+                mover.input_getkey_left();
+            }
+            else
+            {
+                mover.getkeyup_left();
+            }
+            if (right)
+            {
+                mover.input_getkey_right();
+            }
+            else
+            {
+                mover.getkeyup_right();
+            }
         }    
     }
 

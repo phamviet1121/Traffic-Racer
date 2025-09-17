@@ -36,7 +36,7 @@ public class mover : MonoBehaviour
     public GameObject explosion;
 
     public bool gameover = false;
-    TurnSignal turnSignalScript;
+    public TurnSignal turnSignalScript;
 
     brake_suddenly brake_suddenlyScript;
     control_rollingwheel control_rollingwheelScript;
@@ -126,6 +126,7 @@ public class mover : MonoBehaviour
     {
         hasCheckedBrake_left = false;
         input_left = false;
+        turnSignalScript.offTurnLeft();
     }
 
     public void input_getkey_right()
@@ -139,6 +140,7 @@ public class mover : MonoBehaviour
     {
         hasCheckedBrake_right = false;
         input_right = false;
+        turnSignalScript.offTurnRight();
     }
 
     public void A1()
@@ -155,7 +157,7 @@ public class mover : MonoBehaviour
                 moveDirection.x = -5;
 
             }
-            turnSignalScript.turnLeft();
+            turnSignalScript.StartTurnLeft();
 
             if (!hasCheckedBrake_left)
             {
@@ -182,7 +184,7 @@ public class mover : MonoBehaviour
                 moveDirection.x = 5;
 
             }
-            turnSignalScript.turnRight();
+            turnSignalScript.StartTurnRighgt();
 
             if (!hasCheckedBrake_right)
             {
@@ -208,7 +210,7 @@ public class mover : MonoBehaviour
                 moveDirection.x = -5;
 
             }
-            turnSignalScript.turnLeft();
+            turnSignalScript.StartTurnLeft();
 
             if (!hasCheckedBrake_left)
             {
@@ -229,7 +231,7 @@ public class mover : MonoBehaviour
                 moveDirection.x = 5;
 
             }
-            turnSignalScript.turnRight();
+            turnSignalScript.StartTurnRighgt();
 
             if (!hasCheckedBrake_right)
             {

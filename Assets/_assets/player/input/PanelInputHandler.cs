@@ -10,7 +10,7 @@ public class PanelInputHandler : MonoBehaviour
     private bool right = false; // Biến bool xác định nếu người dùng chạm hoặc di chuyển về bên phải
 
     public mover mover;
-    public bool on_setting_inputmoush=false;
+    public bool on_setting_inputmoush = false;
     public void Start()
     {
         //on_setting_inputmoush = false;
@@ -20,9 +20,27 @@ public class PanelInputHandler : MonoBehaviour
         if (on_setting_inputmoush)
         {
             HandleTouchInput(); // Gọi hàm xử lý input
-            mover.input_left=left;
-            mover.input_right=right;
+            //mover.input_left = left;
+            //mover.input_right = right;
+            if (left)
+            {
+                mover.input_getkey_left();
+            }
+            else
+            {
+                mover.getkeyup_left();
+            }
+            if (right)
+            {
+                mover.input_getkey_right();
+            }
+            else
+            {
+                mover.getkeyup_right();
+            }
+            
         }
+
 
     }
 
@@ -39,12 +57,12 @@ public class PanelInputHandler : MonoBehaviour
                 float panelCenterX = panel.position.x; // Lấy tọa độ x của tâm panel
 
                 // Xác định vị trí ngón tay so với panel
-                if (touchPosition.x < panelCenterX-20f)
+                if (touchPosition.x < panelCenterX - 20f)
                 {
                     left = true;
                     right = false;
                 }
-                else if (touchPosition.x > panelCenterX+20f)
+                else if (touchPosition.x > panelCenterX + 20f)
                 {
                     left = false;
                     right = true;
@@ -67,7 +85,7 @@ public class PanelInputHandler : MonoBehaviour
             right = false;
         }
 
-        Debug.Log($"Left: {left}, Right: {right}"); // In giá trị left và right ra console để kiểm tra
+        //Debug.Log($"Left: {left}, Right: {right}"); // In giá trị left và right ra console để kiểm tra
     }
 
     public (bool, bool) GetInputValue() // Hàm public để lấy giá trị left và right

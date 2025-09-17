@@ -111,7 +111,7 @@ public class MOVER_AI : MonoBehaviour
     }
     public void Blockage_Ahead()
     {
-        Debug.Log("có chạy ko ");
+       
         isDeceleration = true;
 
     }

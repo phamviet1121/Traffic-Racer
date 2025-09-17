@@ -22,7 +22,6 @@ public class Deceleration : MonoBehaviour
     {
         if (other.CompareTag("carAI"))
         {
-            Debug.Log("sao ko chạy ");
             collidingObjects.Add(other);
             CallBlockage();
         }

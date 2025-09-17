@@ -26,7 +26,6 @@ public class Convert : MonoBehaviour
     public void save_data_wheel(int index_wheel)
     {
         access_Data.questInfos[index_car].index_wheel = index_wheel;
-        Debug.Log("may có chạy ko hả thằng cho");
     }
 
     public void save_data_Sticker(int index_sticker)
