@@ -13,7 +13,7 @@ public class TurnSignal : MonoBehaviour
 
     private void Start()
     {
-        turnningSpeed = 3f;
+        turnningSpeed = 5f;
     }
 
 
@@ -40,10 +40,12 @@ public class TurnSignal : MonoBehaviour
 
     float yAngle;
     float zAngle;
+    float xAngle;
 
 
-    const float LEFT_Y_ANGLE = -2;
-    const float LEFT_Z_ANGLE = -7;
+    const float LEFT_Y_ANGLE = -1;
+    const float LEFT_Z_ANGLE = -10;
+    const float X_ANGLE = -3;
 
 
     public bool turningLeft = false;
@@ -73,14 +75,16 @@ public class TurnSignal : MonoBehaviour
             return;
         yAngle = Mathf.Max(turnningSpeed * Time.deltaTime * LEFT_Y_ANGLE + yAngle, LEFT_Y_ANGLE);
         zAngle = Mathf.Max(turnningSpeed * Time.deltaTime * LEFT_Z_ANGLE + zAngle, LEFT_Z_ANGLE);
+       // xAngle = Mathf.Max(turnningSpeed * Time.deltaTime * X_ANGLE + xAngle, X_ANGLE);
 
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, yAngle, zAngle);
+        body_car.transform.rotation = Quaternion.Euler(/*currentRotation.x*/xAngle, yAngle, zAngle);
+        Debug.Log("left");
 
     }
 
-    const float RIGHT_Y_ANGLE = 2;
-    const float RIGHT_Z_ANGLE = 7;
+    const float RIGHT_Y_ANGLE = 1;
+    const float RIGHT_Z_ANGLE = 10;
     private void turnRight()
     {
         if (yAngle >= RIGHT_Y_ANGLE)
@@ -89,10 +93,10 @@ public class TurnSignal : MonoBehaviour
             return;
         yAngle = Mathf.Min(turnningSpeed * Time.deltaTime * RIGHT_Y_ANGLE + yAngle, RIGHT_Y_ANGLE);
         zAngle = Mathf.Min(turnningSpeed * Time.deltaTime * RIGHT_Z_ANGLE + zAngle, RIGHT_Z_ANGLE);
-
+        //xAngle = Mathf.Max(turnningSpeed * Time.deltaTime * X_ANGLE + xAngle, X_ANGLE);
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, yAngle, zAngle);
-
+        body_car.transform.rotation = Quaternion.Euler(/*currentRotation.x*/xAngle, yAngle, zAngle);
+        Debug.Log("right");
     }
     public void Acceleration_car()
     {
@@ -110,40 +114,32 @@ public class TurnSignal : MonoBehaviour
     {
         body_car.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
+
     }
 
     public void Inactive_Turn()
     {
 
-        if (yAngle == 0f && zAngle == 0f)
+        if (xAngle == 0f && yAngle == 0f && zAngle == 0f)
             return;
+        if (turningLeft || turningRight)
+            return;
+        
+        // Giảm dần giá trị góc về 0 theo tốc độ nhất định
+       // xAngle = Mathf.MoveTowards(xAngle, 0f, 3f * Time.deltaTime);
+        yAngle = Mathf.MoveTowards(yAngle, 0f, 2f * Time.deltaTime*5f);
+        zAngle = Mathf.MoveTowards(zAngle, 0f, 7f * Time.deltaTime*5f);
 
-        if (yAngle < 0)
-        {
-            yAngle = Mathf.Max(turnningSpeed * Time.deltaTime * 2f + yAngle, 0);
-        }
-        else
-        {
-            yAngle = Mathf.Min(turnningSpeed * Time.deltaTime * -2f + yAngle, 0);
-        }
-        if (zAngle < 0)
-        {
-            zAngle = Mathf.Max(turnningSpeed * Time.deltaTime * 7f + zAngle, 0);
-
-        }
-        else
-        {
-            zAngle = Mathf.Min(turnningSpeed * Time.deltaTime * -7f + zAngle, 0);
-        }
-
-        Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, yAngle, zAngle);
+        // Cập nhật lại rotation cho body_car
+        body_car.transform.rotation = Quaternion.Euler(xAngle, yAngle, zAngle);
+        Debug.Log("dừng");
     }
     public void Inactive_Deceleration_Acceleration_car_car()
     {
 
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(0f, 0f, currentRotation.z);
+        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, currentRotation.y, currentRotation.z);
+        //Debug.Log("Inactive_Deceleration_Acceleration_car_car: " + body_car.transform.rotation);
     }
 
     public void on_light()
