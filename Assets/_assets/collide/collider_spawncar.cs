@@ -20,4 +20,12 @@ public class collider_spawncar : MonoBehaviour
             sponecar_Event.Invoke(quantity_cars);
         }
     }
+
+    public void detroygameobj()
+    {
+        Destroy(gameObject);
+    }
+
+
+
 }
