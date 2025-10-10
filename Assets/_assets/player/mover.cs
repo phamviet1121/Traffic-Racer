@@ -371,7 +371,7 @@ public class mover : MonoBehaviour
     {
 
 
-
+        Debug.Log("spam mấy lần");
         canIncreaseSpeed = false;
         Spamplayer.Invoke();
         control_Rb();
