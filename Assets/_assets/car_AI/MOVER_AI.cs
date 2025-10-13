@@ -26,6 +26,7 @@ public class MOVER_AI : MonoBehaviour
     public bool isDeceleration = false;
     public bool isResuming = false;
 
+    public bool isCarApproaching = false;
 
 
     private Coroutine resetSpeedCoroutine;
@@ -40,6 +41,7 @@ public class MOVER_AI : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         speed = Random.Range(speedrandommin, speedrandommax);
         // turnint = Random.Range(0, 3);
+        isCarApproaching = false;
 
     }
 
@@ -52,7 +54,10 @@ public class MOVER_AI : MonoBehaviour
         //{
         //    control_rollingwheel.rotationSpeed = speed;
         //}
-
+        if (isCarApproaching)
+        {
+            on_random_turn();
+        }
     }
 
     public void Mover_carAI()
@@ -111,7 +116,7 @@ public class MOVER_AI : MonoBehaviour
     }
     public void Blockage_Ahead()
     {
-       
+
         isDeceleration = true;
 
     }
@@ -175,8 +180,6 @@ public class MOVER_AI : MonoBehaviour
 
     }
 
-
-
     public void Blockage_left(bool turn)
     {
         on_left_turn = turn;
@@ -186,6 +189,15 @@ public class MOVER_AI : MonoBehaviour
     {
         // Debug.Log($"rex phai {on_right_turn}");
         on_right_turn = turn;
+    }
+    public bool turningProbability = false;
+    public void on_random_turn()
+    {
+        if (turningProbability)
+        {
+            turn_control();
+            turningProbability = false;
+        }
     }
 
     public void turn_control()
@@ -217,17 +229,21 @@ public class MOVER_AI : MonoBehaviour
                 }
                 else if (transform.position.x < maxX - 1f && !on_right_turn)
                 {
-                    event_turrn_right.Invoke();
+                    if (transform.position.x + 27f <= maxX)
+                    {
+                        event_turrn_right.Invoke();
 
-                    StartCoroutine(MoveToTarget(transform.position.x + 27f));
-
+                        StartCoroutine(MoveToTarget(transform.position.x + 27f));
+                    }
                 }
                 else if (transform.position.x > minX + 1f && !on_left_turn)
                 {
-                    event_turrn_left.Invoke();
+                    if (transform.position.x - 27f >= minX)
+                    {
+                        event_turrn_left.Invoke();
 
-                    StartCoroutine(MoveToTarget(transform.position.x - 27f));
-
+                        StartCoroutine(MoveToTarget(transform.position.x - 27f));
+                    }
                 }
                 else
                 {
@@ -238,10 +254,12 @@ public class MOVER_AI : MonoBehaviour
             {
                 if (transform.position.x < maxX - 1f)
                 {
-                    event_turrn_right.Invoke();
+                    if (transform.position.x + 27f <= maxX)
+                    {
+                        event_turrn_right.Invoke();
 
-                    StartCoroutine(MoveToTarget(transform.position.x + 27f));
-
+                        StartCoroutine(MoveToTarget(transform.position.x + 27f));
+                    }
                 }
                 else
                 {
@@ -252,10 +270,12 @@ public class MOVER_AI : MonoBehaviour
             {
                 if (transform.position.x > minX + 1f)
                 {
-                    event_turrn_left.Invoke();
+                    if (transform.position.x - 27f >= minX)
+                    {
+                        event_turrn_left.Invoke();
 
-                    StartCoroutine(MoveToTarget(transform.position.x - 27f));
-
+                        StartCoroutine(MoveToTarget(transform.position.x - 27f));
+                    }
                 }
                 else
                 {

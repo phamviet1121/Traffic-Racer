@@ -9,31 +9,35 @@ public class spone_car : MonoBehaviour
     public GameObject[] list_cars_1_1;
     public GameObject[] location;
     public GameObject[] location_1_1;
+    public GameObject[] carAI;
+    public GameObject[] carAI_2;
     public int regime;
 
-    void Start()
+    public void randomTurnRate(GameObject carAI)
     {
-        
+        MOVER_AI moverAI = carAI.GetComponent<MOVER_AI>();
+        if (Random.value <= 0.1f)  // 10% xác suất (Random.value trả về số từ 0.0 đến 1.0)
+        {
+            moverAI.turningProbability = true;
+        }
+        else
+        {
+            moverAI.turningProbability = false;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-   
     // Hàm spawn xe
     public void SpawnCars(int quantity_cars)
     {
         GameObject[] randomCars = GetRandomCars(list_cars, quantity_cars);
         GameObject[] randomLocations = GetRandomLocation(location, randomCars.Length);
 
-       for (int i=0; i<randomCars.Length; i++)
+        for (int i = 0; i < randomCars.Length; i++)
         {
             // int randomIndex_location = Random.Range(0, location.Length);
             // Instantiate(randomCars[i], location[randomIndex_location].transform.position, randomCars[i].transform.rotation);
-            Instantiate(randomCars[i], randomLocations[i].transform.position, randomCars[i].transform.rotation);
-        }    
+            GameObject newCar = Instantiate(randomCars[i], randomLocations[i].transform.position, randomCars[i].transform.rotation);
+            randomTurnRate(newCar);
+        }
     }
 
     GameObject[] GetRandomCars(GameObject[] cars, int count)
@@ -41,8 +45,8 @@ public class spone_car : MonoBehaviour
         GameObject[] randomCars = new GameObject[count];
         for (int i = 0; i < count; i++)
         {
-            int randomIndex = Random.Range(0, cars.Length); 
-            randomCars[i] = cars[randomIndex]; 
+            int randomIndex = Random.Range(0, cars.Length);
+            randomCars[i] = cars[randomIndex];
         }
         return randomCars;
     }
@@ -83,7 +87,8 @@ public class spone_car : MonoBehaviour
         {
             //int randomIndex_location = Random.Range(0, location.Length);
             //Instantiate(randomCars[i], location[randomIndex_location].transform.position, randomCars[i].transform.rotation);
-            Instantiate(randomCars[i], randomLocations[i].transform.position, randomCars[i].transform.rotation);
+            GameObject newCar = Instantiate(randomCars[i], randomLocations[i].transform.position, randomCars[i].transform.rotation);
+            randomTurnRate(newCar);
 
         }
         GameObject[] randomCars_1_1 = GetRandomCars(list_cars_1_1, randomSpamQuantityCar_1_1);
@@ -91,8 +96,8 @@ public class spone_car : MonoBehaviour
         {
             //int randomIndex_location = Random.Range(0, location_1_1.Length);
             // Instantiate(randomCars_1_1[i], location_1_1[randomIndex_location].transform.position, randomCars_1_1[i].transform.rotation);
-            Instantiate(randomCars_1_1[i], randomLocations_1_1[i].transform.position, randomCars_1_1[i].transform.rotation);
-
+            GameObject newCar = Instantiate(randomCars_1_1[i], randomLocations_1_1[i].transform.position, randomCars_1_1[i].transform.rotation);
+            randomTurnRate(newCar);
         }
     }
 
