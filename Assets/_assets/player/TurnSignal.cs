@@ -132,7 +132,7 @@ public class TurnSignal : MonoBehaviour
 
         // Cập nhật lại rotation cho body_car
         body_car.transform.rotation = Quaternion.Euler(xAngle, yAngle, zAngle);
-        Debug.Log("dừng");
+       // Debug.Log("dừng");
     }
     public void Inactive_Deceleration_Acceleration_car_car()
     {

@@ -11,7 +11,7 @@ public class spam_player_car : MonoBehaviour
     public UnityEvent UnityEvent_loadCar;
     void Awake()
     {
-        Debug.Log("spam chay");
+        //Debug.Log("spam chay");
         UnityEvent_loadCar.Invoke();
     }
 

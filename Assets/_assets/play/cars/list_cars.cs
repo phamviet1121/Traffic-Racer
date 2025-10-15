@@ -15,7 +15,7 @@ public class list_cars : MonoBehaviour
     public choose_Sticker choose_Sticker;
     void Awake()
     {
-        Debug.Log("list chạy");
+        //Debug.Log("list chạy");
         a = load_playerData.indexcar;
         start_loadscene();
     }

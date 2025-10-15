@@ -322,7 +322,16 @@ public class mover : MonoBehaviour
     // int a;
     public void l_v_3_OncolliderCars(Vector3 contactPoint)
     {
+        if (speed - 30 <= 0)
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed -= 30;
+        }
 
+        BlinkController.runblink_gameobj(navigation_car);
 
         StartCoroutine(DisableSpeedIncrease_1_2(1.5f, contactPoint));
     }
