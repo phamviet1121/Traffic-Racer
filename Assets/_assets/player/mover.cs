@@ -521,7 +521,7 @@ public class mover : MonoBehaviour
     public void accelerate_deceleration_cars()
     {
 
-        if (/*Input.GetKey(KeyCode.K)*/isAccelerating && canIncreaseSpeed)
+        if (Input.GetKey(KeyCode.K) || isAccelerating && canIncreaseSpeed)
         {
 
             accelerate_Inactive = false;
@@ -551,7 +551,7 @@ public class mover : MonoBehaviour
                 turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
             }
         }
-        if (/*Input.GetKey(KeyCode.J)*/isDecelerating)
+        if (Input.GetKey(KeyCode.J) || isDecelerating)
         {
             deceleration_Inactive = false;
             turnSignalScript.Deceleration_car();

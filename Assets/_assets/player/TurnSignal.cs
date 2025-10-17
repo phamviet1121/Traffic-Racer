@@ -66,6 +66,9 @@ public class TurnSignal : MonoBehaviour
     {
         turningRight = false;
     }
+    /// <summary>
+    /// TẠO 1 HÀM TÁC ĐỘNG ĐẾN TRỤC x RIÊNG . NẾU ẤN LEFT HOẶC RIGHT THÌ SẼ GỌI VÀ HÀM ĐÓ . NẾU KO ẤN 1 TRONG 1 THÌ PHẢI XEM XEM NÚT  TĂNG GIẢM TÓC CÓ HOẠT ĐÔN G KO RỒI CHẠY HÀM GIẢM 
+    /// </summary>
 
     private void turnLeft()
     {
@@ -78,7 +81,7 @@ public class TurnSignal : MonoBehaviour
        // xAngle = Mathf.Max(turnningSpeed * Time.deltaTime * X_ANGLE + xAngle, X_ANGLE);
 
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(/*currentRotation.x*/xAngle, yAngle, zAngle);
+        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, yAngle, zAngle);
         Debug.Log("left");
 
     }
@@ -95,20 +98,28 @@ public class TurnSignal : MonoBehaviour
         zAngle = Mathf.Min(turnningSpeed * Time.deltaTime * RIGHT_Z_ANGLE + zAngle, RIGHT_Z_ANGLE);
         //xAngle = Mathf.Max(turnningSpeed * Time.deltaTime * X_ANGLE + xAngle, X_ANGLE);
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(/*currentRotation.x*/xAngle, yAngle, zAngle);
+        body_car.transform.rotation = Quaternion.Euler(/*currentRotation.x*/currentRotation.x, yAngle, zAngle);
         Debug.Log("right");
     }
+    const float X_Acceleration = -3;
     public void Acceleration_car()
     {
+        if (-xAngle >= -X_Acceleration)
+            return;
+        xAngle = Mathf.Max(turnningSpeed * Time.deltaTime * X_Acceleration + xAngle, X_Acceleration);
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(-3f, 0f, currentRotation.z);
+        body_car.transform.rotation = Quaternion.Euler(xAngle, currentRotation.y, currentRotation.z);
 
 
     }
+    const float X_Deceleration = 3;
     public void Deceleration_car()
     {
+        if (xAngle >= X_Deceleration)
+            return;
+        xAngle = Mathf.Min(turnningSpeed * Time.deltaTime * X_Deceleration + xAngle, X_Deceleration);
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(3f, 0f, currentRotation.z);
+        body_car.transform.rotation = Quaternion.Euler(xAngle, currentRotation.y, currentRotation.z);
     }
     public void Inactive()
     {
@@ -120,7 +131,7 @@ public class TurnSignal : MonoBehaviour
     public void Inactive_Turn()
     {
 
-        if (xAngle == 0f && yAngle == 0f && zAngle == 0f)
+        if (/*xAngle == 0f &&*/ yAngle == 0f && zAngle == 0f)
             return;
         if (turningLeft || turningRight)
             return;
@@ -130,15 +141,18 @@ public class TurnSignal : MonoBehaviour
         yAngle = Mathf.MoveTowards(yAngle, 0f, 2f * Time.deltaTime*5f);
         zAngle = Mathf.MoveTowards(zAngle, 0f, 7f * Time.deltaTime*5f);
 
+        Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
         // Cập nhật lại rotation cho body_car
-        body_car.transform.rotation = Quaternion.Euler(xAngle, yAngle, zAngle);
+        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, yAngle, zAngle);
        // Debug.Log("dừng");
     }
     public void Inactive_Deceleration_Acceleration_car_car()
     {
-
+        if(xAngle==0)
+            return;
+        xAngle = Mathf.MoveTowards(xAngle, 0f, 3f * Time.deltaTime * 5f);
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        body_car.transform.rotation = Quaternion.Euler(currentRotation.x, currentRotation.y, currentRotation.z);
+        body_car.transform.rotation = Quaternion.Euler(xAngle, currentRotation.y, currentRotation.z);
         //Debug.Log("Inactive_Deceleration_Acceleration_car_car: " + body_car.transform.rotation);
     }
 
