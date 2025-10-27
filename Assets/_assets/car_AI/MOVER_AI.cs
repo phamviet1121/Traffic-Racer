@@ -210,39 +210,39 @@ public class MOVER_AI : MonoBehaviour
             if (!on_left_turn && !on_right_turn)
             {
 
-                if (transform.position.x >= minX + 27f && transform.position.x <= maxX - 27f)
+                if (transform.position.x >= minX + 26f && transform.position.x <= maxX - 26f)
                 {
                     float targetX;
                     float x = Random.Range(0f, 1f);
                     if (x > 0.5f)
                     {
                         event_turrn_right.Invoke();
-                        targetX = transform.position.x + 27f;
+                        targetX = transform.position.x + 26f;
                     }
                     else
                     {
                         event_turrn_left.Invoke();
-                        targetX = transform.position.x - 27f;
+                        targetX = transform.position.x - 26f;
                     }
 
                     StartCoroutine(MoveToTarget(targetX));
                 }
                 else if (transform.position.x < maxX - 1f && !on_right_turn)
                 {
-                    if (transform.position.x + 27f <= maxX)
+                    if (transform.position.x + 26f <= maxX)
                     {
                         event_turrn_right.Invoke();
 
-                        StartCoroutine(MoveToTarget(transform.position.x + 27f));
+                        StartCoroutine(MoveToTarget(transform.position.x + 26f));
                     }
                 }
                 else if (transform.position.x > minX + 1f && !on_left_turn)
                 {
-                    if (transform.position.x - 27f >= minX)
+                    if (transform.position.x - 26f >= minX)
                     {
                         event_turrn_left.Invoke();
 
-                        StartCoroutine(MoveToTarget(transform.position.x - 27f));
+                        StartCoroutine(MoveToTarget(transform.position.x - 26f));
                     }
                 }
                 else
@@ -254,11 +254,11 @@ public class MOVER_AI : MonoBehaviour
             {
                 if (transform.position.x < maxX - 1f)
                 {
-                    if (transform.position.x + 27f <= maxX)
+                    if (transform.position.x + 26f <= maxX)
                     {
                         event_turrn_right.Invoke();
 
-                        StartCoroutine(MoveToTarget(transform.position.x + 27f));
+                        StartCoroutine(MoveToTarget(transform.position.x + 26f));
                     }
                 }
                 else
@@ -270,11 +270,11 @@ public class MOVER_AI : MonoBehaviour
             {
                 if (transform.position.x > minX + 1f)
                 {
-                    if (transform.position.x - 27f >= minX)
+                    if (transform.position.x - 26f >= minX)
                     {
                         event_turrn_left.Invoke();
 
-                        StartCoroutine(MoveToTarget(transform.position.x - 27f));
+                        StartCoroutine(MoveToTarget(transform.position.x - 26f));
                     }
                 }
                 else
