@@ -11,7 +11,7 @@ public class canvas_gameOver_LV5 : MonoBehaviour
     public TextMeshProUGUI txt_indexmoney;
     public point_moneys point_moneys;
     public money_data money_data;
-
+    public save_data_json save_data_json;
 
     void Start()
     {
@@ -31,6 +31,6 @@ public class canvas_gameOver_LV5 : MonoBehaviour
         txt_money.text= point_moneys.moneys.ToString();
         txt_indexmoney.text = (point_moneys.moneys / point_moneys.plus_moneys).ToString();
         money_data.money_iocn.icon_money += point_moneys.moneys;
-
+        save_data_json.SaveToJson_dataToSave();
     }    
 }

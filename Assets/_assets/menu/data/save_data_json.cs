@@ -111,7 +111,17 @@ public class save_data_json : MonoBehaviour
         if (dataToSave != null)
             LoadFromJson_dataToSave();
     }
+    public void saveall()
+    {
+        if (access_Data != null)
+            SaveToJson_access_Data();
 
+        if (dataToSave != null)
+            SaveToJson_dataToSave();
+
+        if (sourceData != null)
+            SaveToJson_sourceData();
+    }    
     public void OnApplicationQuit()
     {
         if (access_Data != null)
