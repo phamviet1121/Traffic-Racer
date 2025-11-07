@@ -127,6 +127,7 @@ public class plus_point_control : MonoBehaviour
         if (mover.canIncreaseSpeed == true && mover.speed >= 200)
         {
             Collision_player_plus_point_lv5(hitPosition, player);
+            mover.on_overtakeSound();
             event_award.Invoke();
         }
     }    
@@ -162,7 +163,7 @@ public class plus_point_control : MonoBehaviour
         {
             StopCoroutine(resetCoroutine);
         }
-
+        mover.on_overtakeSound();
         Collision_player_plus_point(hitPosition, player);
         resetCoroutine = StartCoroutine(ResetScoreAfterDelay(5f));
     }

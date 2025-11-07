@@ -8,7 +8,7 @@ public class Buttion_sound : MonoBehaviour
     private AudioSource source;
     private void Start()
     {
-        source = buttionSound.AddComponent<AudioSource>();
+        source = buttionSound.GetComponent<AudioSource>();
     }
 
     public void Onclicksound()

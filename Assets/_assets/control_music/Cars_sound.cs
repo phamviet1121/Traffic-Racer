@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Unity.VisualScripting.Member;
@@ -8,30 +8,39 @@ public class Cars_sound : MonoBehaviour
     public GameObject engineSound;
     public GameObject whistleSound;
     public GameObject driftSound;
+    public GameObject driftSound2;
     public GameObject crashSound;
     public GameObject bigcrashSound;
+    public GameObject overtakeSound;
+    public GameObject barrierHitSound;
 
 
 
     private AudioSource enginesource;
     private AudioSource whistlesource;
     private AudioSource driftsource;
+    private AudioSource driftsource2;
     private AudioSource crashsource;
     private AudioSource bigcrashsource;
+    private AudioSource overtakesource;
+    private AudioSource barrierHitsource;
 
 
     private bool isAccelerated;
     private bool isDeceleration;
     private bool isDecelerationone;
     float pitchAngle = 1;
-
-    private void Start()
+  
+    private void Awake()
     {
         enginesource = engineSound.GetComponent<AudioSource>();
         whistlesource = whistleSound.GetComponent<AudioSource>();
         driftsource = driftSound.GetComponent<AudioSource>();
+        driftsource2 = driftSound2.GetComponent<AudioSource>();
         crashsource = crashSound.GetComponent<AudioSource>();
         bigcrashsource = bigcrashSound.GetComponent<AudioSource>();
+        overtakesource = overtakeSound.GetComponent<AudioSource>();
+        barrierHitsource = barrierHitSound.GetComponent<AudioSource>();
         isAccelerated = false;
         isDeceleration = false;
         isDecelerationone = true;
@@ -69,8 +78,17 @@ public class Cars_sound : MonoBehaviour
     {
         if (enginesource != null)
         {
+            Debug.Log("kêu chưa ");
             enginesource.loop = true;
             enginesource.Play();
+        }
+    }
+
+    public void stoptRunCarSound()
+    {
+        if (enginesource != null)
+        {
+            enginesource.Stop();
         }
     }
     public void startAcceleratedSound()
@@ -150,6 +168,13 @@ public class Cars_sound : MonoBehaviour
             driftsource.Play();
         }
     }
+    public void onDriftSound2()
+    {
+        if (driftsource2 != null)
+        {
+            driftsource2.Play();
+        }
+    }
     public void onCrashSound()
     {
         if (crashsource != null)
@@ -162,6 +187,20 @@ public class Cars_sound : MonoBehaviour
         if (bigcrashsource != null)
         {
             bigcrashsource.Play();
+        }
+    }
+    public void onovertakeSound()
+    {
+        if (overtakesource != null)
+        {
+            overtakesource.Play();
+        }
+    }
+    public void onbarrierHitSound()
+    {
+        if (barrierHitsource != null)
+        {
+            barrierHitsource.Play();
         }
     }
 

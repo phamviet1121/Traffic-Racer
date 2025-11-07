@@ -35,7 +35,7 @@ public class color_car_btn : MonoBehaviour
         update_coler_Event.Invoke(x_color, y_color, z_color, w_color);
         if(buy_color==true)
         {
-            Debug.Log("may co doi mau ko ");
+            //Debug.Log("may co doi mau ko ");
             svae_color();
         }
         Onclick_blook_color();

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NewMoneyQuest
   m_EditorClassIdentifier: 
   money_iocn:
-    icon_money: 1109998600
+    icon_money: 10000

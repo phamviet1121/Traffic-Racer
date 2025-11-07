@@ -41,7 +41,7 @@ public class mover : MonoBehaviour
     brake_suddenly brake_suddenlyScript;
     control_rollingwheel control_rollingwheelScript;
     public BlinkController BlinkController;
-
+    public Cars_sound cars_soundScript;
 
     bool accelerate_Inactive;
     bool deceleration_Inactive;
@@ -165,6 +165,8 @@ public class mover : MonoBehaviour
                 if (speed >= 250)
                 {
                     brake_suddenlyScript.turn_suddenly_left();
+                    cars_soundScript.onDriftSound();
+
                 }
             }
             Debug.Log("may chyaj nhieeuf thees HAM AN DAY NE");
@@ -192,6 +194,7 @@ public class mover : MonoBehaviour
                 if (speed >= 250)
                 {
                     brake_suddenlyScript.turnle_suddenly_right();
+                    cars_soundScript.onDriftSound();
                 }
             }
         }
@@ -218,6 +221,7 @@ public class mover : MonoBehaviour
                 if (speed >= 250)
                 {
                     brake_suddenlyScript.turn_suddenly_left();
+                    cars_soundScript.onDriftSound();
                 }
             }
 
@@ -239,6 +243,7 @@ public class mover : MonoBehaviour
                 if (speed >= 250)
                 {
                     brake_suddenlyScript.turnle_suddenly_right();
+                    cars_soundScript.onDriftSound();
                 }
             }
         }
@@ -253,7 +258,6 @@ public class mover : MonoBehaviour
         }
         else
         {
-            //Debug.Log("mayf cos chay ko may dung lai chua ha");
             rb.velocity = new Vector3(0, 0, 0);
             navigation_car.transform.position = navigation_car.transform.position;
         }
@@ -304,7 +308,8 @@ public class mover : MonoBehaviour
     }
     private IEnumerator DisableSpeedIncrease_1_1(float duration, Vector3 contactPoint)
     {
-
+        cars_soundScript.stoptRunCarSound();
+        cars_soundScript.onbigcrashSound();
         gameover = true;
         navigation_car.transform.SetParent(null);
 
@@ -340,7 +345,7 @@ public class mover : MonoBehaviour
         if (speed <= 300)
         {
 
-
+            cars_soundScript.onCrashSound();
             canIncreaseSpeed = false;
             yield return new WaitForSeconds(duration - 1f);
             canIncreaseSpeed = true;
@@ -350,7 +355,8 @@ public class mover : MonoBehaviour
         }
         else
         {
-
+            cars_soundScript.stoptRunCarSound();
+            cars_soundScript.onbigcrashSound();
             gameover = true;
             navigation_car.transform.SetParent(null);
 
@@ -415,14 +421,15 @@ public class mover : MonoBehaviour
     {
         if (speed <= 300)
         {
-
+            cars_soundScript.onCrashSound();
             canIncreaseSpeed = false;
             yield return new WaitForSeconds(duration);
             canIncreaseSpeed = true;
         }
         else
         {
-
+            cars_soundScript.stoptRunCarSound();
+            cars_soundScript.onbigcrashSound();
             gameover = true;
             navigation_car.transform.SetParent(null);
 
@@ -462,6 +469,8 @@ public class mover : MonoBehaviour
             if (turnleft)
             {
                 StartCoroutine(DisableSpeedIncreaseFence(0.1f));
+                cars_soundScript.onbarrierHitSound();
+
             }
             turnleft = false;
 
@@ -471,6 +480,7 @@ public class mover : MonoBehaviour
             if (turnright)
             {
                 StartCoroutine(DisableSpeedIncreaseFence(0.1f));
+                cars_soundScript.onbarrierHitSound();
             }
             turnright = false;
         }
@@ -526,6 +536,7 @@ public class mover : MonoBehaviour
 
             accelerate_Inactive = false;
             turnSignalScript.Acceleration_car();
+            cars_soundScript.startAcceleratedSound();
             // Nếu người chơi nhấn K, tăng dần tốc độ đến maxSpeed
             targetSpeed = maxSpeed;
             speedRunTime = accelerate;
@@ -549,12 +560,14 @@ public class mover : MonoBehaviour
             if (deceleration_Inactive)
             {
                 turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
+                cars_soundScript.stopAcceleratedSound();
             }
         }
         if (Input.GetKey(KeyCode.J) || isDecelerating)
         {
             deceleration_Inactive = false;
             turnSignalScript.Deceleration_car();
+            cars_soundScript.startDecelerationSound();
             targetSpeed = minSpeed;
             speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 5f);
             if (!hasCheckedBrake)
@@ -563,6 +576,7 @@ public class mover : MonoBehaviour
                 if (speed >= 250)
                 {
                     brake_suddenlyScript.brake();
+                    cars_soundScript.onDriftSound2();
                 }
             }
 
@@ -582,6 +596,7 @@ public class mover : MonoBehaviour
             if (accelerate_Inactive)
             {
                 turnSignalScript.Inactive_Deceleration_Acceleration_car_car();
+                cars_soundScript.stopDecelerationSound();
             }
         }
 
@@ -598,13 +613,24 @@ public class mover : MonoBehaviour
     }
     public void on_whistle()
     {
-
+        cars_soundScript.startWhistleSound();
     }
     public void off_whistle()
     {
-
+        cars_soundScript.stopWhistleSound();
     }
-
+    public void on_runcarSound()
+    {
+        cars_soundScript.startRunCarSound();
+    }
+    public void off_runcarSound()
+    {
+        cars_soundScript.stoptRunCarSound();
+    }
+    public void on_overtakeSound()
+    {
+        cars_soundScript.onovertakeSound();
+    }    
 
 
     public void control_Rb()
@@ -624,6 +650,8 @@ public class mover : MonoBehaviour
                 turnSignalScript = navigation_car.GetComponent<TurnSignal>();
                 brake_suddenlyScript = navigation_car.GetComponent<brake_suddenly>();
                 control_rollingwheelScript = navigation_car.GetComponent<control_rollingwheel>();
+                cars_soundScript = navigation_car.GetComponent<Cars_sound>();
+                cars_soundScript.startRunCarSound();
                 event_startgame.Invoke();
             }
         }

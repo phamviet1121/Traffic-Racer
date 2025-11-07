@@ -25,6 +25,7 @@ public class menu_cars : MonoBehaviour
     void Start()
     {
         index = PlayerData.Instance.playerLevel;
+        Convert.index_car = index;
         gameobject_car();
     }
 

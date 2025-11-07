@@ -42,7 +42,7 @@ public class Collision_plus_point : MonoBehaviour
             GameObject player = other.gameObject;
 
 
-           Debug.Log($"player {player}");
+          // Debug.Log($"player {player}");
             Vector3 car = transform.position;
             //Debug.Log($"car {car}");
             Event_plus_point.Invoke(hitPosition, player);
