@@ -3104,6 +3104,153 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: final_atlas_142
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 773
+        width: 55
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b6f48b4cfe3d747920537b5e08a91b
+      internalID: 2087998803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_atlas_143
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 702
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfe63cecdc1d04479b216ad91d33ed8
+      internalID: 1437821153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_atlas_144
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 85
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423ed9ebf7c000a4b90f5ebdc8e6934c
+      internalID: 392294568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_atlas_145
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 5
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a718a13d892d34e4fb92d70bbd201ab4
+      internalID: -568244190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_atlas_146
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 596
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20efaf91783fc348b904058dcaafc92
+      internalID: 1307002029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_atlas_147
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 670
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d34071afef01344daa282f01708a09a
+      internalID: 1284022432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_atlas_148
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 552
+        width: 52
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c81eafb0349f964e8feb35d7386c36a
+      internalID: -954084556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3164,6 +3311,13 @@ TextureImporter:
       final_atlas_14: 138008763
       final_atlas_140: 1851973653
       final_atlas_141: -1010486722
+      final_atlas_142: 2087998803
+      final_atlas_143: 1437821153
+      final_atlas_144: 392294568
+      final_atlas_145: -568244190
+      final_atlas_146: 1307002029
+      final_atlas_147: 1284022432
+      final_atlas_148: -954084556
       final_atlas_15: 487027699
       final_atlas_16: -1957921055
       final_atlas_17: 1633111047

@@ -25,12 +25,13 @@ public class Cars_sound : MonoBehaviour
     private AudioSource overtakesource;
     private AudioSource barrierHitsource;
 
-
     private bool isAccelerated;
     private bool isDeceleration;
     private bool isDecelerationone;
     float pitchAngle = 1;
-  
+
+    public float valueSound;
+    public Data_music data_music;
     private void Awake()
     {
         enginesource = engineSound.GetComponent<AudioSource>();
@@ -44,6 +45,17 @@ public class Cars_sound : MonoBehaviour
         isAccelerated = false;
         isDeceleration = false;
         isDecelerationone = true;
+        if (data_music != null)
+        {
+            
+                startRunCarSound();
+            
+            if (valueSound != data_music.DataMusicQuest.valueSound)
+            {
+                valueSound = data_music.DataMusicQuest.valueSound;
+                statusvalueSound();
+            }
+        }
     }
     private void Update()
     {
@@ -71,14 +83,22 @@ public class Cars_sound : MonoBehaviour
         if (!isAccelerated && !isDeceleration)
         {
             resetSound();
-        }    
+        }
+        if (data_music != null)
+        {
+            
+            if (valueSound != data_music.DataMusicQuest.valueSound)
+            {
+                valueSound = data_music.DataMusicQuest.valueSound;
+                statusvalueSound();
+            }
+        }
     }
 
     public void startRunCarSound()
     {
-        if (enginesource != null)
+        if (enginesource != null && data_music.DataMusicQuest.isSound == 1)
         {
-            Debug.Log("kêu chưa ");
             enginesource.loop = true;
             enginesource.Play();
         }
@@ -148,7 +168,7 @@ public class Cars_sound : MonoBehaviour
 
     public void startWhistleSound()
     {
-        if (whistlesource != null)
+        if (whistlesource != null && data_music.DataMusicQuest.isSound == 1)
         {
             whistlesource.loop = true;
             whistlesource.Play();
@@ -163,45 +183,57 @@ public class Cars_sound : MonoBehaviour
     }
     public void onDriftSound()
     {
-        if (driftsource != null)
+        if (driftsource != null && data_music.DataMusicQuest.isSound == 1)
         {
             driftsource.Play();
         }
     }
     public void onDriftSound2()
     {
-        if (driftsource2 != null)
+        if (driftsource2 != null && data_music.DataMusicQuest.isSound == 1)
         {
             driftsource2.Play();
         }
     }
     public void onCrashSound()
     {
-        if (crashsource != null)
+        if (crashsource != null && data_music.DataMusicQuest.isSound == 1)
         {
             crashsource.Play();
         }
     }
     public void onbigcrashSound()
     {
-        if (bigcrashsource != null)
+        if (bigcrashsource != null && data_music.DataMusicQuest.isSound == 1)
         {
             bigcrashsource.Play();
         }
     }
     public void onovertakeSound()
     {
-        if (overtakesource != null)
+        if (overtakesource != null && data_music.DataMusicQuest.isSound == 1)
         {
             overtakesource.Play();
         }
     }
     public void onbarrierHitSound()
     {
-        if (barrierHitsource != null)
+        if (barrierHitsource != null && data_music.DataMusicQuest.isSound == 1)
         {
             barrierHitsource.Play();
         }
+    }
+
+    public void statusvalueSound()
+    {
+        enginesource.volume = valueSound;
+        whistlesource.volume = valueSound;
+        driftsource.volume = valueSound;
+        driftsource2.volume = valueSound;
+        crashsource.volume = valueSound;
+        bigcrashsource.volume = valueSound;
+        overtakesource.volume = valueSound;
+        barrierHitsource.volume = valueSound;
     }
 
 
