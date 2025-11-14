@@ -47,6 +47,69 @@ public class canvas_gameOver : MonoBehaviour
 
     public void update_index_txt()
     {
+        GooglePlayManager.Instance.PostScoreToLeaderboard((long)plus_point_control.score, "CgkIhtTcqpkdEAIQAA");
+        if (plus_point_control.score >= 1000)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQBg");
+        }
+        if (plus_point_control.score >= 10000)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQBw");
+        }
+        if (plus_point_control.close_overtakes_index >= 5)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQCA");
+        }
+        if (plus_point_control.close_overtakes_index >= 50)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQCQ");
+        }
+        if (plus_point_control.close_overtakes_index >= 100)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQCg");
+        }
+
+        if(plus_point_control.timer>=180f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQDw");
+        }
+        if (plus_point_control.timer >= 300f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQEQ");
+        }
+        if (plus_point_control.timer >= 600f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQEA");
+        }
+        if (plus_point_control.timer >= 900f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQEg");
+        }
+        if (plus_point_control.timer >= 1200f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQEw");
+        }
+        if (plus_point_control.timer >= 1500f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQFA");
+        }
+        if (plus_point_control.timer >= 1800f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQFQ");
+        }
+        if (plus_point_control.timer >= 3600f)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQFg");
+        }
+
+
+
+
+
+
+
+
+
         score_txt.text = plus_point_control.score.ToString();
 
         Total_distance.text = plus_point_control.distance.ToString("F2", new CultureInfo("fr-FR"));

@@ -62,6 +62,17 @@ public class mover : MonoBehaviour
     public bool input_left;
     public bool input_right;
 
+    private bool isAchievements100;
+    private float timeAtHighSpeed100=0f;
+    private bool isAchievements120;
+    private float timeAtHighSpeed120 = 0f;
+    private bool isAchievements150;
+    private float timeAtHighSpeed150 = 0f;
+    private bool isAchievements175;
+    private float timeAtHighSpeed175 = 0f;
+    private bool isAchievements240;
+    private float timeAtHighSpeed240 = 0f;
+
 
     public UnityEvent event_gameOver;
     public UnityEvent event_startgame;
@@ -72,7 +83,7 @@ public class mover : MonoBehaviour
         control_Rb();
         input_left = false;
         input_right = false;
-
+        isAchievements100 = true;
 
     }
     // Update is called once per frame
@@ -109,10 +120,85 @@ public class mover : MonoBehaviour
         player_rb.velocity = new Vector3(0, 0, speed);
         control_rollingwheelScript.rotationSpeed = speed;
 
-    
+
+        AchievementsUnlock();
 
 
     }
+    private void AchievementsUnlock()
+    {
+        if (speed >= 100)
+        {
+            timeAtHighSpeed100 += Time.deltaTime;
+            if (isAchievements100 && timeAtHighSpeed100 >= 30f)
+            {
+                GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQAQ");
+                isAchievements100 = false;
+            }
+        }
+        else
+        {
+            timeAtHighSpeed100 = 0f;
+        }
+
+
+        if (speed >= 120)
+        {
+            timeAtHighSpeed120 += Time.deltaTime;
+            if (isAchievements120 && timeAtHighSpeed120 >= 30f)
+            {
+                GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQAg");
+                isAchievements120 = false;
+            }
+        }
+        else
+        {
+            timeAtHighSpeed120 = 0f;
+        }
+
+
+        if (speed >= 150)
+        {
+            timeAtHighSpeed150 += Time.deltaTime;
+            if (isAchievements150 && timeAtHighSpeed150 >= 30f)
+            {
+                GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQAw");
+                isAchievements150 = false;
+            }
+        }
+        else
+        {
+            timeAtHighSpeed150 = 0f;
+        }
+
+        if (speed >= 175)
+        {
+            timeAtHighSpeed175 += Time.deltaTime;
+            if (isAchievements175 && timeAtHighSpeed175 >= 60f)
+            {
+                GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQBA");
+                isAchievements175 = false;
+            }
+        }
+        else
+        {
+            timeAtHighSpeed175 = 0f;
+        }
+
+        if (speed >= 240)
+        {
+            timeAtHighSpeed240 += Time.deltaTime;
+            if (isAchievements240 && timeAtHighSpeed240 >= 180f)
+            {
+                GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQBQ");
+                isAchievements240 = false;
+            }
+        }
+        else
+        {
+            timeAtHighSpeed240 = 0f;
+        }
+    }    
 
 
     public void input_getkey_left()
@@ -400,7 +486,7 @@ public class mover : MonoBehaviour
     }
     public void OncolliderCars(Vector3 contactPoint)
     {
-       
+
 
 
         if (speed - 30 <= 0)
@@ -411,9 +497,9 @@ public class mover : MonoBehaviour
         {
             speed -= 30;
         }
-      
-            BlinkController.runblink_gameobj(navigation_car);
-        
+
+        BlinkController.runblink_gameobj(navigation_car);
+
 
         StartCoroutine(DisableSpeedIncrease(1.5f, contactPoint));
     }
@@ -630,7 +716,7 @@ public class mover : MonoBehaviour
     public void on_overtakeSound()
     {
         cars_soundScript.onovertakeSound();
-    }    
+    }
 
 
     public void control_Rb()

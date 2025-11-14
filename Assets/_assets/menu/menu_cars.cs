@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -139,6 +140,26 @@ public class menu_cars : MonoBehaviour
     public void buy_car()
     {
         Convert.access_Data.questInfos[index].status_car = true;
+
+        int count = Convert.access_Data.questInfos.Count(q => q.status_car);
+        int max = Convert.access_Data.questInfos.Length;
+        if (count == max)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQDg");
+        }
+        if (count>=5)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQCw");
+        }
+        if (count >= 10)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQDA");
+        }
+           
+        if (index == 1)
+        {
+            GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQDQ");
+        }
     }
 
 }

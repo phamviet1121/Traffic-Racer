@@ -28,7 +28,7 @@ public class plus_point_control : MonoBehaviour
     public UnityEvent/*<float>*/ event_award;
     private UnityEngine.Color defaultColor;
 
-    private float timer = 0f; // Bộ đếm thời gian
+    public float timer = 0f; // Bộ đếm thời gian
     private int scoreIncreaseRate = 1; // Mặc ịnh: tăng 0.1 điểm mỗi lần
     private float scoreUpdateInterval = 0.2f; // Khoảng thời gian cập nhật điểm
     private float lastScoreUpdateTime = 0f; // Lưu thời gian cập nhật điểm cuối cùng

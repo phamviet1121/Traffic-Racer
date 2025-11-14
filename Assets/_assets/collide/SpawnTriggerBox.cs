@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.XR;
-using static UnityEditor.FilePathAttribute;
 
 public class SpawnTriggerBox : MonoBehaviour
 {
