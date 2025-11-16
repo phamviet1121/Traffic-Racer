@@ -158,14 +158,11 @@ public class TurnSignal : MonoBehaviour
         if (turningLeft || turningRight)
             return;
 
-        // Giảm dần giá trị góc về 0 theo tốc độ nhất định
         yAngle = Mathf.MoveTowards(yAngle, 0f, 2f * Time.deltaTime * 5f);
         zAngle = Mathf.MoveTowards(zAngle, 0f, 7f * Time.deltaTime * 5f);
 
         Vector3 currentRotation = body_car.transform.rotation.eulerAngles;
-        // Cập nhật lại rotation cho body_car
         body_car.transform.rotation = Quaternion.Euler(currentRotation.x, yAngle, zAngle);
-        // Debug.Log("dừng");
     }
     public void Inactive_Deceleration_Acceleration_car_car()
     {

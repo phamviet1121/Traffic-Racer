@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_assets/index/scene/Loader.unity
+    guid: 4e1235053581e6f4fa1e88d9357ea1d2
+  - enabled: 1
     path: Assets/_assets/index/scene/index_scene.unity
     guid: 304c2af96f5742b4a85643047f209ddc
   - enabled: 1
@@ -28,47 +31,92 @@ EditorBuildSettings:
     guid: 75e72f0dc4f7ef74ead36aafc5146879
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map2/map2_0.unity
-    guid: 765947b0dacaacc47b8b85f3cf9cbfcd
+    guid: cb177229729e450489c082c24c4b4613
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map2/map2_1.unity
-    guid: c19ec26cb48b7c947b498482f1476b15
+    guid: 9b919d37752a6b442934fd40883659c7
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map2/map2_2.unity
-    guid: 3412679da983d944aa0e9a1f190e10af
+    guid: 067f0ddd7890c2f4b927a74211d58354
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map2/map2_3.unity
-    guid: 40e0756203c279842a59f6ed36438dbc
+    guid: 2b8dabe30fec5044ab2bd4c389cdffe4
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map2/map2_5.unity
-    guid: 5c2caaa47b0e20442ad8903eef547c13
+    guid: 7535ba0b338f1f94da68bf542c9bd71d
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map3/map3_0.unity
-    guid: 8e28845ebe136a648828b3283b85059b
+    guid: a0caf745b6be4a541a22c7e84c77fa66
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map3/map3_1.unity
-    guid: 450b0abf87c03a44b9b36e0b8d667a79
+    guid: b82fad01e56fcb94cbf7abc3c05a9bbc
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map3/map3_2.unity
-    guid: 032ca379e826c594bbc474dd93a4d1b3
+    guid: bf08ad382a4afc94c9787fedb4f639be
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map3/map3_3.unity
-    guid: 897fe6e099ff55f46bbe4e24cc1f71db
+    guid: 759861cbb1321054388d4b8215bcd822
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map3/map3_5.unity
-    guid: bee0a81edbdb07c48a2ccb1344ba99bc
+    guid: 7fe0730d97748cb4082018e6474f6f40
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map4/map4_0.unity
-    guid: 363156dc62490ab4c8cff03ecabb74b6
+    guid: 17d4ef1ddba1eae4b8357fba73ec34fb
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map4/map4_1.unity
-    guid: de6ef6f503a081140a3ec3d2cb6c4ccc
+    guid: 2ccbfd9dd96df204c96c666ca8287dda
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map4/map4_2.unity
-    guid: b4e006f4f305d1b43b5ffa3b37d64209
+    guid: e498b3b5217db8247a2aa7db3937a743
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map4/map4_3.unity
-    guid: dcb682702bf96df4dbe1d9b95c665b61
+    guid: 616394f48a5cd1a4e8431a185e1e8a04
   - enabled: 1
     path: Assets/_assets/Scenes/playgame/map4/map4_5.unity
-    guid: f0d5fad7aeec3c2469e09fd3f14d0252
+    guid: ef0e2564ed97c2641a203e7c3ac43403
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map5/map5_0.unity
+    guid: a5f9297251b6773429211f996418b484
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map5/map5_1.unity
+    guid: a7ca869776128a44b90650adcfc07ee4
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map5/map5_2.unity
+    guid: bdd5a2e05deca8047b8d7363da029812
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map5/map5_3.unity
+    guid: f51f4a9478aab3b4b80cb6c2c83bd326
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map5/map5_5.unity
+    guid: b5e6e59d67501ef4097597363c3ca26f
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map6/map6_0.unity
+    guid: c7a5539c3f87dc647a700c0f1f7510ec
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map6/map6_1.unity
+    guid: 85128f6b0660bab429ce4cf2fb098a31
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map6/map6_2.unity
+    guid: c9ca890dffee74b4cac014ca1d8c28d1
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map6/map6_3.unity
+    guid: 9a788924ebc4ed24b81ed58c84b5df3e
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map6/map6_5.unity
+    guid: 32b4a77fe5f6aba4ea82cea3db7d9826
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map7/map7_0.unity
+    guid: 62552cc38db83124caee4c96945046d8
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map7/map7_1.unity
+    guid: 17ec7c76096240040b788ea4d909439f
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map7/map7_2.unity
+    guid: 86771022d09313e4bb33daa1839266d6
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map7/map7_3.unity
+    guid: 13f5edc7720174447aa4e9ffa9f031fe
+  - enabled: 1
+    path: Assets/_assets/Scenes/playgame/map7/map7_5.unity
+    guid: 6a42c8c378375624fa2d6de038023149
   m_configObjects: {}

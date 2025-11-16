@@ -12,20 +12,28 @@ public class GooglePlayManager : MonoBehaviour
 
     void Awake()
     {
+        // DEBUG: In ra thông báo mỗi khi hàm Awake của một GooglePlayManager được gọi
+        Debug.Log("--- GooglePlayManager AWAKE called on object: " + this.gameObject.name + " ---");
         if (Instance == null)
         {
+            // DEBUG: Thông báo rằng đây là Manager ĐẦU TIÊN và DUY NHẤT
+            Debug.LogWarning(">>> GooglePlayManager INSTANCE CREATED. Setting DontDestroyOnLoad. <<<");
             Instance = this;
             DontDestroyOnLoad(gameObject);
             IsAuthenticated = false; // Khởi tạo trạng thái
         }
         else
         {
+            // DEBUG: Thông báo rằng một bản sao đang được tạo ra và sẽ bị HỦY
+            Debug.LogError(">>> DUPLICATE GooglePlayManager DETECTED! Destroying this new one. <<<");
             Destroy(gameObject);
         }
     }
 
     void Start()
     {
+        // DEBUG: In ra thông báo khi hàm Start được gọi
+        Debug.Log("--- GooglePlayManager START called. Activating PlayGamesPlatform... ---");
         PlayGamesPlatform.Activate();
         SignIn();
     }
@@ -80,7 +88,7 @@ public class GooglePlayManager : MonoBehaviour
     // =============================================================
     // HÀM HIỂN THỊ UI (ĐƯỢC SỬA LẠI HOÀN TOÀN)
     // =============================================================
-    public void ShowLeaderboardUI()
+    public void ShowLeaderboardsUI()
     {
         // Nếu đã đăng nhập, hiển thị luôn
         if (IsAuthenticated)

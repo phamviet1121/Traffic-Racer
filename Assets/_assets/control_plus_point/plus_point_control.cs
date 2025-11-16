@@ -28,10 +28,10 @@ public class plus_point_control : MonoBehaviour
     public UnityEvent/*<float>*/ event_award;
     private UnityEngine.Color defaultColor;
 
-    public float timer = 0f; // Bộ đếm thời gian
-    private int scoreIncreaseRate = 1; // Mặc ịnh: tăng 0.1 điểm mỗi lần
-    private float scoreUpdateInterval = 0.2f; // Khoảng thời gian cập nhật điểm
-    private float lastScoreUpdateTime = 0f; // Lưu thời gian cập nhật điểm cuối cùng
+    public float timer = 0f; 
+    private int scoreIncreaseRate = 1; 
+    private float scoreUpdateInterval = 0.2f; 
+    private float lastScoreUpdateTime = 0f; 
 
 
     public GameObject obstaclePassCount_gameobject;
@@ -177,9 +177,6 @@ public class plus_point_control : MonoBehaviour
         yield return new WaitForSeconds(delay);
         plus_point = 0;
         obstaclesCleared = 0; // Reset số lần ấn về 0
-
-        //obstaclePassCount_txt.enabled = false;
-        //Debug.Log("Score reset to 0 | Press Count reset to 0");
         obstaclePassCount_gameobject.SetActive(false);
 
     }

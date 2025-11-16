@@ -69,7 +69,7 @@ public class canvas_gameOver : MonoBehaviour
             GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQCg");
         }
 
-        if(plus_point_control.timer>=180f)
+        if (plus_point_control.timer >= 180f)
         {
             GooglePlayManager.Instance.UnlockAchievement("CgkIhtTcqpkdEAIQDw");
         }
@@ -123,7 +123,16 @@ public class canvas_gameOver : MonoBehaviour
         total = (int)(plus_point_control.distance * 25f) + (plus_point_control.close_overtakes_index * 15) + (int)(plus_point_control.speed_max_high_ * 7.5f);
 
         // StartCounting(total, Total_money);
-        Total_money.text = total.ToString();
+        if (PlayerPrefs.GetInt("CashDoublerActive", 0) == 1)
+        {
+            Total_money.text = (total * 2f).ToString();
+        }
+        {
+            Total_money.text = total.ToString();
+        }
+
+
+
 
         if (congdiem == true)
         {
@@ -132,9 +141,18 @@ public class canvas_gameOver : MonoBehaviour
 
         // StartCoroutine(CountAllNumbers());
     }
+    public void addDoublerMoney()
+    {
+        money_data.money_iocn.icon_money += total;
+        save_data_json.SaveToJson_dataToSave();
+    }
 
     private IEnumerator delay_total(float a)
     {
+        if (PlayerPrefs.GetInt("CashDoublerActive", 0) == 1)
+        {
+            addDoublerMoney();
+        }    
         money_data.money_iocn.icon_money += total;
         save_data_json.SaveToJson_dataToSave();
         congdiem = false;

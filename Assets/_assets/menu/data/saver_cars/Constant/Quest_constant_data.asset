@@ -21,7 +21,7 @@ MonoBehaviour:
     - 1
     index_wheel: 0
     index_Sticker: -1
-    index_speed: 34
+    index_speed: 25
     index_handling: 15
     index_barking: 15
     status_car: 1

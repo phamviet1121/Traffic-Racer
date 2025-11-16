@@ -35,7 +35,6 @@ public class BlinkController : MonoBehaviour
             elapsedTime += DelayTime;
         }
 
-        // Đảm bảo object bật lại sau cùng
         foreach (var obj in blink_obj.obj)
         {
             obj.SetActive(true);
@@ -73,34 +72,30 @@ public class BlinkController : MonoBehaviour
             {
                 if (mr != null)
                 {
-                    mr.enabled = false; // Tắt hiển thị
+                    mr.enabled = false; 
                 }
             }
-           // gameobj.GetComponent<MeshRenderer>().enabled = false;
             yield return new WaitForSeconds(DelayTime / 2f);
 
             foreach (MeshRenderer mr in blink_obj.meshRenderers)
             {
                 if (mr != null)
                 {
-                    mr.enabled = true; // Tắt hiển thị
+                    mr.enabled = true; 
                 }
             }
-           // gameobj.GetComponent<MeshRenderer>().enabled = true;
             yield return new WaitForSeconds(DelayTime / 2f);
 
             elapsedTime += DelayTime;
         }
 
-        // Đảm bảo object bật lại sau cùng
         foreach (MeshRenderer mr in blink_obj.meshRenderers)
         {
             if (mr != null)
             {
-                mr.enabled = true; // Tắt hiển thị
+                mr.enabled = true; 
             }
         }
-       // gameobj.GetComponent<MeshRenderer>().enabled = true;
 
         runTime_bool = false;
     }

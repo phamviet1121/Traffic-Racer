@@ -15,10 +15,9 @@ public class MOVER_AI : MonoBehaviour
 
 
     private Rigidbody rb;
-    private bool turn_left_right = false;
+    //private bool turn_left_right = false;
     // private bool turn_right;
-    private bool isMoving = false; // Flag to track whether the object is moving
-                                   //  private bool blockageStatus = false;
+    private bool isMoving = false; 
     public bool on_left_turn;
     public bool on_right_turn;
 
@@ -29,7 +28,7 @@ public class MOVER_AI : MonoBehaviour
     public bool isCarApproaching = false;
 
 
-    private Coroutine resetSpeedCoroutine;
+    //private Coroutine resetSpeedCoroutine;
     //public control_rollingwheel control_rollingwheel;
 
     public UnityEvent event_turrn_left;
@@ -62,11 +61,8 @@ public class MOVER_AI : MonoBehaviour
 
     public void Mover_carAI()
     {
-        // giảm tốc về 0 
         if (isCollided)
         {
-
-            // Giảm tốc về 0
             speed = Mathf.Lerp(speed, 0f, Time.deltaTime * 0.75f);
             rb.velocity = new Vector3(0, 0, speed);
 
@@ -74,13 +70,11 @@ public class MOVER_AI : MonoBehaviour
             {
                 speed = 0f;
                 rb.velocity = Vector3.zero;
-                enabled = false; // Dừng cập nhật nếu muốn
+                enabled = false; 
             }
         }
         else
         {
-
-            //giảm tốc
             if (isDeceleration)
             {
                 speed = Mathf.Lerp(speed, speedrandommin - 10f, Time.deltaTime * 5f);
@@ -88,14 +82,12 @@ public class MOVER_AI : MonoBehaviour
                 if (speed <= speedrandommin - 10f)
                 {
                     speed = speedrandommin - 10f;
-                    // isDeceleration = false;
 
                 }
-            }  //tăng tốc  
+            }   
             else if (isResuming)
             {
                 speed_ = Random.Range(speedrandommin, speedrandommax);
-                // Tăng tốc lại
                 speed = Mathf.Lerp(speed, speed_, Time.deltaTime * 0.75f);
                 rb.velocity = new Vector3(0, 0, speed);
 
@@ -105,10 +97,8 @@ public class MOVER_AI : MonoBehaviour
                     isResuming = false;
                 }
             }
-            //tóc độ nình thường
             else
             {
-                // Di chuyển bình thường
                 rb.velocity = new Vector3(0, 0, speed);
             }
         }
@@ -159,15 +149,15 @@ public class MOVER_AI : MonoBehaviour
         float startX = transform.position.x;
         float timeElapsed = 0f;
 
-        while (timeElapsed < 1f) // Move smoothly over time
+        while (timeElapsed < 1f) 
         {
             transform.position = new Vector3(Mathf.Lerp(startX, targetX, timeElapsed), transform.position.y, transform.position.z);
-            timeElapsed += Time.deltaTime * 0.38f; // Adjust the speed factor here if needed
-            yield return null; // Wait until the next frame
+            timeElapsed += Time.deltaTime * 0.38f; 
+            yield return null; 
         }
 
-        transform.position = new Vector3(targetX, transform.position.y, transform.position.z); // Ensure final position
-        isMoving = false; // Reset the moving flag after the movement is complete
+        transform.position = new Vector3(targetX, transform.position.y, transform.position.z); 
+        isMoving = false; 
     }
 
 
@@ -183,11 +173,9 @@ public class MOVER_AI : MonoBehaviour
     public void Blockage_left(bool turn)
     {
         on_left_turn = turn;
-        //  Debug.Log($"rex trai {on_left_turn}");
     }
     public void Blockage_right(bool turn)
     {
-        // Debug.Log($"rex phai {on_right_turn}");
         on_right_turn = turn;
     }
     public bool turningProbability = false;
@@ -202,10 +190,9 @@ public class MOVER_AI : MonoBehaviour
 
     public void turn_control()
     {
-        ////turn_left_right = true;
-        if (/*turn_left_right &&*/ !isMoving) // Check if the object is ready to move
+        if (/*turn_left_right &&*/ !isMoving) 
         {
-            isMoving = true; // Set moving flag to true
+            isMoving = true;
             Debug.Log($"{transform.position.x}");
             if (!on_left_turn && !on_right_turn)
             {

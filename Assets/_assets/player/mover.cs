@@ -15,13 +15,13 @@ public class mover : MonoBehaviour
     public float speedRunTime;
 
     public GameObject navigation_car;
-    public float minX; // Giới hạn biên trái
-    public float maxX;  // Giới hạn biên phải
+    public float minX; 
+    public float maxX;  
 
     private bool turnleft;
     private bool turnright;
 
-    public float maxSpeed; // Tốc độ tối đa
+    public float maxSpeed; 
     public float minSpeed;
     private float targetSpeed;
 
@@ -90,28 +90,6 @@ public class mover : MonoBehaviour
     void Update()
     {
         accelerate_deceleration_cars();
-
-
-        //  moveDirection = new Vector3(0, 0, speed);
-
-        //A2();
-        //A1();
-
-        //if (!gameover)
-        //{
-        //    rb.velocity = moveDirection;
-        //}
-        //else
-        //{
-        //    rb.velocity = Vector3.zero;
-        //}
-
-        //if (input_left == false && input_right == false)
-        //{
-        //    Debug.Log("may chyaj nhieeuf thees");
-        //    moveDirection.x = 0f;
-        //    turnSignalScript.Inactive_Turn();
-        //}
 
         a();
 
@@ -289,7 +267,6 @@ public class mover : MonoBehaviour
     public void a()
     {
         Vector3 moveDirection = new Vector3(0, 0, speed);
-        // Vector3 moveDirection = new Vector3(0, 0, speed);
         if (input_left && turnleft)
         {
 
@@ -410,7 +387,6 @@ public class mover : MonoBehaviour
 
     }
 
-    // int a;
     public void l_v_3_OncolliderCars(Vector3 contactPoint)
     {
         if (speed - 30 <= 0)
@@ -452,8 +428,6 @@ public class mover : MonoBehaviour
 
             //navigation_car.transform.position = navigation_car.transform.position;
             yield return new WaitForSeconds(duration);
-            //  a++;
-            // Debug.Log($"goij may lan {a}");
             if (spam_car_player)
             {
 
@@ -545,10 +519,8 @@ public class mover : MonoBehaviour
     {
         Vector3 position = navigation_car.transform.position;
 
-        // Giới hạn giá trị X trong khoảng [minX, maxX]
         position.x = Mathf.Clamp(position.x, minX, maxX);
 
-        // Cập nhật lại vị trí của đối tượng
         navigation_car.transform.position = position;
         if (position.x <= minX)
         {
@@ -623,7 +595,6 @@ public class mover : MonoBehaviour
             accelerate_Inactive = false;
             turnSignalScript.Acceleration_car();
             cars_soundScript.startAcceleratedSound();
-            // Nếu người chơi nhấn K, tăng dần tốc độ đến maxSpeed
             targetSpeed = maxSpeed;
             speedRunTime = accelerate;
 
@@ -639,7 +610,6 @@ public class mover : MonoBehaviour
             }
             else
             {
-                // Nếu không nhấn K, giảm tốc độ về minSpeed
                 targetSpeed = minSpeed;
                 speedRunTime = deceleration;
             }
@@ -658,7 +628,7 @@ public class mover : MonoBehaviour
             speed = Mathf.Lerp(speed, targetSpeed, Time.deltaTime * 5f);
             if (!hasCheckedBrake)
             {
-                hasCheckedBrake = true; // Đánh dấu đã kiểm tra
+                hasCheckedBrake = true; 
                 if (speed >= 250)
                 {
                     brake_suddenlyScript.brake();
@@ -728,7 +698,7 @@ public class mover : MonoBehaviour
         if (B != null)
         {
 
-            Transform A = B.transform.GetChild(0); // Giả sử A là child đầu tiên của B (cần kiểm tra lại logic nếu có nhiều child)
+            Transform A = B.transform.GetChild(0); 
             navigation_car = B.transform.GetChild(0).gameObject;
             if (A != null)
             {
