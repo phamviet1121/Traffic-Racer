@@ -32,5 +32,12 @@ public class canvas_gameOver_LV5 : MonoBehaviour
         txt_indexmoney.text = (point_moneys.moneys / point_moneys.plus_moneys).ToString();
         money_data.money_iocn.icon_money += point_moneys.moneys;
         save_data_json.SaveToJson_dataToSave();
+    } 
+    public void addMoney()
+    {
+        txt_money.text = (point_moneys.moneys*2).ToString();
+        money_data.money_iocn.icon_money += point_moneys.moneys;
+        save_data_json.SaveToJson_dataToSave();
     }    
+    
 }
